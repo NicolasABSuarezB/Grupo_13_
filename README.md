@@ -1,6 +1,6 @@
 # Grupo_13_
 *nombre del proyecto*
-es un e-comerce pensado y dedica a la venta de accesorios y alimentos de mascotas para que no se aburras y se mueran de hambre.
+es un e-comerce pensado y dedica a la venta de accesorios, juguetes y alimentos de mascotas para que no se aburras y se mueran de hambre.
 
 esta dirigido a todo el publico que tenga una hermosa mascota en su hogar.
 
