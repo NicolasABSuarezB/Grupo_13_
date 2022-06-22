@@ -7,7 +7,7 @@ Descripción de los participantes del proyecto
   
   Pamela Ortiz
     
-  Karen Galan
+  Karen Galan : 21 Años- estudiante ingenieria química y programacion web full stack en DigitalHouse y fundacion formar
     
   Gerardo Matías Pajuelo Cavello
     
