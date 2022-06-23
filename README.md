@@ -7,11 +7,11 @@ Descripción de los participantes del proyecto
   
   Pamela Ortiz
     
-  Karen Galan : 21 Años- estudiante ingenieria química y programacion web full stack en DigitalHouse y fundacion formar
+  Karen Galan : 21 Años- estudiante ingenieria química y programación web full stack en DigitalHouse y fundacion formar
     
   Gerardo Matías Pajuelo Cavello
     
-  Nicolás Alejandro Baltazar Suarez Bermúdez.
+  Nicolás Alejandro Baltazar Suarez Bermúdez : 22 Años - Trabajo con impresiones 3d en FDM y SLA, estudiante de torneria y programación web full stack en DigitalHouse y Fundacion Formar
         
 Listado de páginas de las cuales hemos tomado referencia:
 
