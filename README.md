@@ -9,7 +9,7 @@ Descripción de los participantes del proyecto
     
   Karen Galan : 21 Años- estudiante ingenieria química y programación web full stack en DigitalHouse y fundacion formar
     
-  Gerardo Matías Pajuelo Cavello
+  Gerardo Matías Pajuelo Cavello: 19 años- tecnico en programacion- estudiante de licenciatura de ciencias de la computacion y programación web full stack en DigitalHouse y Fundacion Formar
     
   Nicolás Alejandro Baltazar Suarez Bermúdez : 22 Años - Trabajo con impresiones 3d en FDM y SLA, estudiante de torneria y programación web full stack en DigitalHouse y Fundacion Formar
         
