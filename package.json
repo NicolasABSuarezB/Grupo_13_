@@ -1,0 +1,22 @@
+{
+  "name": "grupo_13_",
+  "version": "1.0.0",
+  "description": "ecommerce de articulos para mascotas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasABSuarezB/Grupo_13_.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasABSuarezB/Grupo_13_/issues"
+  },
+  "homepage": "https://github.com/NicolasABSuarezB/Grupo_13_#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

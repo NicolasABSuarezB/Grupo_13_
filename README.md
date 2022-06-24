@@ -4,8 +4,8 @@ Nuestro cliente DH Venture Capitals nos solicitó realizar un e-commerce dedicad
 Este e-commerce está dirigido a todo el público que posea una mascota en su hogar, esto se debe a que quisimos facilitar la experiencia de búsqueda y compra, ya sea del alimento necesario para su mascota, como así también encontrar accesorios y juguetes para la misma.
 
 Descripción de los participantes del proyecto
-  
-  Pamela Ortiz
+
+  Pamela Ortiz : 35 años- mamá emprendedora y estudiante de programación web full stack.
     
   Karen Galan : 21 Años- estudiante ingenieria química y programación web full stack en DigitalHouse y fundacion formar
     
