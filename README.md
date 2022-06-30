@@ -1,34 +1,51 @@
-# Grupo_13_*NOMBRE DEL PROYECTO MOMENTANIAMENTE SIN ASIGNAR*
-Nuestro cliente DH Venture Capitals nos solicitó realizar un e-commerce dedicado a la venta de alimentos, accesorios y juguetes para varios tipos de mascotas. 
+# Grupo_13_*NOMBRE DEL PROYECTO MOMENTANEAMENTE SIN ASIGNAR* ![logo](./public/img/logo.png)
+---
+## Descripción
+Es un e-commerce dedicado a la venta de alimentos, accesorios y juguetes para mascotas. 
 
-Este e-commerce está dirigido a todo el público que posea una mascota en su hogar, esto se debe a que quisimos facilitar la experiencia de búsqueda y compra, ya sea del alimento necesario para su mascota, como así también encontrar accesorios y juguetes para la misma.
+## A quién está dirigido
+A toda aquella persona que necesite comprar alimento, accesorios, o juguetes para una mascota.
 
-Descripción de los participantes del proyecto
+## Objetivo
+Facilitar y centralizar todos los productos relacionados al rubro para que los amantes de las mascotas puedan comprar todo lo que necesiten a un click de alcanze.
 
-  Pamela Ortiz : 35 años- mamá emprendedora y estudiante de programación web full stack.
+## Colaboradores
+
+  **Pamela Ortiz:** 35 años- mamá emprendedora y estudiante de programación web full stack Node en Digital House y Fundación Formar.
     
-  Karen Galan : 21 Años- estudiante ingenieria química y programación web full stack en DigitalHouse y fundacion formar
+  **Karen Galan:** 21 Años- estudiante ingeniería química y programación web full stack Node en DigitalHouse y Fundación Formar.
     
-  Gerardo Matías Pajuelo Cavello: 19 años- tecnico en programacion- estudiante de licenciatura de ciencias de la computacion y programación web full stack en DigitalHouse y Fundacion Formar
+  **Gerardo Matías Pajuelo Cavello:** 19 años- técnico en programación- estudiante de Licenciatura de Ciencias de la computación y programación web full stack Node en Digital House y Fundación Formar.
     
-  Nicolás Alejandro Baltazar Suarez Bermúdez : 22 Años - Trabajo con impresiones 3d en FDM y SLA, estudiante de torneria y programación web full stack en DigitalHouse y Fundacion Formar
-        
-Listado de páginas de las cuales hemos tomado referencia:
+  **Nicolás Alejandro Baltazar Suarez Bermúdez:** 22 Años - Trabajo con impresiones 3d en FDM y SLA, estudiante de tornería y programación web full stack en DigitalHouse y Fundacion Formar
 
-● Zooplus: (https://www.zooplus.es)
-De esta pagina hemos tomado algunas cosas de referencia como: La categoría de "también podría gustarte" integrada en el carrito.
+---
+## Páginas de referencia:
+> de las siguientes paginas se tomaron algunas ideas para la realizacion de nuestra web. 
 
-●Inti Petshop (https://www.intipetshop.com.ar)
-De esta página hemos tomado algunas cosas de referencia como: El header, las categorías del home.
+[ZOOPLUS](https://www.zooplus.es)
+- Sección de "también podría gustarte" integrada en el carrito.
 
-●BE DOG (https://www.be-dog.com)
-De esta página hemos tomado algunas cosas de referencia como: El fondo que resalta cada objeto y el filtro lateral 
+[INTI PETSHOP](https://www.intipetshop.com.ar)
+- Barra de navegación.
 
-●CATY CAN (https://www.catycan.com)
-De esta página hemos tomado algunas cosas de referencia como: Los colores utilizados, el sector superior sectorizado según especieen el lateral y la flecha para ir a la parte superior de la pagina
+[BE DOG](https://www.be-dog.com) 
+- El fondo que resalta cada objeto y el filtro lateral
 
-●POROTOS (https://porotos.com.ar)
-De esta página hemos tomado algunas cosas de referencia como: Las imágenes de productos grandes y colores disponibles.
+[CATY CAN](https://www.catycan.com)
+- Paleta de colores.
 
-●PET SUPPLIES PLUS (https://www.petsuppliesplus.com)
-De esta página hemos tomado algunas cosas de referencia como: El sistema de puntos para descuentos, ya que esto ayuda a generar clientes frecuentes.
+[POROTOS](https://porotos.com.ar)
+- Las imágenes de productos grandes y colores disponibles.
+---
+## Requisitos
+- NodeJs V.16.15.0
+
+## Instalación
+- Descargar el [repositorio](https://github.com/NicolasABSuarezB/Grupo_13_.git)
+- Instalar dependencias con [NPM](https://www.npmjs.com/)
+
+  `npm install express`  
+- Instalar [Express](https://expressjs.com/es/)
+   
+  `npm install express`
