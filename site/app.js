@@ -12,5 +12,5 @@ app.get('/register', (req,res)=> res.sendFile(path.resolve(__dirname,'views', 'r
 app.get('/carrito', (req,res)=> res.sendFile(path.resolve(__dirname,'views', 'carrito.html')))
 
 
-app.listen(port,() => console.log('Se levantó con éxito el servidor en http://localhost:${port}'))
+app.listen(port,() => console.log(`Se levantó con éxito el servidor en http://localhost:${port}`))
 
