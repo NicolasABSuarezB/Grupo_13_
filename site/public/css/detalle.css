@@ -17,9 +17,7 @@
  .detalle{
     margin: 6% 5%;
  }
- .detalle p{
-    
- }
+ 
  .detalleproducto .imgproducto img{
     width: 200px;
     height: 200px;
@@ -90,7 +88,7 @@
 
 }
  @media(min-width:361px) {
-    .imgproducto img{
+    .imgproductodetalle img{
         width: 60vw;
         height: 60vw;
      }

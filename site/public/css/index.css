@@ -1,5 +1,5 @@
 .home {
-    background-color: rgb(169, 175, 255);
+    background-color: rgb(185, 169, 255);
 }
 
  /* imagen grande del principio*/
@@ -52,16 +52,19 @@
 
 /* 2-productos*/
 .homeventa .homearticulos article{
-    height: 90%;
+    height: 95%;
+    margin: 1%;
+    width: 80vw;
+    background-color: beige;
 }
 .homearticulos{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5%;
+    margin: 1%;
     height: 100vw;
-    margin-top: 10%;
-  
+    
+    
    
 }
 .productohometablet{
@@ -76,11 +79,12 @@ article .imgproducto{
     display: flex;
     justify-content: center;
     height: 60%;
+    padding: 3%;
 
 }
 article .imgproducto img{
     
-    width: 70%;
+    width: 90%;
     
 }
 .homearticulos article .descripcion{
@@ -125,16 +129,14 @@ article div button{
 /*vista tablet*/
 @media(min-width:441px) {
 
-    article .imgproducto{
-        width: 40vw;
-    }
+   
     .productohometablet{
         display: block;
     }
 
     .homearticulos{
         justify-content: center;
-        height: 300px;
+        height: 450px;
     }
          
     .homeventa .homearticulos .moverflecha{
@@ -177,7 +179,7 @@ article div button{
         font-size: 1.5em;
     }
     article .imgproducto{
-        width: 25vw;
+        
     }
     article .descripcion .nombreproduc{
         color: grey;
