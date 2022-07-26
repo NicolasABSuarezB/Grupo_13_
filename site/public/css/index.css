@@ -1,3 +1,197 @@
 .home {
-    background-color: aqua;
+    background-color: rgb(169, 175, 255);
+}
+
+ /* imagen grande del principio*/
+ .mainhome .imageng{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+ }
+
+.mainhome .imageng{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+.mainhome .imageng img{
+    
+    justify-content: center;
+    width: 90%    ;
+    height: 40vw;
+}
+
+/*menu de animales*/
+.mainhome .menuanimal{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.mainhome .menuanimal a img{
+    width: 23vw;
+    height: 23vw;
+    border-radius: 100%;
+}
+
+/*contenido de venta*/
+
+/*1-seleccion de oferta y novedad*/
+.homeventa .menuseleccion{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+.homeventa .menuseleccion .seleccionado{
+    color:blue;
+    border-bottom: 2px solid blue;
+}
+
+/* 2-productos*/
+.homeventa .homearticulos article{
+    height: 90%;
+}
+.homearticulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    height: 100vw;
+    margin-top: 10%;
+  
+   
+}
+.productohometablet{
+    display: none;
+}
+.productohomedestock{
+    display: none;;
+}
+
+
+article .imgproducto{
+    display: flex;
+    justify-content: center;
+    height: 60%;
+
+}
+article .imgproducto img{
+    
+    width: 70%;
+    
+}
+.homearticulos article .descripcion{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+article div button{
+    width: 90%;
+    background-color: gray;
+    color: aliceblue;
+    border: 0;
+    height: 40px;
+    margin-top: 5%;
+}
+.homeventa .homearticulos .moverflecha{
+
+    display: none;
+}
+
+/*seleccion por marca*/
+.mainhome h3{
+    margin: 7%;
+}
+.marcas article{
+    margin: 2%;
+    display: flex;
+}
+.marcas article div{
+    margin: 3%;
+    height: 100%;
+}
+.marcas article div img{
+   
+    height: 100%;
+    width: 100%;
+    
+}
+
+/*vista tablet*/
+@media(min-width:441px) {
+
+    article .imgproducto{
+        width: 40vw;
+    }
+    .productohometablet{
+        display: block;
+    }
+
+    .homearticulos{
+        justify-content: center;
+        height: 300px;
+    }
+         
+    .homeventa .homearticulos .moverflecha{
+        align-items: center;
+        display: flex;   
+    }
+    .homeventa .homearticulos .moverflecha img{
+        width: 20px;
+        height: 100px;
+        
+    }         
+}
+
+
+
+
+
+@media(min-width:769px) {
+    .productohomedestock{
+        display: block;
+    }
+    .mainhome .menuanimal a img{
+        width: 10vw;
+        height: 10vw;
+        border-radius: 100%;
+    }
+    .mainhome .menuanimal{
+        margin: 3% 10%;
+    
+    }
+    .mainhome .imageng img{
+        height: 50vh;
+    }
+    article .descripcion .precioproduc{
+        font-size: 2em;
+    }
+    .homeventa .menuseleccion{
+       
+        margin: 5% 13%;
+        font-size: 1.5em;
+    }
+    article .imgproducto{
+        width: 25vw;
+    }
+    article .descripcion .nombreproduc{
+        color: grey;
+        
+        text-align: center;
+    }
+    article div button{
+        width: 60%;
+        
+    }
+    .mainhome .imageng img {
+        justify-content: center;
+        width: 70%;
+        height: 25vw;
+    }
+
 }

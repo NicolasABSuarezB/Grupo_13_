@@ -1,0 +1,128 @@
+.detalle {
+    background-color: rgb(169, 175, 255);
+}
+.detalleproducto{
+    margin-top: 10%;
+ }
+ .imgproducto{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+ }
+ .imgextra{
+    
+    display: flex;
+    justify-content: center;
+ }
+ .detalle{
+    margin: 6% 5%;
+ }
+ .detalle p{
+    
+ }
+ .detalleproducto .imgproducto img{
+    width: 200px;
+    height: 200px;
+ }
+ .detalleproducto .imgextra img{
+    width: 20vw;
+    height: 20vw;
+    margin: 1%;
+
+ }
+ .interesar{
+    margin: 10%;
+ }
+ .interesar article{
+    margin: 2%;
+    display: flex;
+}
+.interesar .recomendado .imgproducto{
+    margin: 3%;
+    height: 100%;
+}
+.interesar .recomendado .imgproducto img{
+   
+    height: 100%;
+    width: 100%;
+    
+}
+.compra{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+} 
+.compra h4{
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+.compra .cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    height: 60px;
+    width: 220px;
+    margin: auto;
+    border-radius:8%;
+}
+.cantidad form input{
+    width: 30px;
+    height: 30px;
+}
+.cantidad button{
+    height: 30px;
+    width: 30px;
+    margin: 2%;
+}
+.compra .confirmar{
+    height: 30px;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: grey;
+    border: none;
+    color: azure;
+    
+
+}
+ @media(min-width:361px) {
+    .imgproducto img{
+        width: 60vw;
+        height: 60vw;
+     }
+     .detalleproducto .imgextra img{
+        width: 60px;
+        height: 60px;
+        
+     }
+}
+@media(min-width:769px) {
+    .ordendes{
+        display: flex;
+    }
+    .imgextra{
+        order: -1;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left:5% ;
+        margin-right: 1%;
+        
+        
+    }
+    
+    .imgproducto{
+        flex-grow: 0.5;
+    }
+    .detalleproducto .imgproducto img{
+        width: 35vw;
+        height: 35vw;
+        
+    } 
+    .detalleproducto .imgextra img{
+        margin-bottom: 10%;
+    }
+}
