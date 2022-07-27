@@ -2,7 +2,7 @@ header{
     position: relative;
     margin-bottom: 20px;
     background-color: #999999;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--tipografia-principal);
     width: 100%;
 }
 
