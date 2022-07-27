@@ -1,7 +1,10 @@
-.detalle {
-    background-color: rgb(169, 175, 255);
-}
-.detalleproducto{
+*{
+    box-sizing: border-box; 
+    padding: 0%;
+    margin: 0%;
+   
+ }
+ .detalleproducto{
     margin-top: 10%;
  }
  .imgproducto{
@@ -17,7 +20,9 @@
  .detalle{
     margin: 6% 5%;
  }
- 
+ .detalle p{
+    
+ }
  .detalleproducto .imgproducto img{
     width: 200px;
     height: 200px;
@@ -88,7 +93,7 @@
 
 }
  @media(min-width:361px) {
-    .imgproductodetalle img{
+    .imgproducto img{
         width: 60vw;
         height: 60vw;
      }

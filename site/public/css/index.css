@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    background-color: #dfe0ffa8;
     
 }
 .mainhome .imageng img{
@@ -25,9 +26,10 @@
 
 /*menu de animales*/
 .mainhome .menuanimal{
-    margin-top: 10%;
+    padding-top: 10%;
     display: flex;
     justify-content: space-evenly;
+    background-color: #dfe0ffa8;
 
 }
 .mainhome .menuanimal a img{
@@ -35,7 +37,9 @@
     height: 23vw;
     border-radius: 100%;
 }
-
+.mainhome .menuanimal .extramenuanimal{
+    display: none;
+}
 /*contenido de venta*/
 
 /*1-seleccion de oferta y novedad*/
@@ -80,11 +84,13 @@ article .imgproducto{
     justify-content: center;
     height: 60%;
     padding: 3%;
+    margin-bottom: 5%;
+
 
 }
-article .imgproducto img{
-    
-    width: 90%;
+.homeventa .homearticulos .imgproducto img{
+    box-shadow: -2px 4px 29px 0px rgb(156, 155, 156);
+    width: 210px;
     
 }
 .homearticulos article .descripcion{
@@ -114,10 +120,11 @@ article div button{
 .marcas article{
     margin: 2%;
     display: flex;
+    justify-content: center;
 }
 .marcas article div{
     margin: 3%;
-    height: 100%;
+    height: 15vw;
 }
 .marcas article div img{
    
@@ -125,20 +132,28 @@ article div button{
     width: 100%;
     
 }
+.marcas .imgproducto{
+    padding: 0%;
+}
 
 /*vista tablet*/
 @media(min-width:441px) {
 
-   
+    .mainhome .menuanimal .extramenuanimal{
+        display: block;
+    }
+    
     .productohometablet{
         display: block;
     }
 
     .homearticulos{
         justify-content: center;
-        height: 450px;
+        height: 65vh;
     }
-         
+    .homeventa .homearticulos article{
+        height: 75%;
+    }
     .homeventa .homearticulos .moverflecha{
         align-items: center;
         display: flex;   
@@ -164,7 +179,7 @@ article div button{
         border-radius: 100%;
     }
     .mainhome .menuanimal{
-        margin: 3% 10%;
+        padding: 3% 10%;
     
     }
     .mainhome .imageng img{
@@ -177,6 +192,10 @@ article div button{
        
         margin: 5% 13%;
         font-size: 1.5em;
+    }
+    .homeventa .homearticulos article{
+        height: 380px;
+
     }
     article .imgproducto{
         
