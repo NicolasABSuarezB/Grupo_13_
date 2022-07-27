@@ -1,4 +1,4 @@
-# Grupo_13_*NOMBRE DEL PROYECTO MOMENTANEAMENTE SIN ASIGNAR* ![logo](./public/img/logo.png)
+# Grupo_13_*loving Paws* ![logo](./public/img/logo.png)
 ---
 ## Descripción
 Es un e-commerce dedicado a la venta de alimentos, accesorios y juguetes para mascotas. 
