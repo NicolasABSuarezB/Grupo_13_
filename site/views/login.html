@@ -5,18 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
     <script src="https://kit.fontawesome.com/0e7957413b.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="login"> 
-    <header></header>
+<header></header>
+
+<body class="login">
     <main>
-        <h1>login</h1>
-    </main>
-    <footer></footer>
+        <section class="todo">
+            <h3>login</h3>
+            <br>
+            <article class="inicio-de-sesion">
+                <div class="sector-email">
+                    <h3> Email</h3>
+                    <input class="type-user" type="text" placeholder="Correo electronico">
+                </div>
+                <div class="sector-pass">
+                    <h3> Contraseña</h3>
+                    <input class="type-pass" type="password" placeholder="Contraseña">
+                </div>
+                <div>
+                    <input class="save-pass" type="checkbox"> Mantener la sesión iniciada
+                    <br>
+                    <a class="lost-pass" href=""> ¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="linkeados">
+                    <button class="init" type="submit">Iniciar sesión</button>
+                    <br>
+                    <a class="create-user" href="http://localhost:3000/register"> ¿No tienes cuenta? Crear una cuenta</a>
+                </div>
+            </article>
+        </section>
+    </main><br>
 </body>
+<footer></footer>
 
 </html>
