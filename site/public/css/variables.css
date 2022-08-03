@@ -1,4 +1,8 @@
 :root{
     --tipografia-principal: 'Roboto', sans-serif;
     --titulo: 'Titan One', cursive;
+    --azul: #187498;
+    --verde:#04BF9D;
+    --rojo:#DF644F;
+    --fondo:#DCFFFF;
 }

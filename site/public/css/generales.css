@@ -7,3 +7,6 @@
     margin: 0%;
     font-family:var(--tipografia-principal) ;
  }
+ body{
+    background-color: var(--fondo);
+ }

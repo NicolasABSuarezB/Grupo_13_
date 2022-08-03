@@ -1,8 +1,6 @@
-.home {
-    background-color: rgb(185, 169, 255);
-}
 
- /* imagen grande del principio*/
+
+ /* imag<en grande del principio*/
  .mainhome .imageng{
     display: flex;
     justify-content: center;
@@ -15,150 +13,196 @@
     justify-content: center;
     margin-top: 5%;
     background-color: #dfe0ffa8;
-    
+    flex-direction: column;
+    align-items: center;
 }
+    
+
 .mainhome .imageng img{
     
     justify-content: center;
     width: 90%    ;
     height: 40vw;
 }
+.bolitas li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c3c3c3;
+    margin-top: 60px;
+    cursor: pointer;
+}
+.bolitas .seleccion{
+    background-color: black;
+    border:solid 2px var(--azul) ;
+    width: 17px;
+    height: 17px;
+}
 
 /*menu de animales*/
-.mainhome .menuanimal{
+.home .mainhome .menuanimal{
     padding-top: 10%;
     display: flex;
     justify-content: space-evenly;
     background-color: #dfe0ffa8;
 
 }
-.mainhome .menuanimal a img{
+.home .mainhome .menuanimal a img{
     width: 23vw;
     height: 23vw;
     border-radius: 100%;
 }
-.mainhome .menuanimal .extramenuanimal{
+.home .mainhome .menuanimal .extramenuanimal{
     display: none;
 }
 /*contenido de venta*/
 
 /*1-seleccion de oferta y novedad*/
-.homeventa .menuseleccion{
+.home .homeventa .menuseleccion{
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly;
     margin-top: 5%;
 }
-.homeventa .menuseleccion .seleccionado{
-    color:blue;
-    border-bottom: 2px solid blue;
+.home .homeventa .menuseleccion .seleccionado{
+    color:var(--azul);
+    border-bottom: 2px solid var(--azul);
 }
 
 /* 2-productos*/
-.homeventa .homearticulos article{
+.home .homeventa .homearticulos article{
     height: 95%;
     margin: 1%;
     width: 80vw;
-    background-color: beige;
+    border: 1px solid var(--azul);
+    background-color: white;
+
+
 }
-.homearticulos{
+.home .homearticulos{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1%;
-    height: 100vw;
+    height: 450px;
     
-    
-   
 }
-.productohometablet{
+.home .productohometablet{
     display: none;
 }
-.productohomedestock{
+.home .productohomedestock{
     display: none;;
 }
 
 
-article .imgproducto{
+.home article .imgproducto{
     display: flex;
     justify-content: center;
     height: 60%;
     padding: 3%;
     margin-bottom: 5%;
+    
 
 
 }
-.homeventa .homearticulos .imgproducto img{
+.home .homeventa .homearticulos .imgproducto img{
     box-shadow: -2px 4px 29px 0px rgb(156, 155, 156);
     width: 210px;
     
 }
-.homearticulos article .descripcion{
+.home .homearticulos article .descripcion{
     
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
-article div button{
-    width: 90%;
-    background-color: gray;
-    color: aliceblue;
+.home article div button{
+    width: 85%;
+    background-color: var(--azul);
+    color: white;
     border: 0;
-    height: 40px;
+    height: 50px;
     margin-top: 5%;
+
+    
 }
-.homeventa .homearticulos .moverflecha{
+
+.home article div button i{
+    margin: 5px;
+    font-size: 20px;
+
+}
+
+.home .homeventa .homearticulos .moverflecha{
 
     display: none;
 }
+.home article .descripcion .nombreproduc{
+    color: grey;
+    
+    text-align: center;
+}
+.home article .descripcion .precioproduc{
+    font-size: 2em;
+}
 
 /*seleccion por marca*/
-.mainhome h3{
+.home .mainhome h3{
     margin: 7%;
 }
-.marcas article{
+.home .marcas{
+    background-color: #dfe0ffa8;
+    border-top: var(--azul) solid 1px;
+    
+}
+.home .marcas article{
     margin: 2%;
     display: flex;
     justify-content: center;
 }
-.marcas article div{
+.home .marcas article div{
     margin: 3%;
     height: 15vw;
 }
-.marcas article div img{
+.home .marcas article div img{
    
     height: 100%;
     width: 100%;
     
 }
-.marcas .imgproducto{
+.home .marcas .imgproducto{
     padding: 0%;
 }
 
 /*vista tablet*/
 @media(min-width:441px) {
 
-    .mainhome .menuanimal .extramenuanimal{
+    .home .mainhome .menuanimal .extramenuanimal{
         display: block;
     }
-    
-    .productohometablet{
+    .home .homeventa .homearticulos .imgproducto img{
+        
+        width: 190px;
+        
+    }
+    .home .productohometablet{
         display: block;
     }
 
-    .homearticulos{
+    .home .homearticulos{
         justify-content: center;
-        height: 65vh;
+        height: 450px;
     }
-    .homeventa .homearticulos article{
-        height: 75%;
+    .home .homeventa .homearticulos article{
+        height: 85%;
     }
-    .homeventa .homearticulos .moverflecha{
+    .home .homeventa .homearticulos .moverflecha{
         align-items: center;
         display: flex;   
     }
-    .homeventa .homearticulos .moverflecha img{
+    .home .homeventa .homearticulos .moverflecha img{
         width: 20px;
         height: 100px;
         
@@ -170,46 +214,40 @@ article div button{
 
 
 @media(min-width:769px) {
-    .productohomedestock{
+    .home .productohomedestock{
         display: block;
     }
-    .mainhome .menuanimal a img{
+    .home .mainhome .menuanimal a img{
         width: 10vw;
         height: 10vw;
         border-radius: 100%;
     }
-    .mainhome .menuanimal{
+    .home .mainhome .menuanimal{
         padding: 3% 10%;
     
     }
-    .mainhome .imageng img{
+    .home .mainhome .imageng img{
         height: 50vh;
     }
-    article .descripcion .precioproduc{
+    .home article .descripcion .precioproduc{
         font-size: 2em;
     }
-    .homeventa .menuseleccion{
+    .home .homeventa .menuseleccion{
        
         margin: 5% 13%;
         font-size: 1.5em;
     }
-    .homeventa .homearticulos article{
-        height: 380px;
-
+    
+    .home .homeventa .homearticulos{
+        width: 90vw;
+        margin: auto;
     }
-    article .imgproducto{
+    
+    .home article div button{
+        width: 80%;
         
     }
-    article .descripcion .nombreproduc{
-        color: grey;
-        
-        text-align: center;
-    }
-    article div button{
-        width: 60%;
-        
-    }
-    .mainhome .imageng img {
+    .home .mainhome .imageng img {
         justify-content: center;
         width: 70%;
         height: 25vw;
