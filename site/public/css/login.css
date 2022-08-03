@@ -1,0 +1,120 @@
+.login {
+    background-color: #DCFFFF;
+}
+
+.login .todo {
+    font-family: var(--tipografia-principal);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login .inicio-de-sesion {
+    width: 75%;
+}
+
+.login .sector-email h3 {
+    font-size: 1rem;
+    margin-bottom: -2%;
+}
+
+.login .type-user {
+    font-family: var(--tipografia-principal);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 20px;
+    width: 100%;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+    margin-block: 3%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.login .sector-pass h3 {
+    margin-bottom: -2%;
+    font-size: 1rem;
+}
+
+.login .type-pass {
+    font-family: var(--tipografia-principal);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 20px;
+    width: 100%;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+    margin-block: 3%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.login .linkeados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login .lost-pass {
+    font-size: 75%;
+}
+
+.login .init {
+    background-color: #187499;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+    margin-bottom: -1%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+.login .create-user {
+    font-size: 80%;
+}
+
+
+/*Media queries*/
+/*Movil*/
+@media (max-width: 767.98px) {
+    .login .inicio-de-sesion {
+        width: 75%;
+    }
+
+    .login .init {
+        width: 60%;
+        margin-inline: 20%;
+    }
+}
+
+/*Fin Movil*/
+
+/*Tablet*/
+@media (min-width: 767.99px) and (max-width: 1023.98px) {
+    .login .inicio-de-sesion {
+        width: 60%;
+    }
+
+    .login .init {
+        width: 60%;
+        margin-inline: 20%;
+    }
+}
+
+/*Fin Tablet*/
+
+/*Escritorio*/
+@media (min-width: 1024px) {
+    .login .inicio-de-sesion {
+        width: 50%;
+    }
+
+    .login .init {
+        width: 50%;
+        margin-inline: 25%;
+    }
+}
+
+/*Fin escritorio*/
