@@ -1,9 +1,11 @@
 :root{
     --tipografia-principal: 'Roboto', sans-serif;
     --titulo: 'Titan One', cursive;
-    --verde: #04BF9D;
-    --azul:#187498;
-    --rojo:#df644f;
-    --celeste:#dcffff;
-
+/*COLORES DEL CARRITO*/
+    --Color-HeaderYFooter: #e6e6e6;
+    --Color-Letras: #1a1a1a;
+    --Color-Producto: #d5d5d5;
+    --Color-Numeros: #ededed;
+    --Color-Total: #e4e4e4;
+    --Color-Botones: #808080;
 }
