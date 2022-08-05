@@ -5,18 +5,189 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de Compras</title>
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/0e7957413b.js" crossorigin="anonymous"></script>
-
+    <!-- Css -->
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="carrito"> 
-    <header></header>
+<body class="carrito">
+    <header>
+        <div class="top">
+
+            <section class="logo">
+                <a href="/">
+                    <img src="/img/logo.png" alt="">
+                </a>
+            </section>
+
+           
+            <section class="user">
+                <a href="login"><i class="far fa-user"></i></a>
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+            
+            </section>
+
+            <section class="burger">
+                <input type="checkbox" name="burger" id="burger">
+                <label for="burger"><i class="fas fa-bars"></i> </i></label>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">informacion</a></li>
+                        <li><a href="">¿Quienes somos?</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
     <main>
-        <h1>carrito</h1>
+        <section class="producto-y-resumen">
+            <!-- Sector Producto-->
+
+            <article>
+                <!-- Producto -->
+                <article class="producto">
+                    <div class="imagenes" style="height: 170px; width: auto;">
+                        <img src="/images/Products/whiskas 1kg.jpg" alt="Whiskas 1kg"
+                            style="width: 130px; height: 170px;">
+                    </div>
+                    <div class="nombre">
+                        <h3>Whiskas adulto 1kg</h3>
+                    </div>
+                    <div class="detail">
+                        <div class="precio-descuento">
+                            <p class="precio-secundario"
+                                style="font-size: 24px;color: grey;display: flex;text-decoration: line-through;margin-right: 10px;justify-content: center;">
+                                $1800</p>
+                            <span style="font-size: 24px; color:green; display: inline-block;">50%</span>
+                            <span class="precio-principal"
+                                style="font-size: 1.5rem;color:#1a1a1a; width: 100%;">$900</span>
+                        </div>
+                        <div class="añadir-elementos">
+                            <div class="restar">-</div>
+                            <input type="number" value="1">
+                            <div class="agregar">+</div>
+                        </div>
+                    </div>
+                    <button style="height: 25px; height: 25px;"><i class="fas fa-times"></i></button>
+                </article>
+                <!-- Producto -->
+                <article class="producto">
+                    <div class="imagenes" style="height: 170px;width: auto;">
+                        <img src="/images/Products/Royal canin Sterilised37.jpg" alt="RC Sterilised37 1kg"
+                        style="width: 130px; height: 170px;">
+                    </div>
+                    <div class="nombre">
+                        <h3>RC Sterilised37 1kg</h3>
+                    </div>
+                    <div class="detail">
+                        <div class="precio-descuento">
+                            <p class="precio-secundario"
+                                style="font-size: 24px;color: grey;display: flex;text-decoration: line-through;margin-right: 10px;justify-content: center;">
+                                $1320</p>
+                            <span style="font-size: 24px; color:green; display: inline-block;">25%</span>
+                            <span class="precio-principal"
+                                style="font-size: 1.5rem;color:#1a1a1a; width: 100%;">$1.056</span>
+                        </div>
+                        <div class="añadir-elementos">
+                            <div class="restar">-</div>
+                            <input type="number" value="1">
+                            <div class="agregar">+</div>
+                        </div>
+                    </div>
+                    <button style="height: 25px; height: 25px;"><i class="fas fa-times"></i></button>
+                </article>
+                <!-- Producto -->
+                <article class="producto">
+                    <div class="imagenes" style="height: 170px;width: auto;">
+                        <img src="/images/Products/whiskas 1kg.jpg" alt="Whiskas 1kg"
+                            style="width: 130px; height: 170px;">
+                    </div>
+                    <div class="nombre">
+                        <h3>Whiskas adulto 1kg</h3>
+                    </div>
+                    <div class="detail">
+                        <div class="precio-descuento">
+                            <p class="precio-secundario"
+                                style="font-size: 24px;color: grey;display: flex;text-decoration: line-through;margin-right: 10px;justify-content: center;">
+                                $1800</p>
+                            <span style="font-size: 24px; color:green; display: inline-block;">50%</span>
+                            <span class="precio-principal"
+                                style="font-size: 1.5rem;color:#1a1a1a; width: 100%;">$900</span>
+                        </div>
+                        <div class="añadir-elementos">
+                            <div class="restar">-</div>
+                            <input type="number" value="1">
+                            <div class="agregar">+</div>
+                        </div>
+                    </div>
+                    <button style="height: 25px; height: 25px;"><i class="fas fa-times"></i></button>
+                </article>
+            </article>
+            <!-- Sector resumen-->
+            <article class="resumen">
+                <div class="resume">
+                    <form action="" method="post" id="checkout">
+                        <p><span>Subtotal</span> <span>$4.920</span></p>
+                        <hr>
+                        <p><span>Ahorro total</span> <span>-$2.064</span></p>
+                        <hr>
+                        <p><span>Calcula tu Envio</span>
+                        <div class="postal">
+                            <label for="envio">Codigo postal</label>
+                            <input type="number" name="envio" id="envio" placeholder="Ejemplo: 8318">
+                        </div>
+                        <hr>
+                        <p><span>Precio Final</span> <span>$2.856</span></p>
+                        <br />
+                        <a href="#" onclick="document.getElementById('checkout').submit()"><i
+                                class="fa fa-shopping-cart"></i>Realizar Pedido</a>
+                    </form>
+                </div>
+            </article>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="bottom">
+            <section class="cat">
+                <h4>categorias</h4>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">informacion</a></li>
+                        <li><a href="">¿Quienes somos?</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <div class="columna">
+                <section class="cont">
+                    <h4>contactanos</h4>
+                    <nav>
+                        <ul class="red">
+                            <li><a href="www.whatsapp.com"><i class="fab fa-whatsapp-square"></i></a><p>+54(299)668-1457</p></li>
+                            <li><a href="www.instagram.com"><i class="fab fa-instagram-square"></i></a><p>@loving-paws</p></li>
+                            <li><a href="www.facebook.com"><i class="fa-brands fa-facebook-square"></i></a><p>Loving Paws</p></li>
+                            <li><a href="4969468"><i class="fas fa-phone"></i></a><p>telefono fijo</p></li>
+                            <li><a href="https://goo.gl/maps/vYdhbricnJvRKqKV7"><i class="fas fa-map-marker-alt"></i></a><p>perito moreno 280</p></li>
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="ubi">
+                    <h4>Encontranos</h4>
+                    <iframe class="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.5903535595025!2d-58.4185726!3d-34.5892305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb1263f060af%3A0x4239fc96b758980d!2sPalermo%20Pet%20Store!5e0!3m2!1ses!2sar!4v1658757514699!5m2!1ses!2sar"
+                    width="60%" height="60%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </div>      
+        </div>  
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,202 @@
+/*Fuente y Fondo*/
+.carrito {
+    background-color: #DCFFFF;
+    font-family: var(--tipografia-principal);
+}
+
+/*Sector de productos y Resumen*/
+.carrito .producto-y-resumen {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+
+/*Sector Productos*/
+.carrito article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.carrito .producto-y-resumen .producto .imagenes {
+    width: 400px;
+}
+
+.carrito .añadir-elementos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.carrito .detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carrito .añadir-elementos .agregar {
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin: 0px 3px;
+    border-radius: 5px;
+}
+
+.carrito .añadir-elementos input {
+    width: 25px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.carrito .añadir-elementos .restar {
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin: 0px 3px;
+    border-radius: 5px;
+}
+
+.carrito section article h3 {
+    text-decoration-style: var(--tipografia-principal);
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.carrito section .prod-rec h3 {
+    text-decoration-style: var(--tipografia-principal);
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.carrito section .producto {
+    background-color: var(--Color-Producto);
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--Color-HeaderYFooter);
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.carrito section article .imagenes img {
+    width: 33%;
+}
+
+.carrito section article .imagenes {
+    width: 30%;
+}
+
+
+/*Sector Resumen*/
+.resume {
+    flex: 25%;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all .6s ease;
+}
+
+.resume:hover {
+    border: none;
+    transform: scale(1.01);
+}
+
+.resume hr {
+    margin-bottom: 25px;
+}
+
+.resume p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.resume .button {
+    background-color: #76bfb6;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+}
+
+.resume .button:hover {
+    background-color: #3972a7;
+}
+
+.resume a {
+    background-color: #76bfb6;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 900;
+}
+
+.resume i {
+    margin-right: 15px;
+}
+
+.resume a:hover {
+    background-color: #3972a7;
+}
+
+/*Sector de recomendados*/
+.carrito section .prod-rec {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--Color-Producto);
+    margin: 0 auto;
+    width: 20%;
+    border: 1px solid var(--Color-HeaderYFooter);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 20px
+}
+
+/*Tablet*/
+@media (min-width: 767.99px) and (max-width: 1023px) {
+    .carrito .producto-y-resumen {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/*Fin Tablet*/
+
+/*Escritorio*/
+@media (min-width: 1024px) {
+    .carrito .producto-y-resumen {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+/*Fin escritorio*/

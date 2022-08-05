@@ -1,0 +1,243 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h4{
+    font-family: var(--titulo);
+}
+
+footer{
+    position: relative;
+    margin-top:auto;
+    width: 100%;
+    background-color: var(--verde);
+    font-family: var(--tipografia-principal);
+    bottom: 0;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer .bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer  ul li{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    padding-bottom: 2%;
+}
+
+footer .cont ul{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer .cat{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .ubi{
+    display: none;
+}
+
+footer .cont .red p{
+    display: none;
+}
+
+@media (min-width:426px){
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    footer{
+        position: relative;
+        margin-top: auto;
+        width: 100%;
+        background-color: var(--verde);
+        font-family: var(--tipografia-principal);
+        bottom: 0;
+    }
+
+    footer .bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    } 
+    
+    footer  ul li{
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        padding-bottom: 5%;
+    }
+
+    footer .cat ul li{
+        padding-bottom: 20%;
+    }
+    
+    footer ul a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+    footer .cont ul{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer .cat{
+        height:40%
+    }
+  
+    h4{
+        font-family: 'Titan One', cursive;
+    }
+
+    footer .columna{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer .ubi h4{
+        display: none;
+    }
+
+    footer .ubi{
+        display: flex;
+    }
+
+    footer .ubi .mapa{
+        display: flex;
+        position:relative;
+        width: auto;
+        height: auto;
+    }
+    
+    footer .cont .red p{
+        display: none;
+    }
+
+    footer nav{
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 1024px){
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    footer{
+        position: relative;
+        margin-top: auto;
+        width: 100%;
+        background-color: var(--verde);
+        font-family: var(--tipografia-principal);
+        bottom: 0;
+    }
+    
+    footer .bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin:0;
+    }
+    
+    footer  ul li{
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        padding-bottom: 15%;
+    }
+    
+    footer p{
+        font-size: 15px;
+    }
+    footer ul a{
+        text-decoration: none;
+    }
+    
+    footer .cont ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .cat{
+        height:100%
+    }
+    
+    footer .cont nav{
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+
+    footer ul .red{
+        margin: 0;
+        padding: 0;
+        width: 50%;
+        
+    }
+
+    footer ul .red p{
+        margin: 0;
+    }
+
+    footer ul .red i{
+        margin: 0;
+    }
+    
+    h4{
+        font-family: var(--titulo)
+    }
+
+    footer .ubi{
+        display:flex;
+        flex-direction: column;
+    }
+
+    footer .ubi .mapa{
+        width: 80%;
+        height: 80%;
+    }
+
+    footer .ubi h4{
+        display:flex;
+        flex-direction: column;
+    }
+
+    footer .cont .red p{
+        display:flex;
+        flex-direction: column;
+    }
+
+    footer .cont .red{
+        display: flex; 
+    }
+
+    footer .columna{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 60%;
+    }
+}
