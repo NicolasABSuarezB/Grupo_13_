@@ -1,5 +1,5 @@
 .register{
-    background-color: var(--celeste);
+    background-color: var(--fondo);
 }
 .register main{/* todo el cuerpo */
     background-color: var(--celeste);
@@ -39,7 +39,6 @@
     padding: 20px;
     border: none; 
     box-shadow: 5px 5px 19px 0px #187498ba;
-    border-radius: 15px;
 }
 .register main .buttons{
     display: flex;
@@ -49,10 +48,9 @@
 .register main button{/* botones  */
     padding: 15px;
     background-color: var(--azul);
-    color: black;
+    color: white;
     font-weight: 600;
     border: none;
-    border-radius: 10px;
     font-size: 20px;
     width: 170px;
     display: flex;
