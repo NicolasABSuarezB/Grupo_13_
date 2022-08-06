@@ -49,6 +49,9 @@ Facilitar y centralizar todos los productos relacionados al rubro para que los a
 - Instalar [Express](https://expressjs.com/es/)
    
   `npm install express`
-  
-  ## Trello
-  https://trello.com/b/QRMYbhx8/proyectointegradorg13
+---
+## Trello
+https://trello.com/b/QRMYbhx8/proyectointegradorg13
+---
+## Retro.md
+https://github.com/NicolasABSuarezB/Grupo_13_Loving-Paws/blob/main/retro.md
