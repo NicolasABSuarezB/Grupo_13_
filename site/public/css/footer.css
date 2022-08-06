@@ -6,6 +6,7 @@ body{
 
 h4{
     font-family: var(--titulo);
+    padding-bottom: 1%;
 }
 
 footer{
@@ -54,6 +55,12 @@ footer .ubi{
 footer .cont .red p{
     display: none;
 }
+footer a{
+    font-size: 20px;
+}
+footer i{
+    font-size: 25px;
+}
 
 @media (min-width:426px){
     body{
@@ -81,16 +88,16 @@ footer .cont .red p{
         list-style: none;
         display: flex;
         justify-content: left;
-        padding-bottom: 5%;
+        padding-bottom: 5%;;
     }
 
     footer .cat ul li{
-        padding-bottom: 20%;
+        padding-bottom: 15%;
     }
     
     footer ul a{
         text-decoration: none;
-        font-size: 15px;
+        font-size: 20px;
     }
     
     footer .cont ul{
@@ -106,8 +113,12 @@ footer .cont .red p{
   
     h4{
         font-family: 'Titan One', cursive;
+        padding-bottom: 5%;
     }
 
+    .footer .cat h4{
+        padding-bottom: 10%;
+    }
     footer .columna{
         display: flex;
         flex-direction: column;
@@ -133,9 +144,10 @@ footer .cont .red p{
         display: none;
     }
 
-    footer nav{
-        font-size: 15px;
+    footer .red i{
+        font-size: 25px;
     }
+    
 }
 
 @media(min-width: 1024px){
@@ -169,7 +181,7 @@ footer .cont .red p{
     }
     
     footer p{
-        font-size: 15px;
+        font-size: 20px;
     }
     footer ul a{
         text-decoration: none;
@@ -207,7 +219,8 @@ footer .cont .red p{
     }
     
     h4{
-        font-family: var(--titulo)
+        font-family: var(--titulo);
+        padding-bottom: 10%;
     }
 
     footer .ubi{

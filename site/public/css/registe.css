@@ -58,3 +58,7 @@
     margin: 0 5% 5% 0;
     box-shadow: 5px 5px 19px 0px #187498ba;
 }
+
+.register small{
+    padding-top: 1%;
+}
