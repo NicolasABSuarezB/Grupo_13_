@@ -1,6 +1,6 @@
-sprint 1
+ ## sprint 1
 
-##Empezar a hacer:
+*Empezar a hacer:*
 comentar los problemas que suceden.
 darle importancia al trello.
 
@@ -22,7 +22,7 @@ no responder a los mensajes.
 no conectarse a las reuniones.
 
 
-sprint 2
+*sprint 2*
 
 ##Empezar a hacer:
 darle importancia al trello.
