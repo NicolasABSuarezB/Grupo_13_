@@ -90,7 +90,7 @@ header .user {
 }
 
 
-@media (min-width:426px){
+@media (min-width:720px){
     header{
         position: relative;
         margin-bottom: 20px;
