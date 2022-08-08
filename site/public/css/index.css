@@ -11,7 +11,7 @@
 .mainhome .imageng{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+  
     background-color: #dfe0ffa8;
     flex-direction: column;
     align-items: center;
@@ -114,6 +114,7 @@
 .home .homearticulos article .descripcion{
     
     display: flex;
+    height: 40%;
     flex-direction: column;
     align-items: center;
     
@@ -123,7 +124,7 @@
     background-color: var(--azul);
     color: white;
     border: 0;
-    height: 50px;
+    height: 30%;
     margin-top: 5%;
 
     
@@ -184,7 +185,7 @@
     }
     .home .homeventa .homearticulos .imgproducto img{
         
-        width: 190px;
+        width: 70%;
         
     }
     .home .productohometablet{
@@ -240,6 +241,7 @@
     
     .home .homeventa .homearticulos{
         width: 90vw;
+        height: 45vw;
         margin: auto;
     }
     
