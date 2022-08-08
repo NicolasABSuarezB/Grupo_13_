@@ -1,6 +1,6 @@
 /*Fuente y Fondo*/
 .carrito {
-    background-color: #DCFFFF;
+    background-color: var(--fondo);
     font-family: var(--tipografia-principal);
 }
 
@@ -72,29 +72,28 @@
 
 .carrito section article h3 {
     text-decoration-style: var(--tipografia-principal);
-    width: 100%;
-    font-size: 1.5rem;
+    width: min-content;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
 .carrito section .prod-rec h3 {
     text-decoration-style: var(--tipografia-principal);
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
 .carrito section .producto {
-    background-color: var(--Color-Producto);
+    background-color: white;
     display: flex;
-    width: 100%;
-    border-radius: 20px;
-    border: 1px solid var(--Color-HeaderYFooter);
+    width: 90%;
     margin-bottom: 20px;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .carrito section article .imagenes img {
@@ -105,16 +104,23 @@
     width: 30%;
 }
 
-
+.carrito .producto .borrar{
+   margin-bottom: auto;
+}
+.carrito .producto .precio-descuento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*Sector Resumen*/
 .resume {
     flex: 25%;
-    margin-left: 20px;
     padding: 20px;
     border-radius: 5px;
     background: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all .6s ease;
+    width: 90%;
 }
 
 .resume:hover {
@@ -145,11 +151,11 @@
 }
 
 .resume .button:hover {
-    background-color: #3972a7;
+    background-color: var(--azul);
 }
 
 .resume a {
-    background-color: #76bfb6;
+    background-color: var(--azul);
     color: #fff;
     text-decoration: none;
     display: block;
@@ -164,21 +170,19 @@
 }
 
 .resume a:hover {
-    background-color: #3972a7;
+    background-color: var(--verde);
 }
 
-/*Sector de recomendados*/
-.carrito section .prod-rec {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--Color-Producto);
-    margin: 0 auto;
-    width: 20%;
-    border: 1px solid var(--Color-HeaderYFooter);
-    border-radius: 20px;
-    position: relative;
-    margin-bottom: 20px
+/*Movil*/
+@media (max-width: 767.99px) {
+    .carrito .producto-y-resumen {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
+
+/*Fin Movil*/
 
 /*Tablet*/
 @media (min-width: 767.99px) and (max-width: 1023px) {

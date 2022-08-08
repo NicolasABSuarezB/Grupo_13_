@@ -10,12 +10,17 @@
     align-items: center;
 }
 
+.login .todo .titulo{
+    font-family: var(--titulo);
+    font-weight: 300;
+}
+
 .login .inicio-de-sesion {
     width: 75%;
 }
 
 .login .sector-email h3 {
-    font-size: 1rem;
+    font-size: large;
     margin-bottom: -2%;
 }
 
@@ -28,12 +33,18 @@
     width: 100%;
     box-shadow: 5px 5px 19px 0px #187498ba;
     margin-block: 3%;
-    padding: 5px;
+    padding: 20px;
+    border: none;
+}
+.login main small{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--rojo);
 }
 
 .login .sector-pass h3 {
+    font-size: large;
     margin-bottom: -2%;
-    font-size: 1rem;
 }
 
 .login .type-pass {
@@ -45,7 +56,8 @@
     width: 100%;
     box-shadow: 5px 5px 19px 0px #187498ba;
     margin-block: 3%;
-    padding: 5px;
+    padding: 20px;
+    border: none;
 }
 
 .login .linkeados {
@@ -60,13 +72,15 @@
 }
 
 .login .init {
-    background-color: #187499;
+    background-color: var(--azul);
     padding: 5px;
     box-sizing: border-box;
     box-shadow: 5px 5px 19px 0px #187498ba;
     margin-bottom: -1%;
     margin-top: 5%;
     color: white;
+    border: none;
+
 }
 
 .login .create-user {
