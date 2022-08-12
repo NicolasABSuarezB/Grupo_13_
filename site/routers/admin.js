@@ -5,6 +5,6 @@ let{edit,create,lista}=require('../controllers/adminControllers');
 
 router.get('/editar',edit)
 router.get('/crear',create)
-router.get('/listar',lista)
+router.get('/lista',lista)
 
 module.exports= router;
