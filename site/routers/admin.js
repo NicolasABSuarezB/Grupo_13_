@@ -1,10 +1,10 @@
 const express= require('express');
 const router= express.Router();
 
-let{edit,create,listar}=require('../controllers/adminControllers');
+let{edit,create,lista}=require('../controllers/adminControllers');
 
 router.get('/editar',edit)
 router.get('/crear',create)
-router.get('/listar',listar)
+router.get('/listar',lista)
 
 module.exports= router;

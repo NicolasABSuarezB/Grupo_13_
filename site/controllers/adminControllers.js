@@ -1,11 +1,12 @@
 module.exports={
     edit: (req,res)=>{
-        return res.render('edit')
+        return res.render('editarProducto')
     },
     create: (req,res)=>{
-        return res.render('crear')
+        return res.render('crearProducto')
     },
-    listar: (req,res)=>{
-        return res.render('listar')
+    lista
+    : (req,res)=>{
+        return res.render('listaProducto')
     }
 }
