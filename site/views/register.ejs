@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body class="register"> 
+    
+    <%- include('./partials/header') %>
+    <main>
+        <h1>regístrese en Loving Paws y acceda a los mejores descuentos </h1>
+        <form action="" method="post">
+            <section class="container bottom">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
+                <small>Debe ingresar su nombre</small>
+            </section>
+            <section class="container bottom">
+                <label for="email">Email</label>
+                <input type="text" name="email" ld="email" placeholder="Ingrese su email">
+                <small>Debe ingresar su email</small>
+            </section>
+            <section class="container bottom">
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su número de telefono">
+                <small>Debe ingresar su número de telefono</small>
+            </section>
+            <section class="container bottom">
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña">
+                <small>Debe ingresar una contraseña</small>
+            </section>
+            <section class="container bottom">
+                <label for="pass2">Confirme su contraseña</label>
+                <input type="password" name="pass2" id="pass2" placeholder="Confirme su contraseña">
+                <small>Las contraseñas no coinciden</small>
+            </section>
+
+            <section class="buttons">
+                <button type="submit">Registrarme</button>
+                <button type="reset">Cancelar</button>
+            </section>
+            
+
+            <a href="/login">¿Ya esta registrado? Inicie sesion</a>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %>
+    
+</body>
+
+</html>
