@@ -16,9 +16,9 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/',indexrouters)
-app.use('/usuario',usersrouters)
-app.use('/productos',productsrouters)
-app.use('/admin',adminrouters)
+app.use('/',usersrouters)
+app.use('/',productsrouters)
+app.use('/',adminrouters)
 
 
 

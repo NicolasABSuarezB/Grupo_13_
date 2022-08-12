@@ -3,6 +3,6 @@ module.exports={
         return res.render('login')
     },
     register: (req,res)=>{
-        return res.render('resister')
+        return res.render('register')
     }
 }
