@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "comida perros  ",
+        "precio": 1900,
+        "descuento": 19,
+        "stock": 20,
+        "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
+        "categorias": "perros",
+        "imagenes": [
+            "menuperro.jfif"
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "comida de gatos",
+        "precio": 1999,
+        "descuento": 20,
+        "stock": 20,
+        "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
+        "categorias": "gatos",
+        "imagenes": [
+            "menuperro.jfif"
+        ]
+    }
+]
