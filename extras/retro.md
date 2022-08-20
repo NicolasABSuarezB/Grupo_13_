@@ -47,5 +47,28 @@ no responder a los mensajes.
 
 
 
+## sprint 3
+
+**Empezar a hacer:**
+terminar un dia antes de la fecha limite para poder revisar errores.
+
+**hacer mas:**
+darle mas importancia a la fecha limite.
+comentar los problemas que suceden.
+darle importancia al trello.
+
+**seguir haciendo:**
+llegar a un acuerdo respetando las opiniones del resto.
+todos aportan ideas.
+enviar/hacer las dailys.
+
+**hacer menos:**
+distraerse.
+no consultar las dudas en el grupo.
+
+**dejar de hacer:**
+no responder a los mensajes.
+
+
 
 
