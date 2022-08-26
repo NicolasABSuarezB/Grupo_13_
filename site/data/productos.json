@@ -22,5 +22,191 @@
         "imagenes": [
             "menuperro.jfif"
         ]
-    }
-]
+    },{
+    "id": 1,
+  "titulo": "Lorena",
+  "precio": 9761,
+  "stock": 2608,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gato",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 2,
+  "titulo": "Robin",
+  "precio": 3750,
+  "stock": 6311,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 3,
+  "titulo": "Modesta",
+  "precio": 9780,
+  "stock": 4570,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gato",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 4,
+  "titulo": "Peg",
+  "precio": 4370,
+  "stock": 7495,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 5,
+  "titulo": "Stefan",
+  "precio": 2788,
+  "stock": 6532,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "pez",
+  "imagenes": [ "juguete.jfif" ]
+}, {
+  "id": 6,
+  "titulo": "Bradney",
+  "precio": 2842,
+  "stock": 9545,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 7,
+  "titulo": "Rosaline",
+  "precio": 2944,
+  "stock": 6760,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 8,
+  "titulo": "Thorin",
+  "precio": 3385,
+  "stock": 4030,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "ave",
+  "imagenes": [ "correa.jfif" ]
+}, {
+  "id": 9,
+  "titulo": "Ashley",
+  "precio": 7507,
+  "stock": 5654,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "perro",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 10,
+  "titulo": "Eunice",
+  "precio": 2434,
+  "stock": 5428,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "ave",
+  "imagenes": [ "correa.jfif" ]
+}, {
+  "id": 11,
+  "titulo": "Fredric",
+  "precio": 1398,
+  "stock": 8896,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gato",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 12,
+  "titulo": "Newton",
+  "precio": 9583,
+  "stock": 8064,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "ave",
+  "imagenes": [ "juguete.jfif" ]
+}, {
+  "id": 13,
+  "titulo": "Josee",
+  "precio": 6679,
+  "stock": 7802,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "ave",
+  "imagenes": [ "juguete.jfif" ]
+}, {
+  "id": 14,
+  "titulo": "Zedekiah",
+  "precio": 6774,
+  "stock": 8253,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "pez",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 15,
+  "titulo": "Karel",
+  "precio": 9953,
+  "stock": 6536,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes":[ "comida perro.web"]
+}, {
+  "id": 16,
+  "titulo": "Christophe",
+  "precio": 5287,
+  "stock": 2443,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gato",
+  "imagenes": [ "juguete.jfif" ]
+}, {
+  "id": 17,
+  "titulo": "Iormina",
+  "precio": 3772,
+  "stock": 8389,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "perro",
+  "imagenes": [" correa.jfif" ]
+}, {
+  "id": 18,
+  "titulo": "Allx",
+  "precio": 6846,
+  "stock": 2080,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "ave",
+  "imagenes": [ "correa.jfif" ]
+}, {
+  "id": 19,
+  "titulo": "Amelita",
+  "precio": 1338,
+  "stock": 5599,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 20,
+  "titulo": "Ada",
+  "precio": 1969,
+  "stock": 7508,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": [" correa.jfif "]
+}, {
+  "id": 21,
+  "titulo": "Adrian",
+  "precio": 901,
+  "stock": 287,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "pez",
+  "imagenes": [" correa.jfif" ]
+}, {
+  "id": 22,
+  "titulo": "Miranda",
+  "precio": 3309,
+  "stock": 367,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "perro",
+  "imagenes": ["comida perro.web"]
+}, {
+  "id": 23,
+  "titulo": "Kasey",
+  "precio": 7471,
+  "stock": 9500,
+  "descripcion": "esto es una descripción genérica",
+  "categorias": "gatp",
+  "imagenes": [" juguete.jfif "]
+}]
+
+
+    
