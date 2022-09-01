@@ -1,212 +1,192 @@
 [
-    {
-        "id": 1,
-        "titulo": "comida perros  ",
-        "precio": 1900,
-        "descuento": 19,
-        "stock": 20,
-        "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
-        "categorias": "perros",
-        "imagenes": [
-            "menuperro.jfif"
-        ]
-    },
-    {
-        "id": 2,
-        "titulo": "comida de gatos",
-        "precio": 1999,
-        "descuento": 20,
-        "stock": 20,
-        "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
-        "categorias": "gatos",
-        "imagenes": [
-            "menuperro.jfif"
-        ]
-    },{
+  {
     "id": 1,
-  "titulo": "Lorena",
-  "precio": 9761,
-  "stock": 2608,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gato",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 2,
-  "titulo": "Robin",
-  "precio": 3750,
-  "stock": 6311,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 3,
-  "titulo": "Modesta",
-  "precio": 9780,
-  "stock": 4570,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gato",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 4,
-  "titulo": "Peg",
-  "precio": 4370,
-  "stock": 7495,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 5,
-  "titulo": "Stefan",
-  "precio": 2788,
-  "stock": 6532,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "pez",
-  "imagenes": [ "juguete.jfif" ]
-}, {
-  "id": 6,
-  "titulo": "Bradney",
-  "precio": 2842,
-  "stock": 9545,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 7,
-  "titulo": "Rosaline",
-  "precio": 2944,
-  "stock": 6760,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 8,
-  "titulo": "Thorin",
-  "precio": 3385,
-  "stock": 4030,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "ave",
-  "imagenes": [ "correa.jfif" ]
-}, {
-  "id": 9,
-  "titulo": "Ashley",
-  "precio": 7507,
-  "stock": 5654,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "perro",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 10,
-  "titulo": "Eunice",
-  "precio": 2434,
-  "stock": 5428,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "ave",
-  "imagenes": [ "correa.jfif" ]
-}, {
-  "id": 11,
-  "titulo": "Fredric",
-  "precio": 1398,
-  "stock": 8896,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gato",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 12,
-  "titulo": "Newton",
-  "precio": 9583,
-  "stock": 8064,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "ave",
-  "imagenes": [ "juguete.jfif" ]
-}, {
-  "id": 13,
-  "titulo": "Josee",
-  "precio": 6679,
-  "stock": 7802,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "ave",
-  "imagenes": [ "juguete.jfif" ]
-}, {
-  "id": 14,
-  "titulo": "Zedekiah",
-  "precio": 6774,
-  "stock": 8253,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "pez",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 15,
-  "titulo": "Karel",
-  "precio": 9953,
-  "stock": 6536,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes":[ "comida perro.web"]
-}, {
-  "id": 16,
-  "titulo": "Christophe",
-  "precio": 5287,
-  "stock": 2443,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gato",
-  "imagenes": [ "juguete.jfif" ]
-}, {
-  "id": 17,
-  "titulo": "Iormina",
-  "precio": 3772,
-  "stock": 8389,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "perro",
-  "imagenes": [" correa.jfif" ]
-}, {
-  "id": 18,
-  "titulo": "Allx",
-  "precio": 6846,
-  "stock": 2080,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "ave",
-  "imagenes": [ "correa.jfif" ]
-}, {
-  "id": 19,
-  "titulo": "Amelita",
-  "precio": 1338,
-  "stock": 5599,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 20,
-  "titulo": "Ada",
-  "precio": 1969,
-  "stock": 7508,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": [" correa.jfif "]
-}, {
-  "id": 21,
-  "titulo": "Adrian",
-  "precio": 901,
-  "stock": 287,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "pez",
-  "imagenes": [" correa.jfif" ]
-}, {
-  "id": 22,
-  "titulo": "Miranda",
-  "precio": 3309,
-  "stock": 367,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "perro",
-  "imagenes": ["comida perro.web"]
-}, {
-  "id": 23,
-  "titulo": "Kasey",
-  "precio": 7471,
-  "stock": 9500,
-  "descripcion": "esto es una descripción genérica",
-  "categorias": "gatp",
-  "imagenes": [" juguete.jfif "]
-}]
-
-
-    
+    "titulo": "doguiperros adultos  ",
+    "precio": 1900,
+    "descuento": 19,
+    "stock": 20,
+    "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
+    "categorias": "perros",
+    "imagenes": [
+      "comida perro.webp"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Royal canin Sterili7.",
+    "precio": 1999,
+    "descuento": 20,
+    "stock": 20,
+    "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
+    "categorias": "gatos",
+    "imagenes": [
+      "Royal canin Sterilised37.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "corea",
+    "precio": 9780,
+    "stock": 4570,
+    "descripcion": "correa para gatos sencilla 60cm de largo",
+    "categorias": "gato",
+    "imagenes": [
+      "correa.jfif"
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "balon deporte",
+    "precio": 4370,
+    "stock": 7495,
+    "descripcion": "juguete de balon para perros, resistente para perros adultos",
+    "categorias": "perro",
+    "imagenes": [
+      "balonperro.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "titulo": "jueguete raton",
+    "precio": 2788,
+    "stock": 6532,
+    "descripcion": "jueguete de raton para gatos, largo del hilo de 30 cm ",
+    "categorias": "gato",
+    "imagenes": [
+      "juguete.jfif"
+    ]
+  },
+  {
+    "id": 6,
+    "titulo": "whiskas 1kg",
+    "precio": 2842,
+    "stock": 9545,
+    "descripcion": "bolsa de alimento whiskas de 1kg, para gatos",
+    "categorias": "gato",
+    "imagenes": [
+      "whiskas 1kg.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Raza perros adultos",
+    "precio": 2944,
+    "stock": 6760,
+    "descripcion": "alimento marca RAZA para perros adultos, sabor carne",
+    "categorias": "perro",
+    "imagenes": [
+      "RAZaPERROSADULTOS.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "cama de oso",
+    "precio": 3385,
+    "stock": 4030,
+    "descripcion": "cama de oso, para perros mediados, 60x90 cm",
+    "categorias": "perro",
+    "imagenes": [
+      "camaositoperros.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "titulo": "shampoo alfre dog",
+    "precio": 7507,
+    "stock": 5654,
+    "descripcion": "shampoo alfre dog para perros olor lavanda",
+    "categorias": "perro",
+    "imagenes": [
+      "shampooalfredog.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "titulo": "alimento Rio 20kg",
+    "precio": 2434,
+    "stock": 5428,
+    "descripcion": "alimento para aves RIO de 20 kg sabor girasol",
+    "categorias": "ave",
+    "imagenes": [
+      "-rio-alimento-diario-periquitos-20kg-aves.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "titulo": "correa de aves",
+    "precio": 1398,
+    "stock": 8896,
+    "descripcion": "correa de un metro para ave con arnes incluido",
+    "categorias": "ave",
+    "imagenes": [
+      "arnesave.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "titulo": "jaula Iglesia",
+    "precio": 9583,
+    "stock": 8064,
+    "descripcion": "jaula de 100cm x 100 cm con forma de iglesia",
+    "categorias": "ave",
+    "imagenes": [
+      "jaulaIglesia.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "titulo": "Jaula grande",
+    "precio": 6679,
+    "stock": 7802,
+    "descripcion": "jaula grande de 120 x 120 x 60 cm, para aves grandes o para mayor espacio",
+    "categorias": "ave",
+    "imagenes": [
+      "jaulagrande.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "titulo": "comedero frutas",
+    "precio": 6774,
+    "stock": 8253,
+    "descripcion": "comedor para aves silvestre, ideasl para aves que se alimenten de frutos",
+    "categorias": "ave",
+    "imagenes": [
+      "comederofrutas.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "titulo": "comedero colibri",
+    "precio": 9953,
+    "stock": 6536,
+    "descripcion": "alimentador para colibris, con capacidad de 1lt",
+    "categorias": "gatp",
+    "imagenes": [
+      "comederocolibri.jpg"
+    ]
+  },
+  {
+    "id": 16,
+    "titulo": "alimentador peces",
+    "precio": 5287,
+    "stock": 2443,
+    "descripcion": "alimentador automatico para peceras capacodad de 500gr",
+    "categorias": "gato",
+    "imagenes": [
+      "alimentadorpeces.jpg"
+    ]
+  },
+  {
+    "id": 17,
+    "titulo": "alimento peces nobleza",
+    "precio": 3772,
+    "stock": 8389,
+    "descripcion": "alimento nobleza premiun para peces exoticos de agua dulce",
+    "categorias": "perro",
+    "imagenes": [
+      "alimentonobleza.jpg"
+    ]
+  }
+]
+ 
