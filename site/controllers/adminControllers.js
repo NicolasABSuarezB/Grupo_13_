@@ -16,13 +16,13 @@ module.exports={
 
         let categorias=["gatos","perros","aves","peces"]
 
-        return res.render('admin/editarProducto.ejs',{producto,categorias})
+        return res.render('admin/editarProducto',{producto,categorias})
     },
     create: (req,res)=>{
-        return res.render('admin/crearProducto.ejs',{productos})
+        return res.render('admin/crearProducto',{productos})
     },
     lista: (req,res)=>{
-        return res.render('admin/listaProducto.ejs',{productos})
+        return res.render('admin/listaProducto',{productos})
     }, 
     nuevo: (req,res)=>{
 

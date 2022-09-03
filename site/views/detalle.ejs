@@ -36,12 +36,12 @@
                 <section class="compra">
                     <h4>SELECCIONE CANTIDAD</h4>
                     <div class="cantidad">
-                        <button>+</button>
+                        
+                        <button onclick="disminuir()">-</button>
                         <form action="" method="post">
-                            <input type="text" name="" id="">
-
+                            <input type="number" id="numero" value="1">
                         </form>
-                        <button>-</button>
+                        <button onclick="agregar()">+</button>
                     </div>
                     <button class="confirmar">
                         realizar pedido
@@ -68,6 +68,27 @@
     </main>
 
     <%- include('./partials/footer') %>
+    <script>
+        
+        function agregar(){
+            let pato= +document.getElementById('numero').value;
+            let maximo= +document.getElementById('maximo').value;
+            if (pato== maximo) {
+                document.getElementById('numero').value= maximo;
+            } else {
+                document.getElementById('numero').value= pato+1;
+            }
+            
+        };
+        function disminuir(){
+            let pato= +document.getElementById('numero').value;
+            if (pato !=0) {
+                document.getElementById('numero').value= pato -1;
+            } 
+
+        }
+    </script>
+    
 </body>
 
 </html>
