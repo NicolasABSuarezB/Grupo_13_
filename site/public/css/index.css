@@ -254,5 +254,10 @@
         width: 70%;
         height: 25vw;
     }
+    .homearticulos article:hover {
+        border: none;
+        transform: scale(1.11);
+    }
+    
 
 }

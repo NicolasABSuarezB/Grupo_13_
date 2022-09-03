@@ -26,7 +26,6 @@ app.use('/admin',adminrouters)
 
 
 
-
 app.listen(port,() => console.log(`Se levantó con éxito el servidor en http://localhost:${port}`))
 
 

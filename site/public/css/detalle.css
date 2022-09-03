@@ -206,4 +206,7 @@
     .detalle .detalleproducto .imgextra img{
         margin-bottom: 10%;
     }
+    .contenedorDetalle{
+        width: 50%;
+    }
 }

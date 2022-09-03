@@ -39,9 +39,9 @@
                     <img src="/img/imghome/flecha2.jpg" alt="">
                 </div>
 
-                <% let tipovista=['productohome','productohometablet','productohomedestock'];
+                <% let tipovista=['productohome','productohometablet','productohomedestock',];
                     for (let index = 0; index < 3; ) {%>
-                     <%- include('./partials/productoHome',{vistaProducto:tipovista[index]}) %>
+                     <%- include('./partials/productoHome',{vistaProducto:tipovista[index], imagen:productos[index].imagenes[0], nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
                      <%index++  }%>
                    
                
@@ -58,7 +58,7 @@
                 </div>
                 <%
                     for (let index = 0; index < 3; ) {%>
-                     <%- include('./partials/productoHome',{vistaProducto:tipovista[index]}) %>
+                        <%- include('./partials/productoHome',{ vistaProducto:tipovista[index], imagen:productos[index].imagenes[0], nombre:productos[index].titulo, precio:productos[index].precio , id:productos[index].id}) %>
                      <%index++  }%>
                    
                
