@@ -1,4 +1,4 @@
-# Grupo_13_*Loving Paws* ![logo](./public/img/logo.png)
+# Grupo_13_*Loving Paws* ![logo](./site/public/img/logo.png)
 ---
 ## Descripción
 Es un e-commerce dedicado a la venta de alimentos, accesorios y juguetes para mascotas. 
@@ -49,3 +49,9 @@ Facilitar y centralizar todos los productos relacionados al rubro para que los a
 - Instalar [Express](https://expressjs.com/es/)
    
   `npm install express`
+---
+## Trello
+https://trello.com/b/QRMYbhx8/proyectointegradorg13
+---
+## Retro.md
+https://github.com/NicolasABSuarezB/Grupo_13_Loving-Paws/blob/main/retro.md

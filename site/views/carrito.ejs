@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+
+    <body class="carrito">
+        <%- include('./partials/header') %>
+            <main>
+                <section class="producto-y-resumen">
+                    <article>
+                        <% for( let i=0; i < 3; i++ ) { %>
+                                <article class="producto">
+                                    <div class="imagenes" style="height: 170px; width: auto;">
+                                        <img src="/img/imgproducto/<%= productos[i].imagenes[0] %>" alt="Whiskas 1kg"
+                                            style="width: 130px; height: 170px;">
+                                    </div>
+                                    <div class="nombre">
+                                        <h3><%= productos[i].titulo %></h3>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="precio-descuento">
+                                            <p class="precio-secundario"
+                                                style="font-size: 24px;color: grey;display: flex;text-decoration: line-through;margin-right: 10px;justify-content: center;">
+                                                $<%= productos[i].precio %>
+                                            </p>
+                                            <span style="font-size: 24px; color:green; display: inline-block;">
+                                                <%= productos[i].descuento %> %
+                                            </span>
+                                            <span class="precio-principal"
+                                                style="font-size: 1.5rem;color:#1a1a1a; width: 100%;">$900</span>
+                                        </div>
+                                        <div class="añadir-elementos">
+                                            <div class="restar">-</div>
+                                            <input type="number" value="1">
+                                            <div class="agregar">+</div>
+                                        </div>
+                                    </div>
+                                    <button style="height: 20px; width: 20px;"><i class="fas fa-times"></i></button>
+                                </article>
+                            <% } %>
+                    </article>
+                    <!-- Sector resumen-->
+                    <article class="resumen">
+                        <div class="resume">
+                            <form action="" method="post" id="checkout">
+                                <p><span>Subtotal</span> <span>$4.920</span></p>
+                                <hr>
+                                <p><span>Ahorro total</span> <span>-$2.064</span></p>
+                                <hr>
+                                <p><span>Calcula tu Envio</span>
+                                <div class="postal">
+                                    <label for="envio">Codigo postal</label>
+                                    <input type="number" name="envio" id="envio" placeholder="Ejemplo: 8318">
+                                </div>
+                                <hr>
+                                <p><span>Precio Final</span> <span>$2.856</span></p>
+                                <br />
+                                <a href="#" onclick="document.getElementById('checkout').submit()"><i
+                                        class="fa fa-shopping-cart"></i>Realizar Pedido</a>
+                            </form>
+                        </div>
+                    </article>
+                </section>
+                </section>
+            </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+</html>

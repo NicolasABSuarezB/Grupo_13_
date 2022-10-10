@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %>
+
+<body class="detalle">
+
+    <%- include('./partials/header') %>
+   
+    <main class="detalleproducto">
+        <section class="ordendes">
+            <section class=" imgproductodetalle">
+                <img src="/img/imgproducto/<%= producto.imagenes[0] %>" alt="">
+            </section>
+            <section  class= <%= producto.imagenes.length ==1 ? '':'imgextra' %> >
+                <% 
+                for (let a = 1; a <  producto.imagenes.length; a++) {
+                    %> <img src="/img/imgproducto/<%= producto.imagenes[a]%>" alt=""><%
+                    
+                } %> 
+                
+            </section>    
+            <section class="contenedorDetalle">
+                <section class="descripciondetalle">
+                    <h3><%= producto.imagenes %></h3>
+
+                    <h4 class="precio">$<%= producto.precio %></h4>
+                    <h4>DESCRIPCION</h4>
+                    <p><%= producto.descripcion %>
+                    </p>
+                    <h4>IDEAL PARA:</h4>
+                    <p><%= producto.categoria%></p>
+
+
+
+                </section>
+                <section class="compra">
+                    <h4>SELECCIONE CANTIDAD</h4>
+                    <div class="cantidad">
+                        
+                        <button onclick="disminuir()">-</button>
+                        <form action="" method="post">
+                            <input type="number" id="numero" value="1">
+                        </form>
+                        <button onclick="agregar()">+</button>
+                    </div>
+                    <button class="confirmar">
+                        realizar pedido
+                    </button>
+                </section>
+            </section>
+
+        </section>
+
+
+        <section class="interesar">
+            <h2>TE PODRIA INTERESAR</h2>
+            <article class="recomendado">
+
+                
+                <%let tipovista=['productohome','productohometablet','productohomedestock',];
+                for (let index = 0; index < 3; ) {%>
+                <%- include('./partials/productoHome',{ vistaProducto:tipovista[index], imagen:productos[index].imagenes[0], nombre:productos[index].titulo, precio:productos[index].precio , id:productos[index].id}) %>
+                <%index++  }%>
+
+            </article>
+
+        </section>
+    </main>
+    <div id="mydiv" data-test="<%=producto.stock %>"></div>
+    <%- include('./partials/footer') %>
+    <script>
+        
+        function agregar(){
+            let pato= +document.getElementById('numero').value;
+            let test =+ document.getElementById('mydiv').dataset.test;
+            if (pato== test) {
+                document.getElementById('numero').value= maximo;
+            } else {
+                document.getElementById('numero').value= pato+1;
+            }
+            
+        };
+        function disminuir(){
+            let pato= +document.getElementById('numero').value;
+            if (pato !=0) {
+                document.getElementById('numero').value= pato -1;
+            } 
+
+        }
+    </script>
+    
+</body>
+
+</html>

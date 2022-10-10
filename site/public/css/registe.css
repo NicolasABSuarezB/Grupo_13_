@@ -1,0 +1,64 @@
+.register{
+    background-color: var(--fondo);
+}
+.register main{/* todo el cuerpo */
+    background-color: var(--celeste);
+    font-family: var(--tipografia-principal);
+    height: 100%;
+}
+.register main h1{
+    font-family: var(--titulo);
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 2%;
+}
+.register main a{/* ingrese a su cuenta */
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: larger;
+    
+}
+.register main .container{/* contiene label e input*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:center ;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.register main .container label{/* lo que se muestra sobre el input */
+    margin-bottom: 5px;
+    font-size:large;
+    
+}
+.register main .container input{/* espacio a llenar */
+    width: 50%;
+    padding: 20px;
+    border: none; 
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+.register main .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.register main button{/* botones  */
+    padding: 15px;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 20px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    margin: 0 5% 5% 0;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+
+.register small{
+    padding-top: 1%;
+}
