@@ -8,7 +8,7 @@
         <%- include('../partials/header') %>
             <main>
                 <h1>Crear producto</h1>
-                <form action="/admin/crear" method="post">
+                <form action="/admin/crear" method="post" enctype="multipart/form-data">
                     <section>
                         
                         <div class="form-floating m-2">
@@ -49,9 +49,9 @@
                             <small>Obligatorio</small>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="mb-3" >
                             <label for="formFileMultiple" class="form-label">Subir imagenes del producto</label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            <input type="file" name="imagenes" class="form-control" id="formFileMultiple" multiple>
                             <small>Obligatorio</small>
                         </div>
 
