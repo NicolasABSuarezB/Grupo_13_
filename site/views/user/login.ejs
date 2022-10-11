@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+<%- include('../partials/head') %>
 
 
 <body class="login">
-    <%- include('./partials/header') %>
+    <%- include('../partials/header') %>
     
     <main>
         
-
-        <section class="todo">
+        <form action="" method="post" >
+            <section class="todo">
             <h3>login</h3>
             <br>
             <article class="inicio-de-sesion">
                 <div class="sector-email">
                     <h3> Email</h3>
-                    <input class="type-user" type="text" placeholder="Correo electronico">
+                    <input class="type-user" name="email" type="text" placeholder="Correo electronico">
                     <small>Debe ingresar un email valido</small>
                 </div>
                 <div class="sector-pass">
                     <h3> Contraseña</h3>
-                    <input class="type-pass" type="password" placeholder="Contraseña">
+                    <input class="type-pass" type="password" placeholder="Contraseña" name="pass">
                     <small>Debe ingresar la contraseña correcta</small>
                 </div>
                 <div>
-                    <input class="save-pass" type="checkbox"> Mantener la sesión iniciada
+                    <input class="save-pass" type="checkbox"name="guardar"> Mantener la sesión iniciada
                     <br>
                     <a class="lost-pass" href=""> ¿Olvidaste tu contraseña?</a>
                 </div>
                 <div class="linkeados">
-                    <button class="init" type="submit">Iniciar sesión</button>
+                    
                     <br>
                     <a class="create-user" href="/register"> ¿No tienes cuenta? Crear una cuenta</a>
                 </div>
             </article>
         </section>
+        <button class="init" type="submit">Iniciar sesión</button>
+    </form>
+        
     </main>
 
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 
    
 </body>

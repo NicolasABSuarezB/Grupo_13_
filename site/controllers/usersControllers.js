@@ -2,20 +2,20 @@ const fs = require('fs');
 const path = require('path')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs')
-const usuarios = require('./data/usuarios.json')
+const usuarios = require('../data/usuarios.json')
 
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, './data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8')
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8')
 
 module.exports = {
     login: (req, res) => {
         return res.render('user/login')
     },
     processLogin:(req,res) => {
-
+       /*  return res.send(req.body) */
         let errors = validationResult(req)
         if (errors.isEmpty()) {
         
-            const {email,recordarme} = req.body
+            const {email,guardar} = req.body
             let usuario = usuarios.find(user => user.email === email)
 
             req.session.userLogin = {
@@ -24,8 +24,8 @@ module.exports = {
                 image : usuario.image,
                 rol : usuario.rol
             }
-            if(recordarme){
-                res.cookie('Crafsy',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
+            if(guardar){
+                res.cookie('loving-paws',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
             }
 
             return res.redirect('/users/profile')
@@ -52,14 +52,17 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-            let {name,email,pass,pais,genero} = req.body
+            let {name,email,pass,telefono} = req.body
             let usuarioNuevo = {
                 id:usuarios[usuarios.length - 1].id + 1,
                 name,
+                apellido: null,
                 email,
+                genero: null,
                 pass: bcrypt.hashSync(pass, 12),
-                pais,
-                genero,
+                pais: null,
+                direccion: null,
+                numero:telefono,
                 image: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
                 rol: "usuario"
             }
@@ -80,5 +83,8 @@ module.exports = {
         },
     procesoDeRegistro: (req, res) => {
         return res.send(req.body)
+    },
+    perfil: (req,res) => {
+        return res.render('user/perfil')
     }
 }
