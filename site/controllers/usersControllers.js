@@ -1,90 +1,51 @@
-const fs = require('fs');
-const path = require('path')
-const { validationResult } = require('express-validator');
-const bcrypt = require('bcryptjs')
-const usuarios = require('../data/usuarios.json')
-
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json'), JSON.stringify(dato, null, 4), 'utf-8')
+const session = require("express-session");
+let usuarios = require("../data/users.json");
+const { validationResult } = require('express-validator')
 
 module.exports = {
     login: (req, res) => {
-        return res.render('user/login')
+        return res.render('login')
     },
-    processLogin:(req,res) => {
-       /*  return res.send(req.body) */
-        let errors = validationResult(req)
-        if (errors.isEmpty()) {
-        
-            const {email,guardar} = req.body
-            let usuario = usuarios.find(user => user.email === email)
+    logearse: (req, res) => {
+        const { email } = req.body;
 
-            req.session.userLogin = {
-                id : usuario.id,
-                nombre : usuario.name,
-                image : usuario.image,
-                rol : usuario.rol
-            }
-            if(guardar){
-                res.cookie('loving-paws',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
-            }
+        let usuario = usuarios.find(use => use.email === email)
 
-            return res.redirect('/users/profile')
-            /* return res.send(req.body) */
-        } else {
-            /* return res.send(errors.mapped()) */
-            return res.render('users/login', {
-                errors: errors.mapped(),
-                old: req.body
-            })
+        req.session.sessionuser = {
+
+            nombre: usuario.nombre,
+            apellido: usuario.apellido,
+            email: usuario.email,
+            genero: usuario.genero,
+            foto: usuario.foto
+
         }
-    },    
+        res.cookie('hola', req.session.sessionuser)
+        return res.redirect('/')
+
+    },
     register: (req, res) => {
-        return res.render('user/register')
+        res.render('register')
     },
-    processRegister:(req,res) => {
-        
+    registrase: (req, res) => {
         let errors = validationResult(req)
-        if (req.fileValidationError) {
-            let imagen = {
-                param: 'image',
-                msg: req.fileValidationError,
-            }
-            errors.errors.push(imagen)
-        }
         if (errors.isEmpty()) {
-            let {name,email,pass,telefono} = req.body
-            let usuarioNuevo = {
-                id:usuarios[usuarios.length - 1].id + 1,
-                name,
-                apellido: null,
-                email,
-                genero: null,
-                pass: bcrypt.hashSync(pass, 12),
-                pais: null,
-                direccion: null,
-                numero:telefono,
-                image: req.file.size > 1 ? req.file.filename : "avatar-porDefecto.png",
-                rol: "usuario"
-            }
-            usuarios.push(usuarioNuevo)
-            guardar(usuarios)
-
-            return res.redirect('/')
+            return res.redirect('/login')
         } else {
-
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', dato))
-            if (ruta(req.file.filename) && (req.file.filename !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'images', 'users', req.file.filename))
-            }
+            //return res.send(errors)
+            return res.render('register', { errors: errors.mapped(), old: req.body })
         }
+
+
     },
     informacion: (req, res) => {
         return res.render('informacion')
-        },
-    procesoDeRegistro: (req, res) => {
-        return res.send(req.body)
     },
-    perfil: (req,res) => {
-        return res.render('user/perfil')
-    }
+    cerrar: (req, res) => {
+        req.session.sessionuser == null
+        return res.redirect('/login')
+    },
+    perfilusuario: (req, res) => {
+        res.render('perfilusuario')
+    },
 }
