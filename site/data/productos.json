@@ -1,13 +1,14 @@
 [
     {
         "id": 1,
-        "titulo": "Royal canin Sterili7.",
-        "precio": 1999,
-        "descuento": 20,
-        "stock": 20,
+        "titulo": " prueba",
+        "precio": 1000,
+        "descuento": 0,
+        "stock": 230,
         "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
-        "categorias": "gatos",
+        "categorias": "perros",
         "imagenes": [
+            "comida perro.webp",
             "Royal canin Sterilised37.jpg"
         ]
     },
@@ -187,5 +188,15 @@
         "imagenes": [
             "alimentonobleza.jpg"
         ]
+    },
+    {
+        "id": 18,
+        "titulo": "kasey ",
+        "precio": 2345,
+        "descuento": 0,
+        "stock": 0,
+        "descripcion": "",
+        "categorias": "Gato",
+        "imagenes": "default-img.png"
     }
 ]

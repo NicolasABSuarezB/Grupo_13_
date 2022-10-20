@@ -1,5 +1,18 @@
-.perfil .vistaUser{
+.perfil .vistaUser {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: auto;
+}
+
+.perfil .datos {
+    margin-block: 10px;
+}
+
+.perfil .datos p {
+    margin-bottom: 10px;
+}
+
+.perfil .datos h4 {
+    padding-bottom: 0%;
 }

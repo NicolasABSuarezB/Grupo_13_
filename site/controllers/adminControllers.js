@@ -1,17 +1,16 @@
 const fs =require('fs')
-
+const path =require('path')
 const productos = require("../data/productos.json")
-const path = require('path')
+
 let nuevoGuardar =(guardar)=> fs.writeFileSync(path.join(__dirname, '../data/productos.json'),JSON.stringify(guardar,null,4),'utf-8')
 
-
 const{validationResult}=require('express-validator')
+
+
 module.exports={
     
     edit: (req,res)=>{
-        //validar(req.session.sessionuser,res)
 
-       
          id = +req.params.id
         let producto = productos.find((elemento)=>{
             return elemento.id==id;
@@ -22,19 +21,14 @@ module.exports={
         return res.render('admin/editarProducto',{producto,categorias})
     },
     create: (req,res)=>{
-        validar(req.session.sessionuser,res)
         return res.render('admin/crearProducto',{productos})
     },
     lista: (req,res)=>{
-        //validar(req.session.sessionuser,res)
         return res.render('admin/listaProducto',{productos})
     }, 
     nuevo: (req,res)=>{
         let errors= validationResult(req)
-        
-
         if(errors.isEmpty()){
-
             let {Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body;
 
             let nuevoProducto={
@@ -53,18 +47,20 @@ module.exports={
             nuevoGuardar(productos);
 
             res.redirect('/admin/lista')
-        }else{
-            res.render('admin/crearProducto',{productos, errors:errors.mapped(), old:req.body})
-            
-        }
-        
 
+        }else{
+            return res.render('admin/crearProducto',{productos,errors:errors.mapped(),old: req.body})
+
+        }
+
+        
         
         
     },
     editado:(req,res)=>{
-        let errors= validationResult(req)
+       
         let identificar = +req.params.id
+        let errors= validationResult(req)
 
         if(errors.isEmpty()){
             

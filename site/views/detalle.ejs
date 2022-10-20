@@ -66,14 +66,14 @@
 
         </section>
     </main>
-    <div id="mydiv" data-test="<%=producto.stock %>"></div>
+
     <%- include('./partials/footer') %>
     <script>
         
         function agregar(){
             let pato= +document.getElementById('numero').value;
-            let test =+ document.getElementById('mydiv').dataset.test;
-            if (pato== test) {
+            let maximo= +document.getElementById('maximo').value;
+            if (pato== maximo) {
                 document.getElementById('numero').value= maximo;
             } else {
                 document.getElementById('numero').value= pato+1;

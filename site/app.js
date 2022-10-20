@@ -13,10 +13,10 @@ let productsrouters = require('./routers/products');
 let usersrouters = require('./routers/users');
 let adminrouters = require('./routers/admin');
 
+const logeado= require('./middlewares/chekearlogin')
+
 app.set('views',path.join(__dirname, 'views'));
 app.set('view engine','ejs')
-
-const logeado= require('./middleware/chekearlogin')
 
 app.use(session({secret:'pato'}))
 app.use(logeado)
@@ -25,10 +25,9 @@ app.use(logger('dev'));
 app.use(cookieParser());
 app.use(express.urlencoded({extended:false}))
 
+
 app.use(methodOverrive('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
-
-
 
 app.use('/',indexrouters)
 app.use('/',usersrouters)

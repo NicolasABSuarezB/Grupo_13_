@@ -1,22 +1,26 @@
 const express= require('express');
 const router= express.Router();
+const path=require('path');
+const multer= require('multer');
+const upload = require('../middlewares/multerProductos');
+const praductsvalidations=require('../validators/praductsvalidations')
+const haysession=require('../middlewares/verlogin')
+const esAdmin=require('../middlewares/esAdmin')
+
 
 let{edit,create,lista,nuevo,editado,destruir}=require('../controllers/adminControllers');
-const praductsvalidations=require('../validators/praductsvalidations')
-const haysession=require('../middleware/verlogin')
 
 
-router.get('/edit/:id',haysession,edit)
-router.put('/edit/:id',haysession,praductsvalidations,editado)
+router.get('/edit/:id',haysession,esAdmin,edit)
+router.put('/edit/:id',haysession,esAdmin,upload.single('imagenes'),praductsvalidations,editado)
+
+router.get('/crear',haysession,esAdmin,create)
+router.post('/crear',haysession,esAdmin, upload.single('imagenes'),praductsvalidations,nuevo);
 
 
-router.get('/crear',haysession,create)
-router.post('/crear',haysession,praductsvalidations,nuevo)
+router.get('/lista',haysession,esAdmin,lista)
 
 
-router.get('/lista',haysession,lista)
-
-
-router.delete('/destruir/:id',haysession,destruir)
+router.delete('/destruir/:id',haysession,esAdmin,destruir)
 
 module.exports= router;
