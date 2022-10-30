@@ -1,6 +1,7 @@
 const session = require("express-session");
 let usuarios = require("../data/users.json");
 const { validationResult } = require('express-validator')
+const db = require('../database/models')
 
 module.exports = {
     login: (req, res) => {
@@ -8,9 +9,23 @@ module.exports = {
     },
     logearse: (req, res) => {
         const { email } = req.body;
+        /* let usuario = usuarios.find(use => use.email === email) */
+        db.usuarios.findOne({
+            where : {
+                email
+            }
+        })
+        .then(usuario => {
+            req.session.sessionuser = {
 
-        let usuario = usuarios.find(use => use.email === email)
-
+                nombre: usuario.nombre,
+                apellido: usuario.apellido,
+                email: usuario.email,
+                genero: usuario.genero,
+                foto: usuario.foto
+    
+            }
+        })
         req.session.sessionuser = {
 
             nombre: usuario.nombre,
