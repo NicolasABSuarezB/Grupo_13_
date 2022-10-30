@@ -1,4 +1,4 @@
-header{
+header {
     position: relative;
     margin-bottom: 20px;
     background-color: var(--verde);
@@ -6,12 +6,11 @@ header{
     width: 100%;
 }
 
-header a{
+header a {
     color: black;
 }
 
-
-header .top{
+header .top {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -21,23 +20,24 @@ header .top{
     right: 0;
 }
 
-header .logo{
+header .logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 70%;
-}    
+}
 
-header .logo img{
+header .logo img {
     position: relative;
     width: 80px;
     height: 80px;
 }
 
-header .burger{
+header .burger {
     width: 100%;
 }
-header .burger label{
+
+header .burger label {
     position: absolute;
     top: 15px;
     left: 10px;
@@ -46,33 +46,33 @@ header .burger label{
     display: inline-block;
 }
 
-header .burger input{
+header .burger input {
     display: none;
 }
-header .burger nav{
+
+header .burger nav {
     display: none;
     width: 100%;
 }
 
-header .burger input:checked ~ nav{
+header .burger input:checked~nav {
     display: flex;
 }
 
-header .burger nav ul{
+header .burger nav ul {
     padding-bottom: 20px;
-
     width: 100%;
 }
 
-header .burger nav ul li{
+header .burger nav ul li {
     list-style-type: none;
     margin: 20px 0;
     display: flex;
     justify-content: left;
-    
+
 }
 
-header .burger nav a{
+header .burger nav a {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     font-size: 10px;
@@ -83,70 +83,99 @@ header .burger nav a{
 
 header .user {
     display: flex;
-    flex-direction: row;
     justify-content: right;
     width: 20%;
     color: black;
+    align-items: center;
+}
+
+header #menuPequeño {
+    background-color: rgb(219, 219, 219);
+    border: 0.5px solid grey;
+    z-index: 20;
+    position: absolute;
+    right: 0%;
+    top: 10vh;
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+}
+
+header #menuPequeño img {
+    height: 30%;
+    width: 40%;
+    display: block;
+    margin-top: 10%;
+    border-radius: 50%;
+}
+
+header #menuPequeño li ul {
+    padding-top: 20%;
 }
 
 
-@media (min-width:720px){
-    header{
+@media (min-width:720px) {
+    header {
         position: relative;
         margin-bottom: 20px;
         background-color: var(--verde);
         font-family: var(--titulo);
     }
 
-    header .logo{
+    header .logo {
         display: flex;
         flex-direction: row;
         justify-content: left;
-    }    
-    
-    header .logo img{
+    }
+
+    header .logo img {
         position: relative;
         width: 80px;
         height: 80px;
     }
 
-    header .burger label{
+    header .burger label {
         display: none;
     }
 
-    header .burger nav{
+    header .burger nav {
         width: 100%;
         display: block;
         text-align: center;
     }
 
-    header nav ul{
+    header nav ul {
         list-style-type: none;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-    } 
+    }
 
-    header .logo{
+    header .logo {
         width: 20%;
         order: 0;
-    }   
+    }
+
     header .user {
         width: 10%;
         order: 2;
         color: black;
-    } 
-    header .burger{
-         width: 60%;
-         order: 1;
-         
-     }
-     header .burger nav ul{
+    }
+
+    header .burger {
+        width: 60%;
+        order: 1;
+
+    }
+
+    header .burger nav ul {
         padding-bottom: 0;
         background-color: none;
         width: 100%;
     }
-    header .top{
+
+    header .top {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -155,5 +184,4 @@ header .user {
         position: relative;
         right: 0;
     }
-} 
-
+}
