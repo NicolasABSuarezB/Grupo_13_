@@ -10,14 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
      static associate(models) {
-      generos.belongsTo(models.usuarios,{
+      generos.hasMany(models.usuarios,{
         as:'usuario',
         foreignKey:'id_generos'
       })
     }
   }
   generos.init({
-    name: DataTypes.STRING
+    genero: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'generos',

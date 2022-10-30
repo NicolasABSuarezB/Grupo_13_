@@ -37,7 +37,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      idroles: {
+      id_roles: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
@@ -47,7 +47,7 @@ module.exports = {
           key: 'id'
         }
       },
-      id_pais: {
+      id_paises: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {

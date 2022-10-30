@@ -11,21 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
      static associate(models) {
-      usuarios.hasMany(models.paises,{
-        as:'paises',
-        foreignKey: 'id_pais'
+      usuarios.belongsTo(models.paises,{
+        as:'pais',
+        foreignKey: 'id_paises'
       })
-    }
-    static associate(models) {
-      usuarios.hasMany(models.generos,{
-        as:'generos',
+      usuarios.belongsTo(models.generos,{
+        as:'genero',
         foreignKey: 'id_generos'
       })
-    }
-    static associate(models) {
-      usuarios.hasMany(models.roles,{
-        as:'roles',
-        foreignKey: 'idroles'
+      usuarios.belongsTo(models.roles,{
+        as:'rol',
+        foreignKey: 'id_roles'
       })
     }
     
@@ -39,6 +35,9 @@ module.exports = (sequelize, DataTypes) => {
     foto: DataTypes.STRING,
     cp: DataTypes.INTEGER,
     telefono: DataTypes.INTEGER,
+    id_roles: DataTypes.INTEGER,
+    id_paises :DataTypes.INTEGER,
+    id_generos :DataTypes.INTEGER,
     
   }, {
     sequelize,
