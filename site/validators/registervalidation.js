@@ -1,9 +1,9 @@
-const {check}= require('express-validator');
+const { check } = require('express-validator');
 
-module.exports=[
-    check('name').notEmpty().withMessage('este campo es obkigatorio').bail().isLength({min:5}).withMessage('debe haber por lo menos 5 letras'),
-    check('email').notEmpty().withMessage('este campo es obkigatorio').bail().isEmail().withMessage('no es un email valido'),
-    check('telefono').notEmpty().withMessage('este campo es obkigatorio').bail().withMessage('no es un numero valido'),
-    check('pass').notEmpty().withMessage('este campo es obkigatorio').bail().isLength({min:8}).withMessage('debe haber por lo menos 8 carcteres'),
-    check('pass2').notEmpty().withMessage('este campo es obkigatorio')
+module.exports = [
+    check('name').notEmpty().withMessage('Este campo es obligatorio').bail().isLength({ min: 5 }).withMessage('Debe haber por lo menos 5 letras'),
+    check('email').notEmpty().withMessage('Este campo es obligatorio').bail().isEmail().withMessage('No es un email valido'),
+    check('telefono').notEmpty().withMessage('Este campo es obligatorio').bail().withMessage('No es un número valido'),
+    check('pass').notEmpty().withMessage('Este campo es obligatorio').bail().isLength({ min: 8 }).withMessage('Debe haber por lo menos 8 carcteres'),
+    check('pass2').notEmpty().withMessage('Este campo es obligatorio')
 ]
