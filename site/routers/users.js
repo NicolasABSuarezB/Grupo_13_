@@ -1,8 +1,8 @@
 const express= require('express');
 const router= express.Router();
 const upload= require('../middlewares/multerUsuarios')
-const registerValidator = require('./')
-const loginValidator = require('./')
+/* const registerValidator = require('./')
+const loginValidator = require('./') */
 
 let{login,register, informacion,processLogin,processRegister, perfil}=require('../controllers/usersControllers');
 

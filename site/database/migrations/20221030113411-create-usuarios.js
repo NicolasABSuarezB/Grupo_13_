@@ -15,7 +15,7 @@ module.exports = {
       },
       apellido: {
         type: Sequelize.STRING(45),
-        allowNull: false,
+        allowNull: true,
       },
       email: {
         type: Sequelize.STRING(45),
@@ -31,7 +31,7 @@ module.exports = {
       },
       cp: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       telefono: {
         type: Sequelize.STRING,
@@ -49,7 +49,7 @@ module.exports = {
       },
       id_paises: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: {
             tableName: 'paises'
@@ -59,7 +59,7 @@ module.exports = {
       },
       id_generos: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         references: {
           model: {
             tableName: 'generos'
