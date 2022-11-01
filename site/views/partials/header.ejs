@@ -23,6 +23,13 @@
                     <%}  %> 
             <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
         </section>
+       
+        <section class="user">
+            <a href="/login"><i class="far fa-user"></i></a>
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+        
+        </section>
+
         <section class="burger">
             <input type="checkbox" name="burger" id="burger">
             <label for="burger"><i class="fas fa-bars"></i> </i></label>
@@ -30,20 +37,10 @@
                 <ul class="menu">
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/">Productos</a></li>
-                    <li><a href="/informacion">Informacion</a></li>
-                    <li><a href="/informacion">¿Quienes somos?</a></li>
+                    <li><a href="/informacion">informacion</a></li>
+                    <li><a href="/admin/lista">Admin</a></li>
                 </ul>
             </nav>
         </section>
     </div>
-    <script>
-        function menu(){
-            let elements = document.getElementById('menuPequeño').style.display
-            if (elements=='none') {
-                document.getElementById('menuPequeño').style.display='flex';       
-            } else {
-                document.getElementById('menuPequeño').style.display='none';
-            }
-        }
-    </script>
 </header>

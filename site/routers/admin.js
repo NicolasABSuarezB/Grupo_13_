@@ -3,21 +3,24 @@ const router= express.Router();
 const path=require('path');
 const multer= require('multer');
 const upload = require('../middlewares/multerProductos');
+const praductsvalidations=require('../validators/praductsvalidations')
+const haysession=require('../middlewares/verlogin')
+const esAdmin=require('../middlewares/esAdmin')
+
 
 let{edit,create,lista,nuevo,editado,destruir}=require('../controllers/adminControllers');
 
 
-router.get('/edit/:id',edit)
-router.put('/edit/:id',upload.single('imagenes'),editado)
+router.get('/edit/:id',haysession,esAdmin,edit)
+router.put('/edit/:id',haysession,esAdmin,upload.single('imagenes'),praductsvalidations,editado)
+
+router.get('/crear',haysession,esAdmin,create)
+router.post('/crear',haysession,esAdmin, upload.single('imagenes'),praductsvalidations,nuevo);
 
 
-router.get('/crear',create);
-router.post('/crear', upload.single('imagenes'),nuevo);
+router.get('/lista',haysession,esAdmin,lista)
 
 
-router.get('/lista',lista);
-
-
-router.delete('/destruir/:id',destruir);
+router.delete('/destruir/:id',haysession,esAdmin,destruir)
 
 module.exports= router;

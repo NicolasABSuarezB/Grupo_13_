@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+<body class="perfil">
+
+    <%- include('../partials/header') %>
+    <main class="vistaUser">
+        <section>
+            <img src="<%=usuarioemail.foto %>" alt="" srcset="">
+        </section>
+        <section>
+            <h4>nombre de usuario</h4>
+            <p><%=usuarioemail.nombre %></p>
+            <h4>apellido</h4>
+            <p><%=usuarioemail.apellido %></p>
+            <h4>genero</h4>
+            <p><%=usuarioemail.genero %></p> 
+            <h4>correo electronico</h4>
+            <p><%=usuarioemail.email %></p> 
+            
+        </section>
+
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

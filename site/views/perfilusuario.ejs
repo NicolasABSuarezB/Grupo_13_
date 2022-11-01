@@ -7,19 +7,16 @@
 
     <%- include('./partials/header') %>
     <main class="vistaUser">
-        <section>
-            <img src="<%=locals.usurlologin.foto %>" alt="" srcset="">
-        </section>
-
+ 
         <section class="datos">
             <h4>Nombre de usuario</h4>
-            <p><%=locals.usurlologin.nombre %></p>
+            <p><%=locals.sessionuser.nombre %></p>
             <h4>Apellido</h4>
-            <p><%=locals.usurlologin.apellido %></p>
+            <p><%=locals.sessionuser.apellido %></p>
             <h4>Genero</h4>
-            <p><%=locals.usurlologin.genero %></p> 
+            <p><%=locals.sessionuser.genero %></p> 
             <h4>Correo electronico</h4>
-            <p><%=locals.usurlologin.email %></p> 
+            <p><%=locals.sessionuser.email %></p> 
         </section>
 
     </main>

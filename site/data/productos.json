@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "titulo": "doguiperros adultos   ",
-        "precio": 1900,
-        "descuento": 19,
-        "stock": 20,
+        "titulo": " prueba",
+        "precio": 1000,
+        "descuento": 0,
+        "stock": 230,
         "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
         "categorias": "perros",
         "imagenes": [

@@ -33,7 +33,7 @@ module.exports = {
                 if (recordame){
                     res.cookie('hola', req.session.sessionuser, {maxAge: 1000 * 60 * 60 * 24}) 
                 }
-                return res.redirect('/')
+                return res.redirect('/perfil')
             })
             .catch(error =>{
                 return res.send(error)
@@ -97,6 +97,13 @@ module.exports = {
         return res.redirect('/login')
     },
     perfil: (req, res) => {
-        res.render('perfilusuario')
+        db.usuarios.findOne({
+            where:{
+                email:req.session.sessionuser.email 
+            }
+        })
+        .then( usuarioemail => {res.render('user/profile' ,{usuarioemail} )})
+        //res.render('perfilusuario')
+        console.log(req.session.sessionuser)
     },
 }
