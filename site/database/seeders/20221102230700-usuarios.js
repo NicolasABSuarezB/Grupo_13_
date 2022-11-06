@@ -6,19 +6,19 @@ let listado = require('../../data/usuarios.json');
 let usuarios = listado.map(usuario =>{
    let elemento = {
       nombre: usuario.nombre,
-      apellido: usuario.apellido,
+      apellido: null,
       email: usuario.email,
       contrase: usuario.contrase,
       foto: usuario.foto,
-      cp: usuario.cp,
+      cp: null,
       telefono: usuario.numero,
-      id_roles: usuario.id_roles,
-      id_paises: usuario.id_paises,
-      id_generos: usuario.id_generos,
+      id_roles: usuario.id_rol === 'admin' ? 2 : 1,
+      id_paises: null,
+      id_generos: null,
       createdAt: new Date,
       updatedAt: new Date
    }
-
+   return elemento
 })
 
 module.exports = {
