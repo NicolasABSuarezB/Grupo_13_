@@ -1,18 +1,86 @@
-.perfil .vistaUser {
+.perfil {
+    background-color: var(--fondo);
+}
+
+.perfil main {
+    background-color: var(--celeste);
+    font-family: var(--tipografia-principal);
+    height: 100%;
+}
+
+.perfil main h1 {
+    font-family: var(--titulo);
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 2%;
+}
+
+.perfil main a {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: larger;
+    padding-bottom: 10px;
+}
+
+.perfil main .container {
+    display: flex;
     flex-direction: column;
-    margin-top: auto;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 3%;
 }
 
-.perfil .datos {
-    margin-block: 10px;
+.perfil main .container label {
+    margin-bottom: 5px;
+    font-size: large;
+
 }
 
-.perfil .datos p {
-    margin-bottom: 10px;
+.perfil main .container input {
+    width: 50%;
+    padding: 20px;
+    border: none;
+    box-shadow: 5px 5px 19px 0px #187498ba;
 }
 
-.perfil .datos h4 {
-    padding-bottom: 0%;
+.perfil main .container select {
+    width: 50%;
+    padding: 20px;
+    border: none;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+
+.perfil main .container img {
+    width: 50%;
+    padding: 20px;
+    border: none;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+
+.perfil main .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfil main button {
+    padding: 15px;
+    background-color: var(--azul);
+    color: white;
+    font-weight: 600;
+    border: none;
+    font-size: 20px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    margin: 0 5% 5% 0;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+
+.perfil small {
+    padding-top: 1%;
+    color: var(--rojo);
 }
