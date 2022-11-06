@@ -33,6 +33,11 @@
                 <input type="password" name="pass2" id="pass2" placeholder="Confirme su contraseña">
                 <small><%= locals.errors && errors.pass2? errors.pass2.msg : null %></small>
             </section>
+            <section class="container bottom">
+                <label for="avatar">suba su foto de perfil</label>
+                <input type="file" name="avatar" id="avatar" >
+                <small>formato incorrecto</small>
+            </section>
 
             <section class="buttons">
                 <button type="submit">Registrarme</button>
