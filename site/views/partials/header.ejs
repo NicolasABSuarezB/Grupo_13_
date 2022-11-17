@@ -9,6 +9,7 @@
 
         <section class="user">
             <%if(locals.usurlologin){%>
+                
                 <button onclick="menu()"><i class="far fa-user"><%=locals.usurlologin.nombre %> </i></button>
                 <div style="display: none;" id="menuPequeño">
                     <img src="<%=locals.usurlologin.foto %>" alt="">

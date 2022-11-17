@@ -6,7 +6,7 @@
         "descuento": 0,
         "stock": 230,
         "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
-        "categorias": "perros",
+        "categorias": "perro",
         "imagenes": [
             "comida perro.webp",
             "Royal canin Sterilised37.jpg"
@@ -19,7 +19,7 @@
         "descuento": 20,
         "stock": 20,
         "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
-        "categorias": "gatos",
+        "categorias": "gato",
         "imagenes": [
             "Royal canin Sterilised37.jpg"
         ]
@@ -162,7 +162,7 @@
         "precio": 9953,
         "stock": 6536,
         "descripcion": "alimentador para colibris, con capacidad de 1lt",
-        "categorias": "gatp",
+        "categorias": "ave",
         "imagenes": [
             "comederocolibri.jpg"
         ]
@@ -173,7 +173,7 @@
         "precio": 5287,
         "stock": 2443,
         "descripcion": "alimentador automatico para peceras capacodad de 500gr",
-        "categorias": "gato",
+        "categorias": "peces",
         "imagenes": [
             "alimentadorpeces.jpg"
         ]
@@ -184,7 +184,7 @@
         "precio": 3772,
         "stock": 8389,
         "descripcion": "alimento nobleza premiun para peces exoticos de agua dulce",
-        "categorias": "perro",
+        "categorias": "peces",
         "imagenes": [
             "alimentonobleza.jpg"
         ]

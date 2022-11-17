@@ -9,26 +9,19 @@
     <main class="detalleproducto">
         <section class="ordendes">
             <section class=" imgproductodetalle">
-                <img src="/img/imgproducto/<%= producto.imagenes[0] %>" alt="">
+                <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
             </section>
-            <section  class= <%= producto.imagenes.length ==1 ? '':'imgextra' %> >
-                <% 
-                for (let a = 1; a <  producto.imagenes.length; a++) {
-                    %> <img src="/img/imgproducto/<%= producto.imagenes[a]%>" alt=""><%
-                    
-                } %> 
-                
-            </section>    
+               
             <section class="contenedorDetalle">
                 <section class="descripciondetalle">
-                    <h3><%= producto.imagenes %></h3>
+                    <h3><%= producto.titulo %></h3>
 
                     <h4 class="precio">$<%= producto.precio %></h4>
                     <h4>DESCRIPCION</h4>
                     <p><%= producto.descripcion %>
                     </p>
                     <h4>IDEAL PARA:</h4>
-                    <p><%= producto.categoria%></p>
+                    <p><%= producto.categorias.categoria%></p>
 
 
 
@@ -59,7 +52,7 @@
                 
                 <%let tipovista=['productohome','productohometablet','productohomedestock',];
                 for (let index = 0; index < 3; ) {%>
-                <%- include('./partials/productoHome',{ vistaProducto:tipovista[index], imagen:productos[index].imagenes[0], nombre:productos[index].titulo, precio:productos[index].precio , id:productos[index].id}) %>
+                <%- include('./partials/productoHome',{ vistaProducto:tipovista[index],  imagen:productos[index].imagen , nombre:productos[index].titulo, precio:productos[index].precio , id:productos[0].id}) %>
                 <%index++  }%>
 
             </article>
