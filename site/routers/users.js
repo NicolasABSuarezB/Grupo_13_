@@ -16,6 +16,6 @@ router.post('/register', upload.single('avatar'),processRegister);
 router.get('/informacion',informacion)
 
 router.get('/profile', perfil);
-router.put('/profile/:id',upload.single('image'),updatePerfil);
+router.put('/profile/:id',upload.single('avatar'),updatePerfil);
 
 module.exports= router;

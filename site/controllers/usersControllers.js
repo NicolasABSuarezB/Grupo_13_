@@ -58,7 +58,7 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-            /* return res.send(req.body) */
+            /* return res.send(req.file) */
             /* return res.redirect('/login') */
             let { name, email, telefono, pass } = req.body
             db.usuarios.create({
@@ -154,8 +154,8 @@ module.exports = {
                         telefono: numero,
                         cp: codigopostal ? codigopostal : null,
                         foto: req.file ? req.file.filename : user.foto,
-                        id_paises:pais,
-                        id_generos: genero,
+                        id_paises:pais ? pais : null,
+                        id_generos: genero ? genero : null
                     }, {
                         where: {
                             id: id
