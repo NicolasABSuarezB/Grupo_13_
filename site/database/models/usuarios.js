@@ -22,6 +22,16 @@ module.exports = (sequelize, DataTypes) => {
       usuarios.belongsTo(models.roles,{
         as:'rol',
         foreignKey: 'id_roles'
+      }),
+      usuarios.hasMany(models.carritos,{
+        as:'carritos',
+        foreignKey:'id_usuario'
+
+      }),
+      usuarios.hasMany(models.ordenes,{
+        as:'ordenes',
+        foreignKey:'id_usuarios'
+
       })
     }
     

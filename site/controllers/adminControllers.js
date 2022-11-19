@@ -45,8 +45,11 @@ module.exports={
     }, 
     nuevo: (req,res)=>{
         let errors= validationResult(req)
-       
+        
         if(errors.isEmpty()){
+            
+       
+            
             let {Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body
 
             
@@ -60,7 +63,7 @@ module.exports={
                     descripcion:Descripcion,
                     id_categoria:Categoria,
                     id_marcas:1,
-                    imagen:"default-img.png"
+                    imagen:req.file ? req.file.filename : 'default-image.png',
                 })
 
                  .then((result) => {
@@ -72,6 +75,13 @@ module.exports={
             
 
         }else{
+            
+            if(req.file) {
+                if ((fs.existsSync("./public/img/imgproducto/", req.file.filename)) ){
+                    fs.unlinkSync(`./public/img/imgproducto/${req.file.filename}`)
+                }
+            }
+            
             let {Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body;
             return res.send(errors)
             
@@ -84,13 +94,18 @@ module.exports={
     },
     editado:(req,res)=>{
        
-        let identificar = +req.params.id
+        let id = +req.params.id
+        
         let errors= validationResult(req)
-        let productos = db.productos.findAll()
+        let productos = db.productos.findOne({
+                        where:{
+                            id:id
+                        }
+        })
         .then((productos)=>{
 
                         
-        
+            
             if(errors.isEmpty()){
             
                 
@@ -103,25 +118,40 @@ module.exports={
                     descuento:+Descuento,
                     stock:+Stock,
                     descripcion:Descripcion,
+                    imagen:req.file ? req.file.filename : 'default-image.png',
                 },
                 {
-                    where:{id:identificar}
+                    where:{id:id}
                 })
 
                 return res.redirect('/admin/lista')
             }else{
-
-                let producto = productos.find((elemento)=>{
-                    return elemento.id==identificar;
-                })
-        
-                let categorias=["gatos","perros","aves","peces"]
+                
+                if(req.file) {
+                    if ((fs.existsSync("./public/img/imgproducto/", req.file.filename)) ){
+                        fs.unlinkSync(`./public/img/imgproducto/${req.file.filename}`)
+                    }
+                }
+                
+                
+                let categorias=db.categorias.findAll()
+               
+                let producto = db.productos.findByPk(id,{include:'categorias'})
+                Promise.all([producto, categorias])
+                .then(([producto, categorias])=>{
+                    //res.send(producto) 
+                    return res.render('admin/editarProducto',{producto,categorias,errors:errors.mapped(),
+                        old: req.body})
+                   
+                    
+                    
+                    
+                
+                    }
+                )
                 
                 //return res.send({old:req.body.Precio})
-                return res.render('admin/editarProducto',{producto,categorias,
-                    errors:errors.mapped(),
-                    old: req.body}
-                    )
+              
             
 
                 

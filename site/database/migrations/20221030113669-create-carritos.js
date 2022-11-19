@@ -12,6 +12,32 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      id_usuario: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'usuarios',
+            
+          },
+          key: 'id'
+        }
+        
+      },
+      id_producto: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'productos',
+            
+          },
+          key: 'id'
+        }
+        
+      },
+      
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
