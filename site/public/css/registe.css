@@ -36,6 +36,12 @@
     margin-bottom: 3%;
 }
 
+.register main .container i{
+    position: absolute;
+    right: 26%;
+    padding: 20px;
+ }
+
 .register main .container label {
     /* lo que se muestra sobre el input */
     margin-bottom: 5px;

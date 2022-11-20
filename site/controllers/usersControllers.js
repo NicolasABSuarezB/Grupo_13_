@@ -49,6 +49,7 @@ module.exports = {
     },
     processRegister: (req, res) => {
         let errors = validationResult(req)
+        //return res.send(errors)
         if (req.fileValidationError) {
             let imagen = {
                 param: 'avatar',
@@ -82,9 +83,12 @@ module.exports = {
             //return res.send(errors)
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', dato))
 
-            if (ruta(req.file.filename) && (req.file.filename !== "imagenDefectoAvatar.jpg")) {
-                fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', req.file.filename))
+            if (req.file) {
+                if (ruta(req.file.filename) && (req.file.filename !== "imagenDefectoAvatar.jpg")) {
+                    fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', req.file.filename))
+                }
             }
+
             return res.render('register', { errors: errors.mapped(), old: req.body })
         }
 
