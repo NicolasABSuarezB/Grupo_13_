@@ -4,6 +4,7 @@ const { validationResult } = require('express-validator')
 const db = require('../database/models')
 const bcrypt = require("bcryptjs")
 
+
 module.exports = {
     login: (req, res) => {
         return res.render('login')
@@ -33,7 +34,7 @@ module.exports = {
                     if (recordame) {
                         res.cookie('hola', req.session.sessionuser, { maxAge: 1000 * 60 * 60 * 24 })
                     }
-                    return res.redirect('/perfil')
+                    return res.redirect('/profile')
                 })
                 .catch(error => {
                     return res.send(error)
@@ -58,7 +59,7 @@ module.exports = {
             errors.errors.push(imagen)
         }
         if (errors.isEmpty()) {
-            /* return res.send(req.body) */
+            /* return res.send(req.file) */
             /* return res.redirect('/login') */
             let { name, email, telefono, pass } = req.body
             db.usuarios.create({
@@ -100,77 +101,94 @@ module.exports = {
         req.session.sessionuser == null
         return res.redirect('/login')
     },
-    /* perfil: (req, res) => {
+    perfil: (req, res) => {
+        /* const{email}=req.body */
         db.usuarios.findOne({
             where:{
                 email:req.session.sessionuser.email 
             }
         })
-        .then( usuarioemail => {res.render('user/profile' ,{usuarioemail} )})
+        .then(user => {
+            console.log(user)
+            res.render('user/profile', {
+                user
+            })
+        }).catch(err => res.send(err))
+            
+            /* usuarioemail => {res.render('/profile' ,{usuarioemail} )})
         //res.render('perfilusuario')
         console.log(req.session.sessionuser)
-        .catch(err => res.send(err))
-    }, */
-    perfil: (req, res) => {
+        .catch(err => res.send(err)) */
+    },
+
+    /* perfil: (req, res) => {
         db.Users.findOne ({
             where: {
                 email: req.session.user.email
             }
         })
-            .then(user => {
-                res.render('users/profile', {
+        .then(user => {
+                res.render('user/profile', {
                     user
                 })
             }).catch(err => res.send(err))
-    },
+    }, */
     updatePerfil: (req, res) => {
         //return res.send(req.body)
 
         let errors = validationResult(req)
-
+        let id = +req.params.id
         if (errors.isEmpty()) {
+            /* return res.send (req.body) */
+            const { name, apellido, genero,pais,direccion,codigopostal,numero} = req.body
 
-            const { nombre, apellido, cp, telefono,  } = req.body
-
-            db.Users.findOne({
-                id: +req.params.id
+            db.usuarios.findOne({
+                where:{
+                    id: id
+                }
+                
             })
                 .then(user => {
-                    db.Users.update({
-                        nombre: nombre.trim(),
+                    db.usuarios.update({
+                        nombre: name.trim(),
                         apellido: apellido.trim(),
                         email: user.email,
                         contrase: user.contrase,
-                        rid_roles: user.id_roles,
-                        telefono: telefono,
-                        cp: user.cp,
-                        avatar: req.file ? req.file.filename : user.avatar
+                        id_roles: user.id_roles,
+                        telefono: numero,
+                        cp: codigopostal ? codigopostal : null,
+                        foto: req.file ? req.file.filename : user.foto,
+                        id_paises:pais ? pais : null,
+                        id_generos: genero ? genero : null
                     }, {
                         where: {
-                            id: +req.params.id
+                            id: id
                         }
                     })
                         .then(data => {
-                            db.Users.findOne({
-                                id: +req.params.id
+                            console.log(+req.params.id)
+                            db.usuarios.findOne({
+                                where:{
+                                    id: id
+                                } 
                             })
                                 .then(user => {
 
-                                    req.session.user = {
-                                        id: user.id,
-                                        name: user.nombre,
-                                        lastname: user.apellido,
+                                    req.session.sessionuser = {
+
+                                        nombre: user.nombre,
                                         email: user.email,
-                                        image: user.avatar,
-                                        rol: user.rol_id
+                                        foto: user.foto,
+                                        rol: user.id_roles
+                
                                     }
                                     if (req.cookies.helloCookie) {
                                         res.cookie('helloCookie', '', { maxAge: -1 });
-                                        res.cookie('helloCookie', req.session.user, { maxAge: 1000 * 60 * 60 * 24 })
+                                        res.cookie('helloCookie', req.session.sessionuser, { maxAge: 1000 * 60 * 60 * 24 })
                                     }
                                     req.session.save((err) => {
                                         req.session.reload((err) => {
-                                            return res.redirect('/users/profile')
+                                            return res.redirect('/profile')
 
                                         });
                                     });
@@ -183,7 +201,12 @@ module.exports = {
                 .catch(err => res.send(err))
 
         } else {
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', dato))
 
+            if (ruta(req.file.filename) && (req.file.filename == req.file.filename)) {
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', req.file.filename))
+            }
+            return res.render('profile', { errors: errors.mapped(), old: req.body })
         }
     }
 }

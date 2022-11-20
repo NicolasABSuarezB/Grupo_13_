@@ -15,7 +15,7 @@ router.post('/register', upload.single('avatar'), registerValidator, processRegi
 
 router.get('/informacion', informacion)
 
-router.get('/perfil', perfil)
-router.put('/profile/:id', upload.single('image'), updatePerfil);
+router.get('/profile', perfil);
+router.put('/profile/:id',upload.single('avatar'),updatePerfil);
 
 module.exports = router;

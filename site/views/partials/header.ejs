@@ -9,6 +9,7 @@
 
         <section class="user">
             <%if(locals.usurlologin){%>
+                
                 <button onclick="menu()"><i class="far fa-user"><%=locals.usurlologin.nombre %> </i></button>
                 <div style="display: none;" id="menuPequeño">
                     <img src="<%=locals.usurlologin.foto %>" alt="">
@@ -23,13 +24,6 @@
                     <%}  %> 
             <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
         </section>
-       
-        <section class="user">
-            <a href="/login"><i class="far fa-user"></i></a>
-            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-        
-        </section>
-
         <section class="burger">
             <input type="checkbox" name="burger" id="burger">
             <label for="burger"><i class="fas fa-bars"></i> </i></label>
