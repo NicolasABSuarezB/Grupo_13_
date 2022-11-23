@@ -1,18 +1,34 @@
 .login {
-    background-color: #DCFFFF;
+    background-image: url('../img/imghome/perros-corriendo-en-el-agua.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
 }
 
 .login .todo {
     font-family: var(--tipografia-principal);
     display: flex;
-    width: 100%;
+    width: 85vw;
+    height: 70vh;
+    background-color: aliceblue;
     flex-direction: column;
     align-items: center;
+    margin-top: 20vh;
+    margin-bottom: 0vh;
+    box-shadow: -2px 4px 29px 0px rgb(138, 138, 138);
+    position: relative;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    z-index: 20;
+    
+    
 }
 
-.login .todo .titulo {
+.login .todo h3 {
     font-family: var(--titulo);
     font-weight: 300;
+    margin: 10%;
 }
 
 .login .inicio-de-sesion {
@@ -21,7 +37,7 @@
 
 .login .sector-email h3 {
     font-size: large;
-    margin-bottom: -2%;
+    margin-bottom: 2%;
 }
 
 .login .type-user {
@@ -88,6 +104,34 @@
     font-size: 80%;
     padding-bottom: 10px;
 }
+.login .oreja1{
+   
+    /*position: relative;
+    top: 40vh;
+    
+    width: 150px; 
+    height: 150px; 
+    border: 2px solid #555; 
+    background: #5cb85c;
+    background: aliceblue;
+    -webkit-clip-path: ellipse(32% 97% at 51% 97%);
+    clip-path: ellipse(32% 97% at 51% 97%);*/
+
+}
+.login .oreja2{
+   /* position: relative;
+    top: 20vh;
+    left: 26vh;
+    width: 150px; 
+    height: 150px; 
+    border: 2px solid #555; 
+    background: #5cb85c;
+    background: aliceblue;
+    -webkit-clip-path: ellipse(32% 97% at 51% 97%);
+clip-path: ellipse(32% 97% at 51% 97%);*/
+
+    
+}
 
 /*Movil*/
 @media (max-width: 767.98px) {
@@ -98,6 +142,12 @@
     .login .init {
         width: 60%;
         margin-inline: 20%;
+    }
+    .login .todo {
+        width: 80vw;
+        height: 700px;
+        margin-top: 10vh;
+    
     }
 }
 
@@ -126,6 +176,14 @@
     .login .init {
         width: 50%;
         margin-inline: 25%;
+    }
+    .login .todo {
+        width: 50vw;
+        height: 650px;
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+        border-radius: 10%;
+    
     }
 }
 
