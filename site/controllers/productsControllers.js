@@ -1,4 +1,6 @@
 const db = require("../database/models")
+/* let products = require("../data/products.json") */;
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports={
     detalle: (req,res)=>{
@@ -20,5 +22,21 @@ module.exports={
         return res.render('carrito',{
             productos
         });
+    },
+    productos: (req, res) => {
+        /*  let id = +req.params.id
+         let productoEnCarrito = productos.find((producto) => producto.id === id) */
+        db.productos.findAll({
+            include: [{
+                all: true
+            }]
+        })
+            .then(productos => {
+                /*  return res.send(productos) */
+                return res.render('productos', {
+                    productos,
+                    toThousand
+                })
+            })
     }
 }

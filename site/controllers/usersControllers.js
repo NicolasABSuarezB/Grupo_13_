@@ -52,16 +52,16 @@ module.exports = {
         let errors = validationResult(req)
         //return res.send(errors)
         if (req.fileValidationError) {
-            let imagen = {
-                param: 'avatar',
+            let foto = {
+                param:'image',
                 msg: req.fileValidationError,
             }
-            errors.errors.push(imagen)
+            errors.errors.push(foto)
         }
         if (errors.isEmpty()) {
             /* return res.send(req.file) */
             /* return res.redirect('/login') */
-            let { name, email, telefono, pass } = req.body
+            let { name, email, telefono, pass} = req.body
             db.usuarios.create({
                 nombre: name,
                 apellido: null,

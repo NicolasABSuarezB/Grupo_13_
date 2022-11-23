@@ -7,7 +7,7 @@
         <%- include('./partials/header') %>
             <main>
                 <h1>Regístrese en Loving Paws y acceda a los mejores descuentos </h1>
-                <form action="/register" method="post">
+                <form action="/register" method="post" enctype="multipart/form-data" id="formulario">
                     
                     <section class="container bottom">
                         <label for="name">Nombre</label>
@@ -52,8 +52,8 @@
                     </section>
 
                     <section class="container bottom">
-                        <label for="avatar">suba su foto de perfil</label>
-                        <input type="file" name="avatar" id="avatar">
+                        <label for="image">suba su foto de perfil</label>
+                        <input type="file" name="image" id="image">
                         <small class="error-msg" id="errorAvatar">
                             <%= locals.errors && errors.avatar? errors.avatar.msg : null %>
                         </small>
