@@ -83,8 +83,8 @@ module.exports={
             }
             
             let {Titulo,Categoria,Precio,Descuento,Stock,Descripcion} = req.body;
-            return res.send(errors)
-            
+            /* return res.send(errors) */
+            console.log( 'ocurrio errores')
             return res.render('admin/crearProducto',{errors:errors.mapped(),old: req.body})
 
         }

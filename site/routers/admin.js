@@ -11,14 +11,14 @@ const esAdmin=require('../middlewares/esAdmin')
 let{edit,create,lista,nuevo,editado,destruir}=require('../controllers/adminControllers');
 
 
-router.get('/edit/:id',haysession,esAdmin,edit)
-router.put('/edit/:id',haysession,esAdmin,upload.single('imagenes'),praductsvalidations,editado)
+router.get('/edit/:id',/* esAdmin, */edit)
+router.put('/edit/:id',/* esAdmin, */upload.single('imagenes'),praductsvalidations,editado)
 
-router.get('/crear',haysession,esAdmin,create)
-router.post('/crear',haysession,esAdmin, upload.single('imagenes'),praductsvalidations,nuevo);
+router.get('/crear',/* esAdmin */create)
+router.post('/crear', /* esAdmin, */  upload.single('imagenes'),praductsvalidations,nuevo);
 
 
-router.get('/lista',haysession,esAdmin,lista)
+router.get('/lista',/* esAdmin, */lista)
 
 
 router.delete('/destruir/:id',haysession,esAdmin,destruir)
