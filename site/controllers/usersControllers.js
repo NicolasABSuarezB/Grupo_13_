@@ -3,6 +3,8 @@ let usuarios = require("../data/usuarios.json");
 const { validationResult } = require('express-validator')
 const db = require('../database/models')
 const bcrypt = require("bcryptjs")
+const fs = require("fs");
+const path = require("path");
 
 
 module.exports = {
