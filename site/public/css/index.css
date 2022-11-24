@@ -71,11 +71,12 @@
 }
 
 /* 2-productos*/
-.home .homeventa .homearticulos article{
+.home .homeventa .homearticulos .menucarucel{
     height: 95%;
     margin: 1%;
     width: 80vw;
     border: 1px solid var(--azul);
+    border-radius: 5%;
     background-color: white;
 
 
@@ -85,7 +86,7 @@
     justify-content: center;
     align-items: center;
     margin: 1%;
-    height: 450px;
+    
     
 }
 .home .productohometablet{
@@ -96,7 +97,7 @@
 }
 
 
-.home article .imgproducto{
+.home div .imgproducto{
     display: flex;
     justify-content: center;
     height: 60%;
@@ -111,7 +112,7 @@
     width: 210px;
     
 }
-.home .homearticulos article .descripcion{
+.home .homearticulos div .descripcion{
     
     display: flex;
     height: 40%;
@@ -119,7 +120,7 @@
     align-items: center;
     
 }
-.home article div button{
+.home div div button{
     width: 85%;
     background-color: var(--azul);
     color: white;
@@ -130,7 +131,7 @@
     
 }
 
-.home article div button i{
+.home div div button i{
     margin: 5px;
     font-size: 20px;
 
@@ -140,12 +141,12 @@
 
     display: none;
 }
-.home article .descripcion .nombreproduc{
+.home div .descripcion .nombreproduc{
     color: grey;
     
     text-align: center;
 }
-.home article .descripcion .precioproduc{
+.home div .descripcion .precioproduc{
     font-size: 2em;
 }
 
@@ -158,16 +159,16 @@
     border-top: var(--azul) solid 1px;
     
 }
-.home .marcas article{
+.home .marcas div{
     margin: 2%;
     display: flex;
     justify-content: center;
 }
-.home .marcas article div{
+.home .marcas div div{
     margin: 3%;
     height: 15vw;
 }
-.home .marcas article div img{
+.home .marcas div div img{
    
     height: 100%;
     width: 100%;
@@ -194,7 +195,7 @@
 
     .home .homearticulos{
         justify-content: center;
-        height: 450px;
+       
     }
     .home .homeventa .homearticulos article{
         height: 85%;
@@ -208,6 +209,8 @@
         height: 100px;
         
     }         
+
+
 }
 
 
@@ -241,7 +244,7 @@
     
     .home .homeventa .homearticulos{
         width: 90vw;
-        height: 45vw;
+       
         margin: auto;
     }
     

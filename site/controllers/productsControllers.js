@@ -19,9 +19,14 @@ module.exports={
         
     },
     carrito: (req,res)=>{
-        return res.render('carrito',{
+        let productos = db.productos.findAll()
+        .then((productos)=>{
+            return res.render('carrito',{
             productos
-        });
+            });
+        })
+
+        
     },
     productos: (req, res) => {
         /*  let id = +req.params.id

@@ -48,13 +48,21 @@
         <section class="interesar">
             <h2>TE PODRIA INTERESAR</h2>
             <article class="recomendado">
-
+                <div class="glider-contain">
+                        <div class="glider">
+                            <%
+                            for (let index = 0; index < 13; ) { %>
+                                
+                            <%- include('./partials/productoHome2',{ imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
+                            <%index++  }%>
+                        </div>
+                    
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                </div>
                 
-                <%let tipovista=['productohome','productohometablet','productohomedestock',];
-                for (let index = 0; index < 3; ) {%>
-                <%- include('./partials/productoHome',{ vistaProducto:tipovista[index],  imagen:productos[index].imagen , nombre:productos[index].titulo, precio:productos[index].precio , id:productos[0].id}) %>
-                <%index++  }%>
-
+          
             </article>
 
         </section>

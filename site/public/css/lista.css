@@ -1,0 +1,116 @@
+.lista div .listaproducto img{
+    width: 60vw;
+    height:  200px;
+    margin-left: 20px;
+}
+.lista .megalista{
+margin-top: 30px;
+}
+.lista .contenedorlista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 229);
+    box-shadow: -2px 4px 29px 0px rgb(138, 138, 138);
+    height: 500px;
+    margin: 15%;
+    border-radius: 10%;
+    border: 1px solid var(--verde);
+    
+
+}
+.lista .contenedorlista .descripcion{
+    display: flex;
+    flex-direction: column;
+}
+.lista .contenedorlista .descripcion div{
+    display: flex;
+    flex-grow: 0.5;
+   
+}
+.lista .contenedorlista .descripcion div div{
+    display: flex;
+   
+    flex-grow: 0.5;
+   
+}
+.lista .contenedorlista .descripcion div div p{
+    align-items: flex-start;
+   
+}
+.lista .contenedorlista .descripcion div h5{
+    display: inline;
+   flex-grow: 0.5;
+   
+   
+}
+.lista .contenedorlista .botones{
+    display: flex;
+ ;
+    align-items: center;
+ 
+    justify-content: space-around;
+}
+@media(min-width:441px) {
+    .lista .contenedorlista .descripcion div div{
+        width: 50%;
+    }
+    .lista .contenedorlista .descripcion div h5{
+        width: 50%;
+    }
+
+
+    .lista .megalista{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        
+    }
+    .lista .contenedorlista{
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        height: 300px;
+    margin: 2%; 
+}
+.lista div .listaproducto{
+    display: flex;
+    flex-grow: 0.2;
+}
+        
+    
+    .lista div .listaproducto img{
+        width: 150px;
+        height:  150px;
+        
+    }
+    .lista .contenedorlista .botones{
+        
+        flex-direction: column;
+        
+        flex-grow: 0.2;
+       
+    }
+    .lista .contenedorlista .descripcion{
+        
+       
+        
+        flex-grow: 0.6;
+       
+    }
+    
+
+
+}@media(min-width:769px) {
+    .lista .contenedorlista{
+        width: 40vw;
+        margin: 1%;
+        justify-content: center;
+        
+    }
+    .lista div .listaproducto img{
+        width: 150px;
+        height:  150px;
+    }
+}

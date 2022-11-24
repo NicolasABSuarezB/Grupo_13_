@@ -30,49 +30,61 @@
         </section>
         <section class="homeventa">
             <section class="menuseleccion">
-                <h2 class="seleccionado">ofertas</h2>
-                <h2>novedades </h2>
+                <h2 class="seleccionado" onclick="cambio()" id="botonofertas">ofertas</h2>
+                <h2 onclick="cambio()" id="botonovedades">novedades </h2>
             </section>
 
             <section class="homearticulos">
-                <div class="moverflecha">
-                    <img src="/img/imghome/flecha2.jpg" alt="">
-                </div>
-
-                <% let tipovista=['productohome','productohometablet','productohomedestock',];
-                    for (let index = 0; index < 3; ) { %>
-                         
-                     <%- include('./partials/productoHome',{vistaProducto:tipovista[index], imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
-                     <%index++  }%>
-                   
-               
+        
                 
-                <div class="moverflecha">
-                    <img src="/img/imghome/flecha1.jpg" alt="">
-                </div>
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% let tipovista=['productohome','productohometablet','productohomedestock',];
+                        for (let index = 0; index < 6; ) { %>
+                             
+                         <%- include('./partials/productoHome2',{ imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
+                         <%index++  }%>
+                    </div>
+                  
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                  </div>
+                  
+                  
+        
             </section>
-
-
             <section class="homearticulos">
-                <div class="moverflecha">
-                    <img src="/img/imghome/flecha2.jpg" alt="">
-                </div>
+        
+                
+        <div class="glider-contain">
+            <div class="glider2">
                 <%
-                    for (let index = 0; index < 3; ) {%>
-                        <%- include('./partials/productoHome',{ vistaProducto:tipovista[index], imagen:productos[index].imagen, nombre:productos[index].titulo, precio:productos[index].precio , id:productos[index].id}) %>
-                     <%index++  }%>
-                   
-               
-                <div class="moverflecha">
-                    <img src="/img/imghome/flecha1.jpg" alt="">
-                </div>
-            </section>
+                for (let index = 6; index < 14; ) { %>
+                     
+                 <%- include('./partials/productoHome2',{ imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
+                 <%index++  }%>
+            </div>
+          
+            <button aria-label="Previous" class="glider-prev2">«</button>
+            <button aria-label="Next" class="glider-next2">»</button>
+            <div role="tablist" class="dots"></div>
+          </div>
+          
+          
+
+    </section>
+    
+          
+
+            
+
 
 
 
             <h3>SELECCIONE POR MARCA</h3>
             <section class="marcas">
-                <article class="marca">
+                <div class="marca">
                     <div class="imgproducto">
                         <img src="/img/imghome/purinamarca.jfif" alt="">
                     </div>
@@ -87,8 +99,8 @@
                     </div>
 
 
-                </article>
-                <article class="marca">
+                </div>
+                <div class="marca">
                     <div class="imgproducto">
                         <img src="/img/imghome/purinamarca.jfif" alt="">
                     </div>
@@ -103,7 +115,7 @@
                     </div>
 
 
-                </article>
+                </div>
 
             </section>
     </main>
@@ -111,7 +123,7 @@
 
     <%- include('./partials/footer') %>
 
-   
+    <script src="/javascript/cambioindex.js"></script>
 
 
 </body>
