@@ -1,7 +1,9 @@
 .lista div .listaproducto img{
     width: 60vw;
     height:  200px;
+    margin-top: 15%;
     margin-left: 20px;
+    border: 1px solid rgb(119, 196, 218);
 }
 .lista .megalista{
 margin-top: 30px;
@@ -49,7 +51,8 @@ margin-top: 30px;
     display: flex;
  ;
     align-items: center;
- 
+    
+    width: 90%;
     justify-content: space-around;
 }
 @media(min-width:441px) {
@@ -69,9 +72,9 @@ margin-top: 30px;
     }
     .lista .contenedorlista{
         display: flex;
-        flex-direction: row;
-        width: 90vw;
-        height: 300px;
+        height: 500px;
+        width: 50vw;
+        
     margin: 2%; 
 }
 .lista div .listaproducto{
@@ -87,15 +90,14 @@ margin-top: 30px;
     }
     .lista .contenedorlista .botones{
         
-        flex-direction: column;
-        
+       
+        justify-content: space-around;
         flex-grow: 0.2;
        
     }
     .lista .contenedorlista .descripcion{
         
-       
-        
+        width: 80%;
         flex-grow: 0.6;
        
     }
@@ -104,7 +106,7 @@ margin-top: 30px;
 
 }@media(min-width:769px) {
     .lista .contenedorlista{
-        width: 40vw;
+        width: 20vw;
         margin: 1%;
         justify-content: center;
         
