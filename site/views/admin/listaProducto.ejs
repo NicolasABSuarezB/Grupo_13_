@@ -14,7 +14,7 @@
         </a>
         <section class="megalista">
           <% productos.forEach(producto=> { %>
-            <div class="contenedorlista wow animate__animated animate__bounceInUp" onclick="window.location = '/detalle/<%= producto.id %>'">
+            <div class="contenedorlista wow animate__animated animate__bounceInUp" onclick="window.location = '/admin/edit/<%= producto.id %>'">
               <div class="listaproducto ">
                 <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
               </div>
@@ -22,7 +22,7 @@
                 <div><h5>nombre:</h5><div><p class="nombreproduc"> <%= producto.titulo %></p></div></div>
                 <div><h5>precio :</h5><div><p class="precioproduc">$<%= producto.precio %></p></div></div>
                 <div><h5>descuento:</h5><div><p class="descuentoproduct"><%= producto.descuento %>%</p></div></div>
-                <div><h5>st0ck:</h5><div><p class="stockproduct"><%= producto.stock %></p></div></div>
+                <div><h5>stock:</h5><div><p class="stockproduct"><%= producto.stock %></p></div></div>
                 
                 
                 
