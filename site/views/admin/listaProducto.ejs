@@ -14,8 +14,8 @@
         </a>
         <section class="megalista">
           <% productos.forEach(producto=> { %>
-            <div class="contenedorlista" onclick="window.location = '/detalle/<%= producto.id %>'">
-              <div class="listaproducto">
+            <div class="contenedorlista wow animate__animated animate__bounceInUp" onclick="window.location = '/detalle/<%= producto.id %>'">
+              <div class="listaproducto ">
                 <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
               </div>
               <div class="descripcion">
