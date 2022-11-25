@@ -5,6 +5,7 @@ const db = require('../database/models')
 const bcrypt = require("bcryptjs")
 const fs = require("fs");
 const path = require("path");
+const { log } = require("console");
 
 
 module.exports = {
@@ -50,7 +51,7 @@ module.exports = {
     register: (req, res) => {
         res.render('register')
     },
-    processRegister: (req, res) => {
+   /*  processRegister: (req, res) => {
         let errors = validationResult(req)
         //return res.send(errors)
         if (req.fileValidationError) {
@@ -61,9 +62,60 @@ module.exports = {
             errors.errors.push(foto)
         }
         if (errors.isEmpty()) {
-            /* return res.send(req.file) */
-            /* return res.redirect('/login') */
+            // return res.send(req.file) 
+            // return res.redirect('/login') 
             let { name, email, telefono, pass} = req.body
+            db.usuarios.create({
+                nombre: name,
+                apellido: null,
+                email: email,
+                contrase: bcrypt.hashSync(pass, 10),
+                foto: req.file ? req.file.filename : "AvatarDefecto.jfif",
+                cp: null,
+                telefono: telefono,
+                id_roles: "1",
+                id_paises: null,
+                id_generos: null,
+            })
+                .then(usuario => {
+                    req.session.sessionuser = {
+                        id : usuario.id,
+                        nombre : usuario.nombre,
+                        image : usuario.imagen,
+                        rol : usuario.rolId
+                    }
+                    return res.redirect('/login')
+                })
+                .catch(error => {
+                    return res.send(error)
+                })
+        } else {
+            //return res.send(errors)
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', dato))
+
+            if (req.file) {
+                if (ruta(req.file.filename) && (req.file.filename !== "AvatarDefecto.jfif")) {
+                    fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', req.file.filename))
+                }
+            }
+
+            return res.render('register', { errors: errors.mapped(), old: req.body })
+        }
+
+    }, */
+    processRegister: (req, res) => {
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'image',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+        if (errors.isEmpty()) {
+            /* return res.send(req.body) */
+            /* return res.redirect('/login') */
+            let { name, email, telefono, pass } = req.body
             db.usuarios.create({
                 nombre: name,
                 apellido: null,
@@ -85,17 +137,13 @@ module.exports = {
         } else {
             //return res.send(errors)
             let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', dato))
-
-            if (req.file) {
-                if (ruta(req.file.filename) && (req.file.filename !== "imagenDefectoAvatar.jpg")) {
-                    fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', req.file.filename))
-                }
+            if (ruta(req.file.filename) && (req.file.filename !== "imagenDefectoAvatar.jpg")) {
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'imgusuario', req.file.filename))
             }
-
             return res.render('register', { errors: errors.mapped(), old: req.body })
         }
-
     },
+
     informacion: (req, res) => {
         return res.render('informacion')
     },

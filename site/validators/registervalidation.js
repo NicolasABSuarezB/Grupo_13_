@@ -6,5 +6,5 @@ module.exports = [
     check('telefono').notEmpty().withMessage('Este campo es obligatorio').bail().withMessage('No es un número valido'),
     check('pass').notEmpty().withMessage('Este campo es obligatorio').bail().isLength({ min: 8 }).withMessage('Debe haber por lo menos 8 carcteres').bail().isLength({ max: 12 }).withMessage('Maximo 12 carcteres'),
     check('pass2').notEmpty().withMessage('Este campo es obligatorio'),
-    check('avatar').notEmpty().withMessage('Este campo es obligatorio')
+    /* check('avatar').notEmpty().withMessage('Este campo es obligatorio') */
 ]
