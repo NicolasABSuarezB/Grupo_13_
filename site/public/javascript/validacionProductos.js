@@ -174,8 +174,8 @@ window.addEventListener('load', () => {
                 this.classList.add('is-invalid')
                 validate.descripcion = false
                 break;
-            case !(this.value.trim().length >= 10 && this.value.trim().length <= 255):
-                $('#descripcionError').innerHTML = "Debe contener minimo 10 caracteres  y maximo 255"
+            case !(this.value.trim().length >= 10 && this.value.trim().length <= 1000):
+                $('#descripcionError').innerHTML = "Debe contener minimo 10 caracteres  y maximo 1000"
                 this.classList.add('is-invalid')
                 validate.descripcion = false
                 break;
