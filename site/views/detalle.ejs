@@ -11,8 +11,52 @@
             <section class=" imgproductodetalle">
                 <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
             </section>
+            <div class="oscuro animate__animated animate__shakeY" id="oscuro"></div>
+            <section class="puntaje animate__animated animate__bounceInDown" id="puntaje">
+                <form action="/detalle/<%= producto.id %>" method="post" method="post">
+                    <h2>¿Que tal te parecio el producto?</h2>
+                    <section class="estrellas">
+                        <input type="radio" name="estrella" id="estrella1" value="5" onclick="puntaje(5)">
+                        <label for="estrella1"><i class="fa-solid fa-star" ></i></label>
+                        <input type="radio" name="estrella" id="estrella2" value="4" onclick="puntaje(4)">
+                        <label for="estrella2"><i class="fa-solid fa-star"></i></label>
+                        <input type="radio" name="estrella" id="estrella3" value="3" onclick="puntaje(3)">
+                        <label for="estrella3"><i class="fa-solid fa-star"></i></label>
+                        <input type="radio" name="estrella" id="estrella4" value="2" onclick="puntaje(2)">
+                        <label for="estrella4"><i class="fa-solid fa-star"></i></label>
+                        <input type="radio" name="estrella" id="estrella5" value="1" onclick="puntaje(1)">
+                        <label for="estrella5"><i class="fa-solid fa-star"></i></label>
+                    </section>
+                    
+                    
+                    <input type="text" name="comentario" class="comentario">
+                    <div class="botones">
+                         <button type="button" onclick="desapaerecer()"> cancelar</button>
+                          <button class="btn btn-outline-success" id="btn-submit" type="submit">enviar</button>
+                    </div>
+                   
+                </form>
+            </section>
+            
+
                
             <section class="contenedorDetalle">
+                <section class="puntuado">
+                    <% for (let index = 0; index < 5 ; index++) {
+                        if (index < redondeado) {%>
+                            <li><i class="fa-solid fa-star activado"></i></li>
+                        <%}else{ %> 
+                            <li><i class="fa-solid fa-star desactivado"></i>
+                            <% }%>
+                        
+                        
+                    <% } %>  
+                    
+                    
+                    <button onclick="mostrarpuntaje()"> puntuar</button>
+                </section>
+                
+
                 <section class="descripciondetalle">
                     <h3><%= producto.titulo %></h3>
 
@@ -67,7 +111,7 @@
 
         </section>
     </main>
-
+    <script src="/javascript/puntaje.js"></script>
     <%- include('./partials/footer') %>
     <script>
         

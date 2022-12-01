@@ -1,19 +1,25 @@
 'use strict';
 
-let listado = ['puppy','raza','milka']
-
-let marcas = listado.map(marca => {
+let listado = ['purina','royal canin','Whiskas']
+let imagen=['purinamarca.jfif','royalcanin.png','Whiskas-logo.png']
+let subida=[]
+listado.forEach((lita,index)=>{
   let elemento = {
-    marca: marca,
+    marca: lita,
+    imagen: imagen[index],
     createdAt:new Date,
     updatedAt:new Date
   }
-  return elemento
-})
+  subida.push(elemento)
+}
+
+)
+
+
 module.exports = {
   async up (queryInterface, Sequelize) {
    
-     await queryInterface.bulkInsert('marcas', marcas , {});
+     await queryInterface.bulkInsert('marcas',subida , {});
   
   },
 
