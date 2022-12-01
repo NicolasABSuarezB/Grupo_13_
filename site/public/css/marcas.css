@@ -30,4 +30,26 @@
 .marcas .menucarucel{
     background-color: aliceblue;
     margin: 10px;
-    box-shadow: 2px 4px 50px -1px rgba(0,0,0,0.55);}
+    box-shadow: 2px 4px 50px -1px rgba(0,0,0,0.55);
+    
+}
+
+.nohay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 4px 50px -1px rgba(0,0,0,0.55);
+   border-radius: 5%;
+   background-color: rgb(230, 228, 228);
+    height: 300px;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+.nohay h4{
+    text-align: center;
+    margin-top: 15px;
+    
+}
+.nohay img{
+    width: 170px;
+}

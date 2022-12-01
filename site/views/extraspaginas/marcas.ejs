@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <%- include('../partials/head') %>
 
     <body class="informacion">
@@ -12,32 +12,43 @@
                 <img class="imgb" src="/img/imgmarca/<%=marca.imagen %>" alt="">
             </section>
             <section class="descripcion">
-                <h1>descripcion</h1>
+                <h1>sobre nosotros</h1>
                 <p>
-                    dhsudusjasfishduhjsssssssssssssssss
-                    ssssssssssssssssssssssssssssiuhu
-                    sldmksmdksmdkas
-                    skdsndjsndjanmksmd
-                    skdnmskdmsd
+                    descripcion genericadescripcion generica
+                    descripcion genericadescripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
                 </p>
             </section>
-            
-            <div class="glider-contain">
-                <div class="glider">
-                    <% producto.forEach((productos,index)=> { %>
-                        <%- include('../partials/productoHome2',{ imagen:productos.imagen,
-                            nombre:productos.titulo, precio:productos.precio,
-                            id:productos.id}) %>
-                            
-        
-                        <% }) %> 
-                    
+            <% if(producto.length !== 0){%>
+                
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% producto.forEach((productos,index)=> { %>
+                            <%- include('../partials/productoHome2',{ imagen:productos.imagen, nombre:productos.titulo,
+                                precio:productos.precio, id:productos.id}) %>
+                
+                
+                                <% }) %>
+                
+                    </div>
+                
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
                 </div>
+                
+                <% }else{  %> 
+                    
+                    <%- include('../partials/nada') %>
 
-                <button aria-label="Previous" class="glider-prev">«</button>
-                <button aria-label="Next" class="glider-next">»</button>
-                <div role="tablist" class="dots"></div>
-            </div>
+                 <% } %> 
+            
+            
             
             
 
