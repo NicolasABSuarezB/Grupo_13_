@@ -83,4 +83,5 @@
 .perfil small {
     padding-top: 1%;
     color: var(--rojo);
+    width: 50%;
 }

@@ -26,17 +26,9 @@
                     </section>
                     
                     <section class="container bottom">
-                        <label for="telefono">Telefono</label>
-                        <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su número de telefono">
-                        <small class="error-msg" id="errorTelefono">
-                            <%= locals.errors && errors.telefono? errors.telefono.msg : null %>
-                        </small>
-                    </section>
-                    
-                    <section class="container bottom">
                         <label for="pass">Contraseña</label>
                         <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña">
-                        <i class="fas fa-eye-slash"></i>
+                        <i class="fas fa-eye-slash" id="eye-pass"></i>
                         <small class="error-msg" id="errorPass">
                             <%= locals.errors && errors.pass? errors.pass.msg : null %>
                         </small>
@@ -45,19 +37,18 @@
                     <section class="container bottom">
                         <label for="pass2">Confirme su contraseña</label>
                         <input type="password" name="pass2" id="pass2" placeholder="Confirme su contraseña">
-                        <i class="fas fa-eye-slash"></i>
+                        <i class="fas fa-eye-slash" id="eye-pass2"></i>
                         <small class="error-msg" id="errorPass2">
                             <%= locals.errors && errors.pass2? errors.pass2.msg : null %>
                         </small>
                     </section>
 
                     <section class="container bottom">
-                        <label for="avatar">suba su foto de perfil</label>
-                        <input type="file" name="avatar" id="avatar">
+                        <label for="image">suba su foto de perfil</label>
+                        <input type="file" name="image" id="image">
                         <small class="error-msg" id="errorAvatar">
                             <%= locals.errors && errors.avatar? errors.avatar.msg : null %>
                         </small>
-                        <small>formato incorrecto</small>
                     </section>
 
                     <section class="buttons">
@@ -68,7 +59,7 @@
                     <a href="/login">¿Ya esta registrado? Inicie sesion</a>
                 </form>
             </main>
-            <script src="/js/registerValidator.js"></script>
+            <script src="/javascript/registerValidator.js"></script>
             <%- include('./partials/footer') %>
 
     </body>
