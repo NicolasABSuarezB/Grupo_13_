@@ -11,7 +11,7 @@ router.get('/login', login)
 router.post('/login', loginValidator, processLogin)
 
 router.get('/register', register)
-router.post('/register', upload.single('avatar'), registerValidator, processRegister);
+router.post('/register', upload.single('image'), registerValidator, processRegister);
 
 router.get('/informacion', informacion)
 

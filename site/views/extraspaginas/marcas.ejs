@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+    <body class="informacion">
+
+        <%- include('../partials/header') %>
+
+        <main class="marcas" id="marcas">
+
+            <section class="gran_marca">
+                <img class="imgb" src="/img/imgmarca/<%=marca.imagen %>" alt="">
+            </section>
+            <section class="descripcion">
+                <h1>sobre nosotros</h1>
+                <p>
+                    descripcion genericadescripcion generica
+                    descripcion genericadescripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                    descripcion generica
+                </p>
+            </section>
+            <% if(producto.length !== 0){%>
+                
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% producto.forEach((productos,index)=> { %>
+                            <%- include('../partials/productoHome2',{ imagen:productos.imagen, nombre:productos.titulo,
+                                precio:productos.precio, id:productos.id}) %>
+                
+                
+                                <% }) %>
+                
+                    </div>
+                
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                </div>
+                
+                <% }else{  %> 
+                    
+                    <%- include('../partials/nada') %>
+
+                 <% } %> 
+            
+            
+            
+            
+
+            
+           
+        </main>
+
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

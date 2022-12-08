@@ -32,7 +32,7 @@ module.exports = [
 
     check('Descripcion').trim().notEmpty().withMessage('Debes ingresar una descripcion de tu producto').bail()
     .isLength({min:10}).withMessage('Debe contener minimo 10 caracteres y maximo 255')
-    .isLength({max:255}).withMessage('Debe contener maximo 255 caracteres'),
+    .isLength({max:1000}).withMessage('Debe contener maximo 255 caracteres'),
 
     /* check('imagen').notEmpty().withMessage('Este campo es obligatorio')
     .matches(/\.(jpg|jpeg|png|jfif|gif|webp)$/).withMessage('Solo se permite ingresar una imagen con los siguientes fomatos (jpg|jpeg|png|jfif|gif|webp)'), */

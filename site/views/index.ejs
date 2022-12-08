@@ -1,132 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body class="home">
-    <%- include('./partials/header') %> 
-   
-
-    <main class="mainhome">
-        <section class=" imageng">
-
-            <img class="imgb" src="/img/imghome/18.png" alt="">
-            <ul class="bolitas">
-                <li class="seleccion"></li>
-                <li  onclick="banner()"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+    <body class="home">
+        <%- include('./partials/header') %>
 
 
-        </section>
-        <section class="menuanimal">
-            <a class=" wow animate__animated animate__fadeInLeft" href=""><img src="/img/imghome/menuperro.jfif" alt=""></a>
-            <a class=" wow animate__animated animate__fadeInLeft" href=""><img src="/img/imghome/menugato.jfif" alt=""></a>
-            <a class=" wow animate__animated animate__fadeInLeft" href=""><img src="/img/imghome/menuave.jfif" alt=""></a>
-            <a class=" wow animate__animated animate__fadeInLeft" href="" class="extramenuanimal"><img src="/img/imghome/menupez.jfif" alt=""></a>
+            <main class="mainhome">
+                <section class=" imageng">
 
-        </section>
-        <section class="homeventa">
-            <section class="menuseleccion">
-                <h2 class="seleccionado" onclick="cambio()" id="botonofertas">ofertas</h2>
-                <h2 onclick="cambio()" id="botonovedades">novedades </h2>
-            </section>
+                    <img class="imgb" src="/img/imghome/18.png" alt="">
+                    <ul class="bolitas">
+                        <li class="seleccion"></li>
+                        <li onclick="banner()"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
 
-            <section class="homearticulos  wow animate__animated animate__fadeInUp">
-        
-                
-                <div class="glider-contain">
-                    <div class="glider">
-                        <% let tipovista=['productohome','productohometablet','productohomedestock',];
-                        for (let index = 0; index < 6; ) { %>
-                             
-                         <%- include('./partials/productoHome2',{ imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
-                         <%index++  }%>
-                    </div>
-                  
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-                    <div role="tablist" class="dots"></div>
-                  </div>
-                  
-                  
-        
-            </section>
-            <section class="homearticulos wow animate__animated animate__fadeInUp">
-        
-                
-        <div class="glider-contain">
-            <div class="glider2">
-                <%
-                for (let index = 6; index < 14; ) { %>
-                     
-                 <%- include('./partials/productoHome2',{ imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
-                 <%index++  }%>
-            </div>
-          
-            <button aria-label="Previous" class="glider-prev2">«</button>
-            <button aria-label="Next" class="glider-next2">»</button>
-            <div role="tablist" class="dots"></div>
-          </div>
-          
-          
 
-    </section>
-    
-          
+                </section>
+                <section class="menuanimal">
+                    <a class=" wow animate__animated animate__fadeInLeft" href="/productos"><img src="/img/imghome/menuperro.jfif"
+                            alt=""></a>
+                    <a class=" wow animate__animated animate__fadeInLeft" href="/productos"><img src="/img/imghome/menugato.jfif"
+                            alt=""></a>
+                    <a class=" wow animate__animated animate__fadeInLeft" href="/productos"><img src="/img/imghome/menuave.jfif"
+                            alt=""></a>
+                    <a class=" wow animate__animated animate__fadeInLeft" href="/productos" class="extramenuanimal"><img src="/img/imghome/menupez.jfif" alt=""></a>
 
-            
+                </section>
+                <section class="homeventa">
+                    <section class="menuseleccion">
+                        <h2 class="seleccionado" onclick="cambio()" id="botonofertas">ofertas</h2>
+                        <h2 onclick="cambio()" id="botonovedades">novedades </h2>
+                    </section>
+
+                    <section class="homearticulos  wow animate__animated animate__fadeInUp">
+
+
+                        <div class="glider-contain">
+                            <div class="glider">
+                                <% let tipovista=['productohome','productohometablet','productohomedestock',]; for (let
+                                    index=0; index < 6; ) { %>
+
+                                    <%- include('./partials/productoHome2',{ imagen:productos[index].imagen,
+                                        nombre:productos[index].titulo, precio:productos[index].precio,
+                                        id:productos[index].id}) %>
+                                        <%index++ }%>
+                            </div>
+
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
+                        </div>
 
 
 
-
-            <h3>SELECCIONE POR MARCA</h3>
-            <section class="marcas">
-                <div class="marca">
-                    <div class="imgproducto">
-                        <img src="/img/imghome/purinamarca.jfif" alt="">
-                    </div>
-                    <div class="imgproducto">
-                        <img src="/img/imghome/Whiskas-logo.png" alt="">
-                    </div>
-                    <div class="imgproducto">
-                        <img src="/img/imghome/royalcanin.png" alt="">
-                    </div>
-                    <div class="imgproducto">
-                        <img src="/img/imghome/royalcanin.png" alt="">
-                    </div>
+                    </section>
+                    <section class="homearticulos wow animate__animated animate__fadeInUp">
 
 
-                </div>
-                <div class="marca">
-                    <div class="imgproducto">
-                        <img src="/img/imghome/purinamarca.jfif" alt="">
-                    </div>
-                    <div class="imgproducto">
-                        <img src="/img/imghome/Whiskas-logo.png" alt="">
-                    </div>
-                    <div class="imgproducto">
-                        <img src="/img/imghome/royalcanin.png" alt="">
-                    </div>
-                    <div class="imgproducto">
-                        <img src="/img/imghome/royalcanin.png" alt="">
-                    </div>
+                        <div class="glider-contain">
+                            <div class="glider2">
+                                <% for (let index=6; index < 14; ) { %>
+
+                                    <%- include('./partials/productoHome2',{ imagen:productos[index].imagen,
+                                        nombre:productos[index].titulo, precio:productos[index].precio,
+                                        id:productos[index].id}) %>
+                                        <%index++ }%>
+                            </div>
+
+                            <button aria-label="Previous" class="glider-prev2">«</button>
+                            <button aria-label="Next" class="glider-next2">»</button>
+                            <div role="tablist" class="dots"></div>
+                        </div>
 
 
-                </div>
 
-            </section>
-    </main>
+                    </section>
 
 
-    <%- include('./partials/footer') %>
-    <script src="/javascript/banner.js"></script>
-
-    <script src="/javascript/cambioindex.js"></script>
 
 
-</body>
+
+
+
+
+                    <h3>SELECCIONE POR MARCA</h3>
+                    <section class="marcas">
+                        <div class="marca">
+                            <% marcas.forEach(producto=> { %>
+
+                                <div class="imgproducto" onclick="window.location = '/marcas/<%= producto.id %>'">
+                                    <img src="/img/imgmarca/<%= producto.imagen %>" alt="">
+                                </div>
+
+                                <% }) %>
+
+
+
+                        </div>
+                        <div class="marca">
+                            <% marcas.forEach((producto)=> { %>
+
+                                <div class="imgproducto" onclick="window.location = '/marcas/<%= producto.id %>'">
+                                    <img src="/img/imgmarca/<%= producto.imagen %>" alt="">
+                                </div>
+
+                                <% }) %>
+
+
+
+
+                        </div>
+
+                    </section>
+            </main>
+
+
+            <%- include('./partials/footer') %>
+                <script src="/javascript/banner.js"></script>
+
+                <script src="/javascript/cambioindex.js"></script>
+
+
+    </body>
 
 </html>
