@@ -27,7 +27,7 @@ module.exports = {
       },
       foto: {
         type: Sequelize.STRING(100),
-        allowNull: false,
+        allowNull: true,
       },
       cp: {
         type: Sequelize.INTEGER,
@@ -35,7 +35,7 @@ module.exports = {
       },
       telefono: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       id_roles: {
         type: Sequelize.INTEGER,
