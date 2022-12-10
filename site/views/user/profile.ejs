@@ -7,16 +7,14 @@
 
             <main class="vistaUser" id="userForms">
                 <h1>Bienvenid@</h1>
-                <!-- REVISAR PARA QUE FUNCIONE EL POST -->
                 <form action="/profile/<%=user.id%>?_method=PUT" method="post" enctype="multipart/form-data">
                     <!-- EMAIL -->
                     <section class="container bottom">
                         <label class="email_user">Email: <%=user.email %> </label>
                     </section>
-                    <!-- REVISAR PARA QUE FUNCIONE -->
                     <!-- FOTO DE PERFIL -->
                     <section class="container bottom">
-                        <img src="" alt="">
+                        <img src="/img/usuario/<%=user.foto %>" alt="foto de perfil">
                         <div class="avatar_edit">
                             <input name="avatar" type='file' id="imageUpload" accept="image/*" />
                             <label for="imageUpload" class="fas fa-pencil-alt"></label>
@@ -44,7 +42,9 @@
                     <section class="container bottom">
                         <label for="genero">Genero</label>
                         <select name="genero" id="genero">
-                            <option value="<%=user.genero %>"></option>
+                            <option value="<%=user.genero %>">
+                                <%=user.genero %>
+                            </option>
                             <option value="Seleccione su genero" disabled>Seleccione su genero</option>
                             <option value="1">Female</option>
                             <option value="2">Male</option>
@@ -55,7 +55,9 @@
                     <section class="container bottom">
                         <label for="pais">Pais</label>
                         <select name="pais" id="pais">
-                            <option value="<%=user.pais %>"></option>
+                            <option value="<%=user.id_paises %>">
+                                <%=user.id_paises %>
+                            </option>
                             <option value="Seleccione su pais" disabled>Seleccione su pais</option>
                             <option value="1">Argentina</option>
                             <option value="2">Chile</option>
@@ -90,8 +92,8 @@
                     <!-- CODIGO POSTAL -->
                     <section class="container bottom">
                         <label for="direccion">Codigo Postal</label>
-                        <input type="number" name="codigopostal" id="codigopostal" placeholder="Ingrese su codigo postal"
-                            value="<%=user.cp %>">
+                        <input type="number" name="codigopostal" id="codigopostal"
+                            placeholder="Ingrese su codigo postal" value="<%=user.cp %>">
                         <small class="error-msg" id="errorCodigopostal">
                             <%= locals.errors && errors.codigopostal? errors.name.msg : null %>
                         </small>

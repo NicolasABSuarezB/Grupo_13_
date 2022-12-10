@@ -94,7 +94,6 @@ window.onload = () => {
                 validationsErrors = true;
                 break;
 
-
             default:
                 $("#errorPass").innerHTML = ""
                 validationsErrors = false;
@@ -128,7 +127,6 @@ window.onload = () => {
                 validationsErrors = true;
                 break;
 
-
             case pass2.value != pass.value:
                 $("#errorPass2").innerHTML = "Las constraseñas no coinciden"
                 validationsErrors = true;
@@ -152,7 +150,6 @@ window.onload = () => {
                 $('#imagenContainer').innerHTML = ""
                 break;
         }
-
     })
 
     // Visualizador de clave
