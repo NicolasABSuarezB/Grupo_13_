@@ -3,13 +3,13 @@ const { check, body } = require('express-validator');
 module.exports = [
     // Nombre
     check('name').notEmpty().withMessage('El nombre es obligatorio').bail()
-        .matches(/^[a-zA-Z0-9\sñáéíóúü ]*$/).withMessage("El nombre no debe contener datos numericos ni especiales").bail()
-        .isLength({ min: 5 }).withMessage('Debe haber por lo menos 5 letras').bail(),
+        .matches(/^[a-zA-Z0-9\sñáéíóúü ]*$/).withMessage("El nombre no debe contener datos numéricos ni especiales")
+        .isLength({ min: 5 }).withMessage('Debe haber por lo menos 5 caracteres'),
 
     // Apellido
     check('apellido').notEmpty().withMessage('El apellido es obligatorio').bail()
-        .matches(/^[a-zA-Z0-9\sñáéíóúü ]*$/).withMessage("El nombre no debe contener datos numericos ni especiales").bail()
-        .isLength({ min: 5 }).withMessage('Debe haber por lo menos 5 letras').bail(),
+        .matches(/^[a-zA-Z0-9\sñáéíóúü ]*$/).withMessage("El nombre no debe contener datos numéricos ni especiales")
+        .isLength({ min: 5 }).withMessage('Debe haber por lo menos 5 letras'),
 
     // Genero    check('genero').notEmpty().withMessage('').bail(),
     // Pais    check('pais').notEmpty().withMessage('').bail(),
@@ -20,9 +20,9 @@ module.exports = [
 
     // Codigo Postal
     check('codigopostal').notEmpty().withMessage('El codigo postal es obligatorio').bail()
-        .isNumeric().withMessage('Solo se permiten numeros').bail(),
+        .isNumeric().withMessage('Solo se permiten numeros'),
 
     // Telefono
     check('telefono').notEmpty().withMessage('El numero de telefono es obligatorio').bail()
-        .isNumeric().withMessage('Solo se permiten numeros').bail(),
+        .isNumeric().withMessage('Solo se permiten numeros'),
 ]

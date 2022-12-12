@@ -80,17 +80,7 @@ window.onload = () => {
                 break;
 
             case !regExPass.test(pass.value):
-                $("#errorPass").innerHTML = "La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
-                validationsErrors = true;
-                break;
-
-            case value.length < 8:
-                $("#errorPass").innerHTML = 'Debe haber por lo menos 8 carcteres'
-                validationsErrors = true;
-                break;
-
-            case value.length > 12:
-                $("#errorPass").innerHTML = 'Maximo 12 carcteres'
+                $("#errorPass").innerHTML = 'La contraseña debe tener entre 8 y 12 caracteres, una mayuscula, una minuscula y un numero'
                 validationsErrors = true;
                 break;
 
@@ -113,17 +103,7 @@ window.onload = () => {
                 break;
 
             case !regExPass.test(pass.value):
-                $("#errorPass").innerHTML = "La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
-                validationsErrors = true;
-                break;
-
-            case value.length < 8:
-                $("#errorPass2").innerHTML = 'Debe haber por lo menos 8 carcteres'
-                validationsErrors = true;
-                break;
-
-            case value.length > 12:
-                $("#errorPass2").innerHTML = 'Maximo 12 carcteres'
+                $("#errorPass").innerHTML = 'La contraseña debe tener entre 8 y 12 caracteres, una mayuscula, una minuscula y un numero'
                 validationsErrors = true;
                 break;
 

@@ -33,7 +33,7 @@ window.onload = () => {
                 break;
 
             case !regExAlpha.test(value):
-                $('#errorName').innerHTML = "El nombre NO debe contener datos numéricos"
+                $('#errorName').innerHTML = "El nombre no debe contener datos numéricos ni especiales"
                 validationsErrors = true;
                 break;
 
@@ -61,7 +61,7 @@ window.onload = () => {
                 break;
 
             case !regExAlpha.test(value):
-                $('#errorApellido').innerHTML = "El apellido NO debe contener datos numéricos o especiales"
+                $('#errorApellido').innerHTML = "El apellido no debe contener datos numéricos ni especiales"
                 validationsErrors = true;
                 break;
 

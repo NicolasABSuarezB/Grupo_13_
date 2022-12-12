@@ -52,17 +52,6 @@ window.onload = () => {
                 validationsErrors = true;
                 break;
 
-            case value.length < 8:
-                $("#errorPass").innerHTML = 'Debe haber por lo menos 8 carcteres'
-                validationsErrors = true;
-                break;
-
-            case value.length > 12:
-                $("#errorPass").innerHTML = 'Maximo 12 carcteres'
-                validationsErrors = true;
-                break;
-
-
             default:
                 $("#errorPass").innerHTML = ""
                 validationsErrors = false;
