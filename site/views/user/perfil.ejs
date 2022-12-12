@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body class="vistaperfil">
+
+        <%- include('../partials/header') %>
+
+        <main class="infoperfil">
+            <section class="contenidoperfil">
+                <section class="fotoperfil  wow animate__animated animate__fadeInUp">
+                    <img src="<%=user.foto %> " alt="">
+                </section>
+                <section>
+                    <h1>
+                        <%=user.nombre%>
+                            <%=user.apellido %>
+                    </h1>
+                    <p>rol:<%=user.roles.rol%>
+                    </p>
+                </section>
+                <a href="/profile">Editar mi perfil</a>
+                
+                    <button onclick=""> cerrar sesion</button>
+                    <button>cambiar perfil</button>
+            
+               >
+            </section>
+            <section class="minihistorial">
+                <h3>lo ultimo que estuviste viendo</h3>
+                <section class="historial">
+                    <% minihisto.forEach((producto,index)=> {%>
+                
+                        <%- include('../partials/productoHome2',{ imagen:producto.productos.imagen, nombre:producto.productos.titulo,
+                            precio:producto.productos.precio, id:producto.productos.id}) %>
+                
+                
+                            <%}); %>
+                
+                </section>
+               
+            </section>
+        
+        </main>
+       
+
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

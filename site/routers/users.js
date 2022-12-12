@@ -4,7 +4,7 @@ const upload = require('../middlewares/multerUsuarios')
 const registerValidator = require('./../validators/registervalidation')
 const loginValidator = require('./../validators/loginvalidator')
 
-let { login, register, informacion, processLogin, processRegister, perfil, updatePerfil } = require('../controllers/usersControllers');
+let { login, register, informacion, processLogin, processRegister, perfil, updatePerfil,cerrar,vistaperfil } = require('../controllers/usersControllers');
 
 
 router.get('/login', login)
@@ -17,5 +17,8 @@ router.get('/informacion', informacion)
 
 router.get('/profile', perfil);
 router.put('/profile/:id',upload.single('avatar'),updatePerfil);
+
+router.get('/perfil', vistaperfil)
+router.get('/cerrar',cerrar)
 
 module.exports = router;

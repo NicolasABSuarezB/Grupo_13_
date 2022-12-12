@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'id_paises'
       })
       usuarios.belongsTo(models.generos,{
-        as:'genero',
+        as:'generos',
         foreignKey: 'id_generos'
       })
       usuarios.belongsTo(models.roles,{
-        as:'rol',
+        as:'roles',
         foreignKey: 'id_roles'
       }),
       usuarios.hasMany(models.carritos,{
@@ -32,7 +32,13 @@ module.exports = (sequelize, DataTypes) => {
         as:'ordenes',
         foreignKey:'id_usuarios'
 
+      }),
+      usuarios.hasMany(models.recomendados,{
+        as:'recomendados',
+        foreignKey:'id_usuario'
+
       })
+    
     }
     
   }

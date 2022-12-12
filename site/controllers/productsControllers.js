@@ -10,34 +10,94 @@ module.exports={
         let puntaje = db.detalles.findAll({
             where:{
                 id_producto:id
-            }})
+            },include: [{
+                all: true
+            }]})
+        let hayopinion=[{}]
+        let agregarrecomiendo=null
+        
         if (req.session.sessionuser) {
-            let hayopinion = db.detalles.findAll({
+            hayopinion = db.detalles.findAll({
                 where: {
-                    id_producto:req.session.sessionuser.id
-                }
-            })
+                    id_producto: +id,
+                    id_usuario:req.session.sessionuser.id
+
+                }})
+            agregarrecomiendo=db.recomendados.findAll({
+                where:{
+                    id_usuario:req.session.sessionuser.id
+                }})
+             
+    
+           
 
         }
         
        
-        Promise.all([producto, productos, puntaje])
-        .then(([producto, productos, puntaje, hayopinio])=>{
-            let promedio=0
-            let cantidad=0
-            puntaje.forEach((element,index) => {
-                promedio= promedio + element.puntaje
-                cantidad=index
-            });
-            promedio= promedio / cantidad;
-            let redondeado=Math.round(promedio)
-             //return res.send(redondeado.toString())
-            return res.render('detalle',{producto,productos,puntaje,promedio,redondeado})
         
-            }
-        )
-        .catch(error => res.send(error))
-        
+        Promise.all([producto, productos, puntaje, hayopinion,agregarrecomiendo])
+                .then(([producto, productos, puntaje, hayopinion,agregarrecomiendo]) => {
+                    let promedio = 0
+                    let cantidad = 0
+                    puntaje.forEach((element, index) => {
+                        promedio = promedio + element.puntaje
+                        cantidad = index+1
+                    });
+                    promedio = promedio / cantidad;
+                    let redondeado = Math.round(promedio)
+                   
+                    
+                     if(hayopinion.toString() !== "[object SequelizeInstance:detalles]"){
+                        hayopinion =hayopinion.toString()
+                       
+                    }
+                    //return res.send(puntaje[0].usuario.foto)
+                    
+                    if (req.session.sessionuser) {
+                        if (agregarrecomiendo.length <=19) {
+                            db.recomendados.create({
+                                id_usuario:req.session.sessionuser.id,
+                                id_producto:+id
+                            })
+                        }else{
+                        let fechahoy =new Date()
+                        let eliminar={updatedAt:fechahoy.toISOString()}
+                            agregarrecomiendo.forEach(fecha => {
+                                
+                                if(Date.parse(fecha.updatedAt)<= fechahoy.getTime()){
+                                    if(Date.parse(eliminar.updatedAt)>Date.parse(fecha.updatedAt)){
+                                        eliminar=fecha
+                                        console.log("exito",eliminar.id)
+                                    }
+                                  
+                                }
+
+                                
+                            })
+                            db.recomendados.update({
+                                id_usuario:req.session.sessionuser.id,
+                                id_producto:+id
+                                
+                            },
+                            {
+                                where:{id:eliminar.id}
+                            })
+            
+
+                            
+
+                        }
+            
+                    }
+                  
+                    console.log(hayopinion)
+                  // return res.send(hayopinion)
+                    return res.render('detalle', { producto, productos, puntaje, promedio, redondeado, hayopinion })
+
+                }
+                )
+                .catch(error => res.send(error))
+            
         
     },
     carrito: (req,res)=>{
@@ -87,19 +147,51 @@ module.exports={
     puntaje:(req,res)=>{
         let id = +req.params.id
         let {estrella, comentario}=req.body
+        let hayopinion = db.detalles.findAll({
+            where: {
+                id_producto: +id,
+                id_usuario:req.session.sessionuser.id
+            }})
+        .then((hayopinion)=>{
+            if(hayopinion[0]!=null){
 
-        db.detalles.create({
-            puntaje: +estrella,
-            comentarios:comentario,
-            id_usuario:1,
-            id_producto: id,
-
-                
+                db.detalles.update({
+                    puntaje: +estrella,
+                    comentarios: comentario,
+                   
+                },
+                    {
+                        where: {
+                            id_producto: id,
+                            id_usuario:req.session.sessionuser.id
+    
+                        }
+                    })
+                    return res.send(hayopinion[0])
+    
+    
+            }else{
+                db.detalles.create({
+                    puntaje: +estrella,
+                    comentarios: comentario,
+                    id_usuario: req.session.sessionuser.id,
+                    id_producto: id,
+    
+    
                     
-           
+    
+                })
+                return res.send("no hay opinion"+estrella)
+            }
+
         })
-        return res.end()
+        
+
+        
+        
 
         
     },
+   
+    
 }

@@ -111,7 +111,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 10%;
-    height: 350px;
+   /* height: 350px;*/
     
 }
 .detalle .productohometablet{
@@ -221,8 +221,15 @@
 .detalle .puntuado li{
     list-style:none;
     font-size: 25px;
+}
+.detalle .estrellas{
+   display: flex;
     
 }
+.detalle .estrellas img{
+    height: 50px;
+     
+ }
 .detalle .puntaje h2{
    font-family: var(--tipografia-principal);
    font-size: 15px;
@@ -254,7 +261,16 @@
 .detalle .desactivado{
     color: black;
 }
-
+.detalle .comentario{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    border: 1px solid var(--azul);
+    height: 200px;
+}
+.detalle .comentario .estrellas{
+    background-color:rgb(163, 193, 233);
+}
 
  @media(min-width:361px) {
     .detalle .imgproductodetalle img{
@@ -269,6 +285,11 @@
      .detalle .productohometablet{
         display: block;
     }
+    .detalle .contenedoropinion{
+        
+       display: flex;
+       justify-content: center;
+    }
     .detalle .puntaje{
         
         width: 70vw;
@@ -282,6 +303,10 @@
         
         font-size: 20px;
      }
+     .detalle .comentario{
+        width: 80vw;
+        height: 200px;
+    }
 }
 @media(min-width:769px) {
     .detalle .productohomedestock{
@@ -314,6 +339,10 @@
     .contenedorDetalle{
         width: 50%;
     }
+    .detalle .contenedoropinion{
+        
+        justify-content: flex-start;
+     }
     .detalle .puntaje{
         
         width: 50vw;
@@ -324,7 +353,6 @@
     
     }
     .detalle .puntuado {
-        
         justify-content: flex-start;
         
     }
@@ -333,8 +361,9 @@
         font-size: 40px;
         
     }
-    .detalle .puntaje .comentario{
+    .detalle .comentario{
         
+        margin-left: 10vw;
         height: 100px;
         margin-bottom: 10%;
     }
@@ -347,6 +376,10 @@
         font-size: 45px;
         
         
+    }
+    .detalle .comentario{
+        width: 40vw;
+        height: 200px;
     }
     
 }
