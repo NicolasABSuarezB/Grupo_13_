@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+    <body class="informacion">
+
+        <%- include('./partials/header') %>
+
+        <main>
+            <section class="homearticulos  wow animate__animated animate__fadeInUp">
+
+
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% producto.forEach((productos,index)=> { %>
+                            <%- include('../partials/productoHome2',{ imagen:productos.imagen,
+                                nombre:productos.titulo, precio:productos.precio,
+                                id:productos.id}) %>
+                                
+
+                            <% }) %> 
+                    </div>
+
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                </div>
+
+
+
+            </section>
+
+        </main>
+
+        <%- include('./partials/footer') %>
+
+    </body>
+
+</html>

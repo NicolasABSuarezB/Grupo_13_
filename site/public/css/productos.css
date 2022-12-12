@@ -10,7 +10,8 @@
 .contenedor-listado .listado .project {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+
     width: 100%;
 }
 

@@ -5,30 +5,34 @@ window.onload = () => {
 
     let name = $('#name');
     let email = $('#email');
-    let telefono = $('#telefono');
     let pass = $('#pass');
     let pass2 = $('#pass2');
-    let avatar = $('#avatar');
+    let eye = $('#eye-pass');
+    let eye2 = $('#eye-pass2');
 
-    //Validaciones para los imput
+    // Validaciones para los input
     let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     let regExpEmail = /^[a-z0-9!#$%&'*+\=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     let regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/;
     let regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/;
 
-    //Nombre
+    // Nombre
     name.addEventListener('blur', (e) => {
 
         let value = e.target.value;
 
         switch (true) {
             case !value.trim():
-                $('#errorName').innerHTML = "El nombre es obligatorio"
+                $('#errorName').innerHTML = "Este campo es obligatorio"
                 validationsErrors = true;
                 break;
 
             case !regExAlpha.test(value):
-                $('#errorName').innerHTML = "El nombre NO debe contener datos numericos"
+                $('#errorName').innerHTML = "El nombre NO debe contener datos numericos o especiales"
+                validationsErrors = true;
+                break;
+            case value.length < 5:
+                $("#errorName").innerHTML = "Debe haber por lo menos 5 caracteres"
                 validationsErrors = true;
                 break;
 
@@ -39,14 +43,14 @@ window.onload = () => {
         }
     })
 
-    //Email
+    // Email
     email.addEventListener('blur', (e) => {
 
         let value = e.target.value;
 
         switch (true) {
             case !value.trim():
-                $('#errorEmail').innerHTML = "El email es obligatorio"
+                $('#errorEmail').innerHTML = "Este campo es obligatorio"
                 validationsErrors = true;
                 break;
 
@@ -55,6 +59,8 @@ window.onload = () => {
                 validationsErrors = true;
                 break;
 
+            //Falta validar: EL EMAIL SE ENCUENTRA REGISTRADO
+
             default:
                 $('#errorEmail').innerHTML = ""
                 validationsErrors = false
@@ -62,36 +68,19 @@ window.onload = () => {
         }
     })
 
-    //Telefono
-    telefono.addEventListener('blur', (e) => {
-
-        let value = e.target.value;
-
-        switch (true) {
-            case !value.trim():
-                $('#errorTelefono').innerHTML = "El Telefono es obligatorio"
-                validationsErrors = true;
-                break;
-
-            default:
-                $('#errorTelefono').innerHTML = ""
-                validationsErrors = false
-                break;
-        }
-
-    })
-
-    //Pass
+    // Pass
     pass.addEventListener("blur", (e) => {
+
         let value = e.target.value;
+
         switch (true) {
             case !value.trim():
-                $("#errorPass").innerHTML = "La constraseña es requerida"
+                $("#errorPass").innerHTML = "Este campo es obligatorio"
                 validationsErrors = true;
                 break;
 
-            case !regExPass.test(password.value):
-                $("#errorPass").innerHTML = "La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
+            case !regExPass.test(pass.value):
+                $("#errorPass").innerHTML = 'La contraseña debe tener entre 8 y 12 caracteres, una mayuscula, una minuscula y un numero'
                 validationsErrors = true;
                 break;
 
@@ -102,22 +91,24 @@ window.onload = () => {
         }
     })
 
-    //Pass2
+    // Pass2
     pass2.addEventListener("blur", (e) => {
+
         let value = e.target.value;
+
         switch (true) {
             case !value.trim():
                 $("#errorPass2").innerHTML = "Debe confirmar la contraseña"
                 validationsErrors = true;
                 break;
 
-            case !regExPass.test(pass2.value):
-                $("#errorPass2").innerHTML = "La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
+            case !regExPass.test(pass.value):
+                $("#errorPass").innerHTML = 'La contraseña debe tener entre 8 y 12 caracteres, una mayuscula, una minuscula y un numero'
                 validationsErrors = true;
                 break;
 
-            case password.value != value:
-                $("#errorPass2").innerHTML = `Las constraseñas no coinciden`
+            case pass2.value != pass.value:
+                $("#errorPass2").innerHTML = "Las constraseñas no coinciden"
                 validationsErrors = true;
                 break;
 
@@ -128,18 +119,51 @@ window.onload = () => {
         }
     })
 
-    //Avatar
-    avatar.addEventListener('change', function () {
+    // Imagen
+    image.addEventListener('change', function () {
         switch (true) {
-            case !regExExt.exec(img.value):
-                $('#errorAvatar').innerHTML = "Solo se permite ingresar una imagen valida fomato (jpg|jpeg|png|jfif|gif|webp)"
-                validationsErrors = true;
+            case !regExExt.exec(image.value):
+                $('#imagenContainer').innerHTML = "Solo se permite formatos: <br> (jpg|jpeg|png|jfif|gif|webp)"
                 break;
 
             default:
-                $('#errorAvatar').innerHTML = ""
-                validationsErrors = false
+                $('#imagenContainer').innerHTML = ""
                 break;
+        }
+    })
+
+    // Visualizador de clave
+    eye.addEventListener('click', (e) => {
+        pass.type === 'password' ? pass.type = 'text' : pass.type = 'password'
+        if (eye.classList.contains('fa-eye-slash')) {
+            eye.classList.toggle('fa-eye-slash')
+            eye.classList.toggle('fa-eye')
+        } else {
+            eye.classList.toggle('fa-eye-slash')
+            eye.classList.toggle('fa-eye')
+        }
+    })
+
+    // Visualizador de clave 2
+    eye2.addEventListener('click', (e) => {
+        pass2.type === 'password' ? pass2.type = 'text' : pass2.type = 'password'
+        if (eye2.classList.contains('fa-eye-slash')) {
+            eye2.classList.toggle('fa-eye-slash')
+            eye2.classList.toggle('fa-eye')
+        } else {
+            eye2.classList.toggle('fa-eye-slash')
+            eye2.classList.toggle('fa-eye')
+        }
+    })
+
+    // Formulario
+    form.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+        console.log(form.elements);
+        if (errores.length > 0) {
+            form.submit()
         }
     })
 }

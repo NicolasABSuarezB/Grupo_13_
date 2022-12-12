@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+
+    <body class="marcaspagina">
+
+        <%- include('../partials/header') %>
+
+        <main class="marcasmain" id="marcas">
+
+            <section class="gran_marca">
+                <img class="imgb" src="/img/imgmarca/<%=marca.imagen %>" alt="">
+            </section>
+            <section class="demas">
+                
+            
+                <% if(producto.length !==0){%>
+                    <h1>Nuestros productos</h1>
+                    <section class="marcacontenedor">
+                        <% producto.forEach((productos,index)=> { %>
+                            <%- include('../partials/productoHome2',{ imagen:productos.imagen, nombre:productos.titulo,
+                                precio:productos.precio, id:productos.id}) %>
+            
+            
+                                <% }) %>
+                                <section class="descripcionmarca">
+                                    <h1>sobre nosotros</h1>
+                                    <p>
+                                        <%=marca.descripcion %>
+                                    </p>
+                                </section>
+                            
+                    </section>
+            
+            
+            
+                    <% }else{ %>
+                        <section class="descripcionmarca">
+                            <h1>sobre nosotros</h1>
+                            <p>
+                                <%=marca.descripcion %>
+                            </p>
+                        </section>
+                    
+            
+                        <%- include('../partials/nada') %>
+            
+                            <% } %>
+            
+            
+            </section>
+            
+            
+            
+
+            
+           
+        </main>
+
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

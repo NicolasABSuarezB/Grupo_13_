@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "titulo": " prueba",
+        "titulo": "DOG CHOW POUCH SALMON",
         "precio": 1000,
         "descuento": 0,
         "stock": 230,
-        "descripcion": "Alimento  para perros adultos de todas las razas y tamaños a partir de12meses de edad con actividad física moderada a alta. Sus principales característicasson: alta palatabilidad, protección de la salud del pelo y la piel, fortalecimiento dehuesos y articulaciones e incremento de las defensas.",
+        "marca":"purina dog",
+        "descripcion": "Alimento  para perros adultos 100gr sabor a salmon, una comida nutritiva y rapida para tu perro",
         "categorias": "perro",
         "imagenes": [
-            "comida perro.webp",
-            "Royal canin Sterilised37.jpg"
+            "dogchowsalmon.jfif"
         ]
     },
     {
@@ -37,13 +37,14 @@
     },
     {
         "id": 4,
-        "titulo": "balon deporte",
-        "precio": 4370,
+        "titulo": "alimento sabor a pavo 100gr",
+        "precio": 370,
         "stock": 7495,
-        "descripcion": "juguete de balon para perros, resistente para perros adultos",
+        "marca":"purina dog",
+        "descripcion": "alimento balanceado para perros adultos sabor a pavo de la marca purina dog chow perfecta para una comida rapido de la mejor calidad a tu perro",
         "categorias": "perro",
         "imagenes": [
-            "balonperro.jpg"
+            "pavodog.jpg"
         ]
     },
     {
@@ -81,13 +82,14 @@
     },
     {
         "id": 8,
-        "titulo": "cama de oso",
+        "titulo": "Dog Chow Adulto Raza Pequeña 21kg",
         "precio": 3385,
         "stock": 4030,
-        "descripcion": "cama de oso, para perros mediados, 60x90 cm",
+        "marca":"purina dog",
+        "descripcion": "allimento purina Dog Chow para razas pequeñas, con sabores vareados efectos visibles en unos dias",
         "categorias": "perro",
         "imagenes": [
-            "camaositoperros.jpg"
+            "dogchowrazaspequeñas.webp"
         ]
     },
     {
@@ -191,12 +193,22 @@
     },
     {
         "id": 18,
+        "titulo": "pro plan adultos ",
+        "precio": 2345,
+        "descuento": 30,
+        "stock": 20,
+        "descripcion": "alimento para perros adultos de la marca pro plam, los mejores ingredientes y un buen alimento balanceado",
+        "categorias": "perro",
+        "imagenes": ["perroproplanadulto.webp"]
+    },
+    {
+        "id": 19,
         "titulo": "kasey ",
         "precio": 2345,
         "descuento": 0,
         "stock": 0,
         "descripcion": "",
-        "categorias": "Gato",
-        "imagenes": "default-img.png"
+        "categorias": "gato",
+        "imagenes": ["default-img.png"]
     }
 ]

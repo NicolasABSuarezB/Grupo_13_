@@ -12,6 +12,12 @@ module.exports = {
       marca: {
         type: Sequelize.STRING
       },
+      descripcion: {
+        type: Sequelize.STRING
+      },
+      imagen: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
