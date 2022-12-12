@@ -21,6 +21,6 @@ router.post('/crear', /* esAdmin, */  upload.single('imagenes'),praductsvalidati
 router.get('/lista',/* esAdmin, */lista)
 
 
-router.delete('/destruir/:id',haysession,esAdmin,destruir)
+router.delete('/destruir/:id',/* haysession,esAdmin, */destruir)
 
 module.exports= router;

@@ -19,12 +19,14 @@ module.exports={
         
     },
     carrito: (req,res)=>{
-        let productos = db.productos.findAll()
-        .then((productos)=>{
+        db.productos.findAll()
+        .then(productos=>{ 
             return res.render('carrito',{
             productos
             });
+            /* return res.send(productos) */
         })
+        .catch(error => res.send(error))
 
         
     },

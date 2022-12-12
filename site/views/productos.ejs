@@ -8,7 +8,7 @@
                 <section class="project">
                     <% productos.forEach(producto => { %>
                         <article class="card">
-                            <div class="imagen">
+                            <div class="imagen" onclick="window.location = '/detalle/<%= producto.id %>'">  
                                 <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
                             </div>
                             <div class="content">
