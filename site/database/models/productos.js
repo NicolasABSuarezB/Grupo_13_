@@ -24,6 +24,11 @@ module.exports = (sequelize, DataTypes) => {
         as:'carritos',
         foreignKey:'id_producto'
 
+      }),
+      productos.hasMany(models.recomendados,{
+        as:'recomendados',
+        foreignKey:'id_producto'
+
       })
       
     }

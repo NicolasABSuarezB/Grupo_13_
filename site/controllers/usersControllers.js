@@ -26,7 +26,7 @@ module.exports = {
                 .then(usuario => {
                     /* console.log(usuario) */
                     req.session.sessionuser = {
-
+                        id:usuario.id,
                         nombre: usuario.nombre,
                         email: usuario.email,
                         foto: usuario.foto,
@@ -148,8 +148,11 @@ module.exports = {
         return res.render('informacion')
     },
     cerrar: (req, res) => {
-        req.session.sessionuser == null
-        return res.redirect('/login')
+        req.session.destroy();
+        if (req.cookies.hola) {
+            res.cookie('hola', '', { maxAge: -1 })
+        }
+        return res.redirect('/')
     },
     perfil: (req, res) => {
         /* const{email}=req.body */
@@ -258,5 +261,27 @@ module.exports = {
             }
             return res.render('profile', { errors: errors.mapped(), old: req.body })
         }
+    },
+    vistaperfil: (req, res) => {
+        /* const{email}=req.body */
+        let user= db.usuarios.findOne({
+            where:{
+                email:req.session.sessionuser.email 
+            },
+            include: 'roles'
+
+        })
+        let minihisto=db.recomendados.findAll({
+            where:{
+                id_usuario:req.session.sessionuser.id
+            },include: 'productos'})
+              
+        Promise.all([user, minihisto])
+        .then(([user, minihisto]) => {
+             //res.send(minihisto)
+            return res.render('user/perfil', {
+                user,minihisto
+            })
+        })
     }
 }

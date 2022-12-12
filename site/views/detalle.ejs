@@ -2,138 +2,208 @@
 <html lang="es">
 <%- include('./partials/head') %>
 
-<body class="detalle">
+    <body class="detalle">
 
-    <%- include('./partials/header') %>
-   
-    <main class="detalleproducto">
-        <section class="ordendes">
-            <section class=" imgproductodetalle">
-                <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
-            </section>
-            <div class="oscuro animate__animated animate__shakeY" id="oscuro"></div>
-            <section class="puntaje animate__animated animate__bounceInDown" id="puntaje">
-                <form action="/detalle/<%= producto.id %>" method="post" method="post">
-                    <h2>¿Que tal te parecio el producto?</h2>
-                    <section class="estrellas">
-                        <input type="radio" name="estrella" id="estrella1" value="5" onclick="puntaje(5)">
-                        <label for="estrella1"><i class="fa-solid fa-star" ></i></label>
-                        <input type="radio" name="estrella" id="estrella2" value="4" onclick="puntaje(4)">
-                        <label for="estrella2"><i class="fa-solid fa-star"></i></label>
-                        <input type="radio" name="estrella" id="estrella3" value="3" onclick="puntaje(3)">
-                        <label for="estrella3"><i class="fa-solid fa-star"></i></label>
-                        <input type="radio" name="estrella" id="estrella4" value="2" onclick="puntaje(2)">
-                        <label for="estrella4"><i class="fa-solid fa-star"></i></label>
-                        <input type="radio" name="estrella" id="estrella5" value="1" onclick="puntaje(1)">
-                        <label for="estrella5"><i class="fa-solid fa-star"></i></label>
+        <%- include('./partials/header') %>
+
+            <main class="detalleproducto">
+                <section class="ordendes">
+                    <section class=" imgproductodetalle">
+                        <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
                     </section>
-                    
-                    
-                    <input type="text" name="comentario" class="comentario">
-                    <div class="botones">
-                         <button type="button" onclick="desapaerecer()"> cancelar</button>
-                          <button class="btn btn-outline-success" id="btn-submit" type="submit">enviar</button>
-                    </div>
-                   
-                </form>
-            </section>
-            
+                    <div class="oscuro animate__animated animate__shakeY" id="oscuro"></div>
+                    <section class="puntaje animate__animated animate__bounceInDown" id="puntaje">
+                        <form action="/detalle/<%= producto.id %>" method="post" method="post">
+                            <h2>¿Que tal te parecio el producto?</h2>
+                            <section class="estrellas">
+                                <% if(hayopinion !=null ){
+                                    
+                                    for (let index = 0; index < 5;index++ ) {
+                                        let valor=5-index
+                                        if(hayopinion.puntaje<index){ %>
+                                            <h2></h2>
+                                        
+                                        <input type="radio" name="estrella" id="estrella<%=index+1 %>" value="<%= valor%>" >
+                                        <label style="color: rgb(244, 248, 31); " for="estrella<%=index+1 %>"><i class="fa-solid fa-star"></i></label>
+                                        
+                                    <%}else{%>
+                                        <input type="radio" name="estrella" id="estrella<%=index+1 %>" value="<%= valor%>" >
+                                        <label for="estrella<%=index+1 %>"><i class="fa-solid fa-star"></i></label>
 
-               
-            <section class="contenedorDetalle">
-                <section class="puntuado">
-                    <% for (let index = 0; index < 5 ; index++) {
-                        if (index < redondeado) {%>
-                            <li><i class="fa-solid fa-star activado"></i></li>
-                        <%}else{ %> 
-                            <li><i class="fa-solid fa-star desactivado"></i>
-                            <% }%>
-                        
-                        
-                    <% } %>  
-                    
-                    
-                    <button onclick="mostrarpuntaje()"> puntuar</button>
-                </section>
-                
+                                    <%}  }%>
+                                </section>
+                                    <input type="text" name="comentario" class="comentario" value="<%=hayopinion.comentarios %>">
+                                        <div class="botones">
+                                            <button type="button" onclick="desapaerecer()"> cancelar</button>
+                                            <button class="btn btn-outline-success" id="btn-submit" type="submit">enviar</button>
+                                        </div>
+                                    <%
+                                   
+                                        
+                                   }else{%>
+                                    
+                                    
+                                    <input type="radio" name="estrella" id="estrella1" value="5" >
+                                    <label for="estrella1"><i class="fa-solid fa-star"></i></label>
+                                    <input type="radio" name="estrella" id="estrella2" value="4" >
+                                    <label for="estrella2"><i class="fa-solid fa-star"></i></label>
+                                    <input type="radio" name="estrella" id="estrella3" value="3" >
+                                    <label for="estrella3"><i class="fa-solid fa-star"></i></label>
+                                    <input type="radio" name="estrella" id="estrella4" value="2" >
+                                    <label for="estrella4"><i class="fa-solid fa-star"></i></label>
+                                    <input type="radio" name="estrella" id="estrella5" value="1" >
+                                    <label for="estrella5"><i class="fa-solid fa-star"></i></label>
+                                                
+                                        </section>
+                                        <input type="text" name="comentario" class="comentario">
+                                        <div class="botones">
+                                            <button type="button" onclick="desapaerecer()"> cancelar</button>
+                                            <button class="btn btn-outline-success" id="btn-submit" type="submit">enviar</button>
+                                        </div>
 
-                <section class="descripciondetalle">
-                    <h3><%= producto.titulo %></h3>
 
-                    <h4 class="precio">$<%= producto.precio %></h4>
-                    <h4>DESCRIPCION</h4>
-                    <p><%= producto.descripcion %>
-                    </p>
-                    <h4>IDEAL PARA:</h4>
-                    <p><%= producto.categorias.categoria%></p>
+                                    
+                                    <%} %>
 
+                           
 
-
-                </section>
-                <section class="compra">
-                    <h4>SELECCIONE CANTIDAD</h4>
-                    <div class="cantidad">
-                        
-                        <button onclick="disminuir()">-</button>
-                        <form action="" method="post">
-                            <input type="number" id="numero" value="1">
                         </form>
-                        <button onclick="agregar()">+</button>
-                    </div>
-                    <button class="confirmar">
-                        realizar pedido
-                    </button>
+                    </section>
+
+
+
+                    <section class="contenedorDetalle">
+                        <section class="puntuado">
+                            <% for (let index=0; index < 5 ; index++) { if (index < redondeado) {%>
+                                <li><i class="fa-solid fa-star activado"></i></li>
+                                <%}else{ %>
+                                    <li><i class="fa-solid fa-star desactivado"></i>
+                                        <% }%>
+
+
+                                            <% } %>
+
+                                                <%if (locals.userLogin) {%>
+                                                    <button onclick="mostrarpuntaje()"> puntuar</button>
+                                                    <%} %>
+
+                        </section>
+
+
+                        <section class="descripciondetalle">
+                            <h3>
+                                <%= producto.titulo %>
+                            </h3>
+
+                            <h4 class="precio">$<%= producto.precio %>
+                            </h4>
+                            <h4>DESCRIPCION</h4>
+                            <p>
+                                <%= producto.descripcion %>
+                            </p>
+                            <h4>IDEAL PARA:</h4>
+                            <p>
+                                <%= producto.categorias.categoria%>
+                            </p>
+
+
+
+                        </section>
+                        <section class="compra">
+                            <h4>SELECCIONE CANTIDAD</h4>
+                            <div class="cantidad">
+
+                                <button onclick="disminuir()">-</button>
+                                <form action="" method="post">
+                                    <input type="number" id="numero" value="1">
+                                </form>
+                                <button onclick="agregar()">+</button>
+                            </div>
+                            <button class="confirmar">
+                                realizar pedido
+                            </button>
+                        </section>
+                    </section>
+
                 </section>
-            </section>
-
-        </section>
-
-
-        <section class="interesar">
-            <h2>TE PODRIA INTERESAR</h2>
-            <article class="recomendado">
-                <div class="glider-contain">
-                        <div class="glider">
-                            <%
-                            for (let index = 0; index < 13; ) { %>
+                <section>
+                    <%puntaje.forEach(opinion => { %>
+                        <div>
+                            <div>
+                                <section class="puntuado">
+                                    <% for (let index=0; index < 5 ; index++) { if (index < opinion.puntaje) {%>
+                                        <li><i class="fa-solid fa-star activado"></i></li>
+                                        <%}else{ %>
+                                            <li><i class="fa-solid fa-star desactivado"></i>
+                                                <% }%>
                                 
-                            <%- include('./partials/productoHome2',{ imagen:productos[index].imagen, nombre:productos[index].titulo,  precio:productos[index].precio, id:productos[index].id}) %>
-                            <%index++  }%>
+                                
+                                                    <% } %>
+                                
+                                </section>
+                                <img src="/img/usuario/<%= opinion.usuarios.foto %>" alt="">
+
+                                
+                            </div>
+                            <div>
+                                <p><%=opinion.comentarios %></p>
+                            </div>
                         </div>
+
+                        
+                    <%}); %>
                     
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-                    <div role="tablist" class="dots"></div>
-                </div>
-                
-          
-            </article>
+                   
+                    
+                </section>
 
-        </section>
-    </main>
-    <script src="/javascript/puntaje.js"></script>
-    <%- include('./partials/footer') %>
-    <script>
-        
-        function agregar(){
-            let pato= +document.getElementById('numero').value;
-            let maximo= +document.getElementById('maximo').value;
-            if (pato== maximo) {
-                document.getElementById('numero').value= maximo;
-            } else {
-                document.getElementById('numero').value= pato+1;
-            }
-            
-        };
-        function disminuir(){
-            let pato= +document.getElementById('numero').value;
-            if (pato !=0) {
-                document.getElementById('numero').value= pato -1;
-            } 
 
-        }
-    </script>
-    
-</body>
+                <section class="interesar">
+                    <h2>TE PODRIA INTERESAR</h2>
+                    <article class="recomendado">
+                        <div class="glider-contain">
+                            <div class="glider">
+                                <% for (let index=0; index < 13; ) { %>
+
+                                    <%- include('./partials/productoHome2',{ imagen:productos[index].imagen,
+                                        nombre:productos[index].titulo, precio:productos[index].precio,
+                                        id:productos[index].id}) %>
+                                        <%index++ }%>
+                            </div>
+
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
+                        </div>
+
+
+                    </article>
+
+                </section>
+            </main>
+            <script src="/javascript/puntaje.js"></script>
+            <%- include('./partials/footer') %>
+                <script>
+
+                    function agregar() {
+                        let pato = +document.getElementById('numero').value;
+                        let maximo = +document.getElementById('maximo').value;
+                        if (pato == maximo) {
+                            document.getElementById('numero').value = maximo;
+                        } else {
+                            document.getElementById('numero').value = pato + 1;
+                        }
+
+                    };
+                    function disminuir() {
+                        let pato = +document.getElementById('numero').value;
+                        if (pato != 0) {
+                            document.getElementById('numero').value = pato - 1;
+                        }
+
+                    }
+                </script>
+
+    </body>
 
 </html>

@@ -8,11 +8,11 @@
         </section>
 
         <section class="user">
-            <%if(locals.usurlologin){%>
+            <%if(locals.userLogin){%>
                 
-                <button onclick="menu()"><i class="far fa-user"><%=locals.usurlologin.nombre %> </i></button>
+                <button id="menu"><i class="far fa-user"><%=locals.userLogin.nombre %> </i></button>
                 <div style="display: none;" id="menuPequeño">
-                    <img src="<%=locals.usurlologin.foto %>" alt="">
+                    <img src="<%=locals.userLogin.foto %>" alt="">
                     <li>
                         <ul><a href="/admin/lista">Mis productos</a></ul>
                         <ul><a href="">Configuración</a></ul>
@@ -22,7 +22,9 @@
                 <%}else{%>
                     <a href="/login"><i class="far fa-user"></i></a>
                     <%}  %> 
+            <%if(locals.userLogin){%>
             <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+            <% } %> 
         </section>
         <section class="burger">
             <input type="checkbox" name="burger" id="burger">
@@ -32,7 +34,10 @@
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/productos">Productos</a></li>
                     <li><a href="/informacion">informacion</a></li>
-                    <li><a href="/admin/lista">Admin</a></li>
+                    <% if(locals.userLogin && locals.userLogin.rol===2){%>
+                        <li><a href="/admin/lista">Admin</a></li>
+                    <% } %> 
+                    
                 </ul>
             </nav>
         </section>

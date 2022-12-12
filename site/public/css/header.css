@@ -1,6 +1,6 @@
 header {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     background-color: var(--verde);
     font-family: var(--tipografia-principal);
     width: 100%;
@@ -118,7 +118,7 @@ header #menuPequeño li ul {
 @media (min-width:720px) {
     header {
         position: relative;
-        margin-bottom: 20px;
+        
         background-color: var(--verde);
         font-family: var(--titulo);
     }
