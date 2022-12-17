@@ -8,7 +8,7 @@
             <main>
                 <h1>Regístrese en Loving Paws y acceda a los mejores descuentos </h1>
                 <form action="/register" method="post" enctype="multipart/form-data" id="formulario">
-                    
+
                     <section class="container bottom">
                         <label for="name">Nombre</label>
                         <input type="text" name="name" id="name" placeholder="Ingrese su nombre">
@@ -16,7 +16,7 @@
                             <%= locals.errors && errors.name? errors.name.msg : null %>
                         </small>
                     </section>
-                    
+
                     <section class="container bottom">
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email" placeholder="Ingrese su email">
@@ -24,7 +24,7 @@
                             <%= locals.errors && errors.email? errors.email.msg : null %>
                         </small>
                     </section>
-                    
+
                     <section class="container bottom">
                         <label for="pass">Contraseña</label>
                         <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña">
@@ -33,7 +33,7 @@
                             <%= locals.errors && errors.pass? errors.pass.msg : null %>
                         </small>
                     </section>
-                    
+
                     <section class="container bottom">
                         <label for="pass2">Confirme su contraseña</label>
                         <input type="password" name="pass2" id="pass2" placeholder="Confirme su contraseña">
@@ -45,7 +45,8 @@
 
                     <section class="container bottom">
                         <label for="image">suba su foto de perfil</label>
-                        <input type="file" name="image" id="image">
+                        <img id="imagenPrevisualizacion" style="max-width: 50%; padding: 20px; border: none;">
+                        <input type="file" name="image" id="image" accept="image/*">
                         <small class="error-msg" id="errorAvatar">
                             <%= locals.errors && errors.avatar? errors.avatar.msg : null %>
                         </small>
@@ -59,6 +60,7 @@
                     <a href="/login">¿Ya esta registrado? Inicie sesion</a>
                 </form>
             </main>
+            <script src="/javascript/imgRegister.js"></script>
             <script src="/javascript/registerValidator.js"></script>
             <%- include('./partials/footer') %>
 

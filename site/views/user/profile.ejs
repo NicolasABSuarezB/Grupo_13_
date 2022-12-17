@@ -14,12 +14,10 @@
                     </section>
                     <!-- FOTO DE PERFIL -->
                     <section class="container bottom">
-                        <img src="/img/usuario/<%=user.foto %>" alt="foto de perfil">
-                        <div class="avatar_edit">
-                            <input name="avatar" type='file' id="imageUpload" accept="image/*" />
-                            <label for="imageUpload" class="fas fa-pencil-alt"></label>
-                        </div>
+                        <img src="/img/usuario/<%=user.foto %>" alt="foto de perfil" id="imagenPrevisualizacion">
+                        <input name="avatar" type='file' id="imageUpload" accept="image/*" />
                     </section>
+
                     <!-- NOMBRE -->
                     <section class="container bottom">
                         <label for="name">Nombre</label>
@@ -115,7 +113,7 @@
             </main>
 
             <script src="/javascript/profileValidator.js"></script>
-
+            <script src="/javascript/imgProfile.js"></script>
             <%- include('../partials/footer') %>
     </body>
 
