@@ -33,6 +33,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
+      direccion: {
+        type: Sequelize.STRING(45),
+        allowNull: true,
+      },
       telefono: {
         type: Sequelize.STRING,
         allowNull: true,

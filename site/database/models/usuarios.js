@@ -49,6 +49,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     contrase: DataTypes.STRING,
     foto: DataTypes.STRING,
+    direccion: DataTypes.STRING,
     cp: DataTypes.INTEGER,
     telefono: DataTypes.INTEGER,
     id_roles: DataTypes.INTEGER,
