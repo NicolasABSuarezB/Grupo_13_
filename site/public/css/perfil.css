@@ -2,21 +2,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
 }
 .vistaperfil .infoperfil .contenidoperfil{
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid var(--azul);
+    border-radius: 10%;
     height: 500px;
     
 }
 .vistaperfil .infoperfil .contenidoperfil{
-    margin-top: 5vh;
+
+    margin-top: 7vh;
     width: 80%;
-    height: 400px;
+    height: 450px;
     background-color: rgb(194, 197, 197);
     margin-bottom: 40px;
+}
+.vistaperfil .infoperfil button{
+    width: 45%;
+    background-color: var(--azul);
+    color: white;
+    border: 0;
+    height: 30%;
+    margin-top: 5%;
+
+    
+}
+.vistaperfil .infoperfil .contenidoperfil .nombre{
+    margin-bottom: 20%;
+    font-size: 110%;
 }
 .vistaperfil .infoperfil .contenidoperfil .fotoperfil{
     margin:30px 0;
@@ -69,7 +87,9 @@
     margin-left: 50%;
     transform: translateX(-50%);
 }
-
+.datosuser{
+    margin-top: 5px;
+}
 @media(min-width:361px) {
 
 }
@@ -77,18 +97,19 @@
     .vistaperfil .infoperfil{
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: flex-start;
         height: 100%;
     }
     .vistaperfil .infoperfil .contenidoperfil{
         margin-top: 0;
         width: 30%;
-        height: 1000%;
+       /* height: 50vh;*/
         
     }
     .vistaperfil .infoperfil .minihistorial{
         
-        width: 80%;
+        width: 60%;
       }
    .vistaperfil .infoperfil .historial{
     display: flex;

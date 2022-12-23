@@ -37,7 +37,7 @@ module.exports = {
                     if (recordame) {
                         res.cookie('hola', req.session.sessionuser, { maxAge: 1000 * 60 * 60 * 24 })
                     }
-                    return res.redirect('/profile')
+                    return res.redirect('/perfil')
                 })
                 .catch(error => {
                     return res.send(error)
@@ -159,10 +159,11 @@ module.exports = {
         db.usuarios.findOne({
             where:{
                 email:req.session.sessionuser.email 
-            }
+            }, include:[ 'generos','pais']
         })
         .then(user => {
             console.log(user)
+          //return res.send(user)
             res.render('user/profile', {
                 user
             })
@@ -208,6 +209,7 @@ module.exports = {
                         email: user.email,
                         contrase: user.contrase,
                         id_roles: user.id_roles,
+                        direccion:direccion ? direccion : null,
                         telefono: numero,
                         cp: codigopostal ? codigopostal : null,
                         foto: req.file ? req.file.filename : user.foto,
@@ -228,7 +230,7 @@ module.exports = {
                                 .then(user => {
 
                                     req.session.sessionuser = {
-                                        
+                                        id:user.id,
                                         nombre: user.nombre,
                                         email: user.email,
                                         foto: user.foto,
@@ -279,7 +281,10 @@ module.exports = {
               
         Promise.all([user, minihisto])
         .then(([user, minihisto]) => {
-             //res.send(minihisto)
+           if (minihisto.length <=1) {
+                minihisto=null
+            }     
+            //return res.send(minihisto2)
             return res.render('user/perfil', {
                 user,minihisto
             })

@@ -12,7 +12,7 @@
     flex-wrap: wrap;
     width: 100%;
 
-    width: 100%;
+    justify-content: center;
 }
 
 .contenedor-listado h1 {

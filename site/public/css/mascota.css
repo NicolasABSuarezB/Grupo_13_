@@ -1,0 +1,33 @@
+#fondo{
+    display: none;
+}
+#ofertaso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#ofertaso h1{
+  font-size: 300%;
+}
+
+
+
+@media (min-width:500px) {
+ /*   #flotante{
+        visibility: visible;
+    animation-name: fadeInLeft;
+    position: fixed;
+    top: 30%;
+    height: 300%;
+    }*/
+    #fondo{
+        display: block;
+        width: 100vw;
+    }
+   
+}
+
+/* Desktop */
+@media (min-width:769px) {
+    
+}

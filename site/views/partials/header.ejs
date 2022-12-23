@@ -1,21 +1,29 @@
 <header>
+    <div class="form-search" style="margin-top: 10px;margin-left: 40vw;">
+        <form action="/busqueda" method="get">
+            <input type="text" name="search" id="search" class="barraDeBusqueda" placeholder="Busca tu producto aca ">
+            <button type="submit" class="lupa"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
     <div class="top">
+        
 
         <section class="logo">
             <a href="/">
                 <img src="/img/logo.png" alt="">
             </a>
         </section>
+       
 
         <section class="user">
             <%if(locals.userLogin){%>
                 
                 <button id="menu"><i class="far fa-user"><%=locals.userLogin.nombre %> </i></button>
                 <div style="display: none;" id="menuPequeño">
-                    <img src="<%=locals.userLogin.foto %>" alt="">
+                    <img src="/img/usuario/<%=locals.userLogin.foto %>" alt="">
                     <li>
-                        <ul><a href="/admin/lista">Mis productos</a></ul>
-                        <ul><a href="">Configuración</a></ul>
+                        <ul><a href="/perfil">Mi Perfil</a></ul>
+                        <ul><a href="/profile">Configuración</a></ul>
                         <ul><a href="/cerrar">Cerrar Sesion</a></ul>
                     </li>
                 </div>
@@ -26,6 +34,7 @@
             <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
             <% } %> 
         </section>
+       
         <section class="burger">
             <input type="checkbox" name="burger" id="burger">
             <label for="burger"><i class="fas fa-bars"></i> </i></label>

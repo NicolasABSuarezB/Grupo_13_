@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <%- include('../partials/head') %>
 
     <body class="vistaperfil">
@@ -9,33 +9,34 @@
         <main class="infoperfil">
             <section class="contenidoperfil">
                 <section class="fotoperfil  wow animate__animated animate__fadeInUp">
-                    <img src="<%=user.foto %> " alt="">
+                    <img src="/img/usuario/<%=user.foto %> " alt="">
                 </section>
-                <section>
+                <section class="nombre">
                     <h1>
                         <%=user.nombre%>
                             <%=user.apellido %>
                     </h1>
-                    <p>rol:<%=user.roles.rol%>
+                    <p class="datosuser">email:<%=  user.email%> </p>
+                    <p class="datosuser">rol:<%=user.roles.rol%>
                     </p>
-                </section>
-                <a href="/profile">Editar mi perfil</a>
-                
-                    <button onclick=""> cerrar sesion</button>
-                    <button>cambiar perfil</button>
+                    
+                </section>   
+                    <button onclick="window.location = '/cerrar'"> cerrar sesion</button>
+                    <button onclick="window.location = '/profile'">Editar mi perfil</button>
             
                >
             </section>
             <section class="minihistorial">
                 <h3>lo ultimo que estuviste viendo</h3>
                 <section class="historial">
-                    <% minihisto.forEach((producto,index)=> {%>
+
+                    <%if(minihisto!==null){minihisto.forEach((producto,index)=> {%>
                 
                         <%- include('../partials/productoHome2',{ imagen:producto.productos.imagen, nombre:producto.productos.titulo,
                             precio:producto.productos.precio, id:producto.productos.id}) %>
                 
                 
-                            <%}); %>
+                            <%})} else{ %> <%- include('../partials/nada') %><% } %> 
                 
                 </section>
                

@@ -11,7 +11,7 @@
                     <section class=" imgproductodetalle">
                         <img src="/img/imgproducto/<%= producto.imagen %>" alt="">
                     </section>
-                    <div class="oscuro animate__animated animate__shakeY" id="oscuro"></div>
+                    <div class="oscuro" id="oscuro"></div>
                     <section class="puntaje animate__animated animate__bounceInDown" id="puntaje">
                         <form action="/detalle/<%= producto.id %>" method="post" method="post">
                             <h2>¿Que tal te parecio el producto?</h2>
@@ -32,7 +32,7 @@
 
                                     <%}  }%>
                                 </section>
-                                    <input type="text" name="comentario" class="comentario" value="<%=hayopinion.comentarios %>">
+                                    <input type="text" name="comentario" class="comentariopuntaje" value="<%=hayopinion.comentarios %>">
                                         <div class="botones">
                                             <button type="button" onclick="desapaerecer()"> cancelar</button>
                                             <button class="btn btn-outline-success" id="btn-submit" type="submit">enviar</button>
@@ -159,7 +159,7 @@
 
 
                 <section class="interesar">
-                    <h2>TE PODRIA INTERESAR</h2>
+                    <h2>otros productos</h2>
                     <article class="recomendado">
                         <div class="glider-contain">
                             <div class="glider">

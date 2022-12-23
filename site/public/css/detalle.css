@@ -21,6 +21,7 @@
  .detalle .detalleproducto .ordendes .descripciondetalle h4 {
     margin-top: 15px;
     font-size: large;
+    padding-bottom: 10px;
  }
  .detalle .detalleproducto .ordendes .descripciondetalle .precio{
     
@@ -210,7 +211,7 @@
 .detalle .puntaje input:hover ~ label {
     color: rgb(244, 248, 31);
 }
-.detalle .puntaje .comentario{
+.detalle .puntaje .comentariopuntaje{
     display: block;
     width: 90%;
     height: 50px;
@@ -290,7 +291,7 @@
     }
     .detalle .contenedoropinion{
         
-       display: flex;
+       
        justify-content: center;
     }
     .detalle .puntaje{
@@ -368,7 +369,7 @@
         
         margin-left: 10vw;
         height: 100px;
-        margin-bottom: 10%;
+        
     }
     .detalle .puntaje h2{
         

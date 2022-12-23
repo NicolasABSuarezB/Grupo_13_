@@ -5,6 +5,27 @@
         <%- include('./partials/header') %>
             <main class="listado">
                 <h1>nuestros productos</h1>
+                <template id="tempale-tbod">
+                    <article class="card">
+                        <div class="imagen" > 
+                            <img id="imagen"src="" alt="">
+                        </div>
+                        <div class="content">
+                            <h3 id="nombre"> </h3>
+                            <div class="detail">
+                                <div class="precio-descuento">
+                                    <p class="precio-secundario">$<del> </del><small id="descuento"></small></p>
+                                    <p id="precio" class="precio-principal"></p>
+                                </div>
+                                <a id="btn-edit">
+                                    <button name="button"><i class="fas fa-shopping-cart"></i>añadir carrito</button>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </article>
+
+                </template>
                 <section class="project">
                     <% productos.forEach(producto => { %>
                         <article class="card">
@@ -29,5 +50,6 @@
                 </section>
             </main>
             <%- include('./partials/footer') %>
+            <script src="/javascript/vistaproductos.js"></script>
     </body>
 </html>

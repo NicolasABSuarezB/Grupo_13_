@@ -40,10 +40,14 @@
                     <section class="container bottom">
                         <label for="genero">Genero</label>
                         <select name="genero" id="genero">
-                            <option value="<%=user.id_generos %>">
-                                <%=user.id_generos %>
-                            </option>
-                            <option value="Seleccione su genero" disabled>Seleccione su genero</option>
+                            <% if(user.id_generos) {%>
+                                 <option value="<%=user.id_generos %>">
+                                        <%=user.generos.genero %>
+                                    </option>
+                                <%  }else{ %>
+                                    <option value="" >Seleccione su genero</option><% } %> 
+                           
+                           
                             <option value="1">Female</option>
                             <option value="2">Male</option>
                             <option value="3">Non-binary</option>
@@ -53,10 +57,14 @@
                     <section class="container bottom">
                         <label for="pais">Pais</label>
                         <select name="pais" id="pais">
-                            <option value="<%=user.id_paises %>">
-                                <%=user.id_paises %>
+                            <% if(user.id_paises) {%>
+                                <option value="<%=user.id_paises %>">
+                                <%=user.pais.pais %>
                             </option>
-                            <option value="Seleccione su pais" disabled>Seleccione su pais</option>
+                               <%  }else{ %>
+                                <option value="" >Seleccione su pais</option><% } %>
+                           
+                            
                             <option value="1">Argentina</option>
                             <option value="2">Chile</option>
                             <option value="3">Uruguay</option>

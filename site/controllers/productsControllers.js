@@ -54,12 +54,18 @@ module.exports={
                     //return res.send(puntaje[0].usuario.foto)
                     
                     if (req.session.sessionuser) {
-                        if (agregarrecomiendo.length <=19) {
-                            db.recomendados.create({
-                                id_usuario:req.session.sessionuser.id,
-                                id_producto:+id
-                            })
-                        }else{
+                      /*  let ver=  agregarrecomiendo.filter(ptp => ptp.id_producto ==2)
+                        console.log(ver)
+                        if(ver.length !==0){*/
+                            if (agregarrecomiendo.length <=19) {
+                                db.recomendados.create({
+                                    id_usuario:req.session.sessionuser.id,
+                                    id_producto:+id
+                                })
+                                
+                            }
+                        
+                        else{
                         let fechahoy =new Date()
                         let eliminar={updatedAt:fechahoy.toISOString()}
                             agregarrecomiendo.forEach(fecha => {
@@ -67,7 +73,7 @@ module.exports={
                                 if(Date.parse(fecha.updatedAt)<= fechahoy.getTime()){
                                     if(Date.parse(eliminar.updatedAt)>Date.parse(fecha.updatedAt)){
                                         eliminar=fecha
-                                        console.log("exito",eliminar.id)
+                                       // console.log("exito",eliminar.id)
                                     }
                                   
                                 }
@@ -90,7 +96,7 @@ module.exports={
             
                     }
                   
-                    console.log(hayopinion)
+                   // console.log(hayopinion)
                   // return res.send(hayopinion)
                     return res.render('detalle', { producto, productos, puntaje, promedio, redondeado, hayopinion })
 
@@ -146,6 +152,24 @@ module.exports={
        
         
     },
+    especifico:(req,res)=>{
+        let id = +req.params.id
+        let producto = db.productos.findAll({
+            where:{
+                id_categoria:id
+            }})
+            Promise.all([producto])
+            .then(([producto])=>{
+                //return res.send(marca)
+                    let ofertas= producto.filter(word => word.descuento !== "0")
+                    if(ofertas.length ===0){
+                            ofertas=null
+                    }
+                    return res.render('extraspaginas/mascota',{producto,ofertas})
+            
+                })
+
+    },
     puntaje:(req,res)=>{
         let id = +req.params.id
         let {estrella, comentario}=req.body
@@ -169,7 +193,7 @@ module.exports={
     
                         }
                     })
-                    return res.send(hayopinion[0])
+                    return res.redirect('/detalle/'+id)
     
     
             }else{
@@ -183,7 +207,7 @@ module.exports={
                     
     
                 })
-                return res.send("no hay opinion"+estrella)
+                return res.redirect('/detalle/'+id)
             }
 
         })

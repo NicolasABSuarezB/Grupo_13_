@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body class="marcasmain" id="busqueda">
+
+        <%- include('../partials/header') %>
+
+        <main>
+      <% if (resultados.length != 0) { %>
+      <h1 class="listo">Resultado de la busqueda: <%= busqueda %></h1>
+      <section class="demas" id="resu">
+        <section class="marcacontenedor">
+        <% resultados.forEach(producto => { %>
+          
+          <%- include('../partials/productoHome2',{ imagen:producto.imagen,
+              nombre:producto.titulo, precio:producto.precio,
+              id:producto.id}) %>
+              
+           
+        <% }) %>
+      </section>
+      <% }else { %>
+      <h1 class="listo">
+        No se encontraron coincidencias con la busqueda de: <%= busqueda %>
+      </h1>
+      <section class="resu">
+        <%- include('../partials/nada') %>
+      </section>
+      </section>
+      <% } %>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

@@ -9,7 +9,7 @@ let { login, register, informacion, processLogin, processRegister, perfil, updat
 
 
 router.get('/login', login)
-router.post('/login', loginValidator, processLogin)
+router.post('/login',/* loginValidator,*/processLogin)
 
 router.get('/register', register)
 router.post('/register', upload.single('image'), registerValidator, processRegister);

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body class="home">
+
+        <%- include('../partials/header') %>
+
+        <main class="mainhome">
+            
+            <% let tipo=["menugato.jfif","menuperro.jfif","menuave.jfif","menupez.jfif"]
+                let fondo=["gatofondo.jfif","perrofondo.jfif","avefondo.jfif","pezfondo.jfif"]
+            for( let index = 0; index < 5; index++ ) {  
+                if(producto[0].id_categoria === index){%>
+            <img id="fondo"  src="/img/imgfondo/<%= fondo[index-1]%>" alt="">
+            <section class="menuanimal">
+                        <a id="flotante" class=" wow animate__animated animate__fadeInLeft" href="/mascota/2"><img src="/img/imghome/<%=tipo[index-1] %>"></a>
+                <% } }%>
+                
+                
+            </section>
+            <section class="homeventa">
+            <section class="homearticulos  wow animate__animated animate__fadeInUp">
+
+
+                <div class="glider-contain">
+                    <div class="glider">
+                        <% producto.forEach((productos,index)=> { %>
+                            <%- include('../partials/productoHome2',{ imagen:productos.imagen,
+                                nombre:productos.titulo, precio:productos.precio,
+                                id:productos.id}) %>
+                                
+
+                            <% }) %> 
+                    </div>
+
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                </div>
+
+
+
+            </section>
+            <div id="ofertaso">
+            <h1>ofertas</h1>
+            <% if (ofertas) {%>
+                <section class="homearticulos  wow animate__animated animate__fadeInUp">
+
+
+                    <div class="glider-contain">
+                        <div class="glider2">
+                            <% ofertas.forEach((productos,index)=> { %>
+                                <%- include('../partials/productoHome2',{ imagen:productos.imagen,
+                                    nombre:productos.titulo, precio:productos.precio,
+                                    id:productos.id}) %>
+                                    
+
+                                <% }) %> 
+                        </div>
+
+                    </div>
+
+
+
+                    </section>
+                
+           <% } else {%>
+            <%- include('../partials/nada') %>
+                
+            <%}%>
+        </div>
+        </section>
+        </section>
+        </main>
+     
+
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

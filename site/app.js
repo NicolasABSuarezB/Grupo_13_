@@ -15,6 +15,10 @@ let indexrouters = require('./routers/index');
 let productsrouters = require('./routers/products');
 let usersrouters = require('./routers/users');
 let adminrouters = require('./routers/admin');
+const apiRouter = require('./routers/api/prueba');
+const apiRouter2 = require('./routers/api/prueba2');
+const productos = require('./routers/api/productos');
+const apiCarrito = require('./routers/api/caritto');
 
 app.set('views',path.join(__dirname, 'views'));
 app.set('view engine','ejs')
@@ -36,6 +40,10 @@ app.use('/',indexrouters)
 app.use('/',usersrouters)
 app.use('/',productsrouters)
 app.use('/admin',adminrouters)
+app.use('/api',apiRouter);
+app.use('/api',apiRouter2);
+app.use('/api',productos);
+app.use('/api',apiCarrito);
 
 
 

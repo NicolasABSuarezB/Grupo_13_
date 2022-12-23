@@ -12,12 +12,12 @@ module.exports = {
     edit: (req, res) => {
         id = +req.params.id
         let categorias = db.categorias.findAll()
-
+        let marcas = db.marcas.findAll()
         let producto = db.productos.findByPk(id, { include: 'categorias' })
-        Promise.all([producto, categorias])
-            .then(([producto, categorias]) => {
+        Promise.all([producto, categorias,marcas])
+            .then(([producto, categorias,marcas]) => {
                 //res.send(producto) 
-                return res.render('admin/editarProducto', { producto, categorias })
+                return res.render('admin/editarProducto', { producto, categorias,marcas })
 
 
 
@@ -28,10 +28,12 @@ module.exports = {
         return res.render('admin/crearProducto')
     },
     lista: (req, res) => {
-        let productos = db.productos.findAll()
-            .then((productos) => {
+        let categorias  = db.categorias.findAll()
+        let marcas   = db.marcas.findAll()
+        Promise.all([categorias,marcas])
+            .then(([categorias,marcas]) => {
                 //res.send(productos.imagen)
-                return res.render('admin/listaProducto', { productos })
+                return res.render('admin/listaProducto', {categorias, marcas})
 
             }
             )
@@ -44,8 +46,8 @@ module.exports = {
 
 
 
-            let { Titulo, Categoria, Precio, Descuento, Stock, Descripcion } = req.body
-
+            let { Titulo, Categoria, Precio, Descuento, Stock, Descripcion,marca} = req.body
+         
 
             db.productos.create({
 

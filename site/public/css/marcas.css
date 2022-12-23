@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
+
 }
 .marcasmain .descripcionmarca h1{
     font-size: 10vw;

@@ -1,5 +1,5 @@
 
-
+const { Op } = require("sequelize");
 const db = require("../database/models")
 
 
@@ -113,5 +113,27 @@ module.exports={
 
             )
             
-    }
+            
+    },
+    search : (req,res) => {
+        let elemento = req.query.search
+
+        let resultados =db.productos.findAll({
+            where : {
+                [Op.or] : [
+                    {titulo : {[Op.substring] : elemento}},
+                    {descripcion : {[Op.substring] : elemento}}
+                ]
+            }
+        })
+        Promise.all([resultados])
+        .then(([resultados]) => {
+            // return res.send(resultados)
+return res.render('extraspaginas/busqueda', 
+        {
+            busqueda: elemento,
+            resultados
+        });
+        })
+        }
 }
