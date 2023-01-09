@@ -9,26 +9,23 @@
 .login .todo {
     font-family: var(--tipografia-principal);
     display: flex;
-    width: 85vw;
+    width: 75vw;
     height: 70vh;
     background-color: aliceblue;
     flex-direction: column;
     align-items: center;
-    margin-top: 20vh;
-    margin-bottom: 0vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     box-shadow: -2px 4px 29px 0px rgb(138, 138, 138);
     position: relative;
-    border-top-right-radius: 10%;
-    border-top-left-radius: 10%;
-    z-index: 20;
-    
-    
+    border-radius: 10%;
+    z-index: 20;   
 }
 
 .login .todo h3 {
     font-family: var(--titulo);
     font-weight: 300;
-    margin: 10%;
+    margin: 8%;
 }
 
 .login .inicio-de-sesion {

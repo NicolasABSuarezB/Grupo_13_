@@ -6,19 +6,21 @@
         </form>
     </div>
     <div class="top">
-        
 
         <section class="logo">
             <a href="/">
                 <img src="/img/logo.png" alt="">
             </a>
         </section>
-       
 
         <section class="user">
             <%if(locals.userLogin){%>
-                
-                <button id="menu"><i class="far fa-user"><%=locals.userLogin.nombre %> </i></button>
+
+                <button id="menu"
+                    style="background-color: transparent; border-radius: 10%; border: 2px solid black; box-shadow: -2px 4px 29px 0px rgb(138, 138, 138); margin-right: 1%;padding-inline: 2px;"><i
+                        class="fas fa-user">
+                        <%=locals.userLogin.nombre %>
+                    </i></button>
                 <div style="display: none;" id="menuPequeño">
                     <img src="/img/usuario/<%=locals.userLogin.foto %>" alt="">
                     <li>
@@ -29,12 +31,12 @@
                 </div>
                 <%}else{%>
                     <a href="/login"><i class="far fa-user"></i></a>
-                    <%}  %> 
-            <%if(locals.userLogin){%>
-            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-            <% } %> 
+                    <%} %>
+                        <%if(locals.userLogin){%>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <% } %>
         </section>
-       
+
         <section class="burger">
             <input type="checkbox" name="burger" id="burger">
             <label for="burger"><i class="fas fa-bars"></i> </i></label>
@@ -45,8 +47,8 @@
                     <li><a href="/informacion">informacion</a></li>
                     <% if(locals.userLogin && locals.userLogin.rol===2){%>
                         <li><a href="/admin/lista">Admin</a></li>
-                    <% } %> 
-                    
+                        <% } %>
+
                 </ul>
             </nav>
         </section>

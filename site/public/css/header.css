@@ -69,7 +69,6 @@ header .burger nav ul li {
     margin: 20px 0;
     display: flex;
     justify-content: left;
-
 }
 
 header .burger nav a {
@@ -118,7 +117,6 @@ header #menuPequeño li ul {
 @media (min-width:720px) {
     header {
         position: relative;
-        
         background-color: var(--verde);
         font-family: var(--titulo);
     }

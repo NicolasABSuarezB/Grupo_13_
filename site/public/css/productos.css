@@ -29,7 +29,7 @@
 .contenedor-listado .listado .project .card {
     margin: 10px;
     border: 1px solid var(--azul);
-    width: 45%;
+    width: 80%;
     text-align: center;
     background-color: white;
     border-radius: 7px;

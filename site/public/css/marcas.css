@@ -1,84 +1,95 @@
-.marcasmain .descripcionmarca{
-    
+.marcasmain .descripcionmarca {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
-    margin-bottom: 20%;
-
+    margin-top: 5%;
+    padding-inline: 2%;
+    margin-bottom: 5%;
 }
-.marcasmain .descripcionmarca h1{
+
+.marcasmain .descripcionmarca h1 {
     font-size: 10vw;
     margin-bottom: 10px;
 }
-.marcasmain .gran_marca{
+
+.marcasmain .gran_marca {
     width: 100vw;
     display: flex;
     justify-content: center;
-   
+
     background-image: url('./img/imgmarca/purrinafondo.jpg');
     background-repeat: no-repeat;
     height: 30vh;
     background-size: cover;
     align-items: center;
-    
-    
+
+
 }
-.marcasmain .gran_marca img{
+
+.marcasmain .gran_marca img {
     width: 50vw;
-    
+
 }
-#marcasmain{
+
+#marcasmain {
     margin: 0%;
-    
+
 }
-.marcasmain .demas{
-    
-}
-.marcasmain .marcacontenedor{
+
+.marcasmain .demas {}
+
+.marcasmain .marcacontenedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
 }
-.marcasmain .menucarucel .imgproducto img{
+
+.marcasmain .menucarucel .imgproducto img {
     width: 40vw;
     height: 100%;
 }
+
 .marcasmain .menucarucel .imgproducto {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
     height: 50%;
 }
-.marcasmain .menucarucel{
+
+.marcasmain .menucarucel {
     background-color: aliceblue;
     margin: 10px;
     width: 90vw;
-    box-shadow: 2px 4px 50px -1px rgba(0,0,0,0.55);
+    box-shadow: 2px 4px 50px -1px rgba(0, 0, 0, 0.55);
     height: 120vw;
     border: 1px solid var(--azul);
-    
-    
+
+
 }
-.marcasmain .menucarucel .descripcion{
+
+.marcasmain .menucarucel .descripcion {
     display: flex;
     height: 40%;
     flex-direction: column;
-    
-    align-items: center;margin-top: 10px;
+
+    align-items: center;
+    margin-top: 10px;
 }
-.marcasmain .menucarucel .descripcion p{
+
+.marcasmain .menucarucel .descripcion p {
     height: 20%;
     overflow: hidden;
     text-align: center;
-    
+
 }
+
 .marcasmain .menucarucel .descripcion .nombreproduc {
     font-size: 7vw;
     margin-bottom: 10px;
 }
+
 .marcasmain .menucarucel .descripcion button {
     width: 85%;
     background-color: var(--azul);
@@ -89,43 +100,48 @@
 
 }
 
-.nohay{
+.nohay {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2px 4px 50px -1px rgba(0,0,0,0.55);
-   border-radius: 5%;
-   background-color: rgb(230, 228, 228);
+    box-shadow: 2px 4px 50px -1px rgba(0, 0, 0, 0.55);
+    border-radius: 5%;
+    background-color: rgb(230, 228, 228);
     height: 300px;
     margin: 10px;
     margin-bottom: 50px;
 }
-.nohay h4{
+
+.nohay h4 {
     text-align: center;
     margin-top: 15px;
-    
+
 }
-.nohay img{
+
+.nohay img {
     width: 170px;
 }
+
 @media(min-width:441px) {
-    .marcasmain .menucarucel{
+    .marcasmain .menucarucel {
         width: 40vw;
         height: 80vw;
-        
+
     }
-    .marcasmain .menucarucel .descripcion{
-        
-    }
-    .marcasmain .marcacontenedor{
+
+    .marcasmain .menucarucel .descripcion {}
+
+    .marcasmain .marcacontenedor {
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         flex-wrap: wrap;
     }
-    .marcasmain .menucarucel .imgproducto img{
+
+    .marcasmain .menucarucel .imgproducto img {
         width: 30vw;
         height: 90%;
     }
+
     .marcasmain .menucarucel .descripcion .nombreproduc {
         font-size: 5vw;
         margin-bottom: 10px;
@@ -133,36 +149,41 @@
     }
 
 }
+
 @media(min-width:769px) {
-    .marcasmain .menucarucel{
+    .marcasmain .menucarucel {
         padding-top: 3%;
         width: 15vw;
         height: 34vw;
         margin-bottom: 3%;
-        
+
     }
-    .marcasmain .menucarucel .descripcion{
-        
-    }
-    .marcasmain .marcacontenedor{
+
+    .marcasmain .menucarucel .descripcion {}
+
+    .marcasmain .marcacontenedor {
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         flex-wrap: wrap;
     }
-    .marcasmain .menucarucel .imgproducto img{
+
+    .marcasmain .menucarucel .imgproducto img {
         width: 50%;
         height: 90%;
     }
+
     .marcasmain .menucarucel .descripcion .nombreproduc {
         font-size: 2vw;
         margin-bottom: 10px;
         text-align: center;
     }
+
     .menucarucel:hover {
         border: none;
         transform: scale(1.11);
     }
-    .marcasmain{
+
+    .marcasmain {
         background-image: url('../img/imgmarca/purrinafondo.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -171,27 +192,31 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-     }
-     .marcasmain .gran_marca{
+    }
+
+    .marcasmain .gran_marca {
         height: 60vh;
-        
+
     }
-    .marcasmain .gran_marca img{
+
+    .marcasmain .gran_marca img {
         width: 30vw;
-        
+
     }
-    .marcasmain .demas{
+
+    .marcasmain .demas {
         width: 98vw;
         background-color: var(--fondo);
         display: flex;
         align-items: center;
         flex-direction: column;
     }
-    
-.nohay{
-    width: 90%;
-    justify-content: center;
-    height: 60vh;
-   
 
-}}
+    .nohay {
+        width: 90%;
+        justify-content: center;
+        height: 60vh;
+
+
+    }
+}

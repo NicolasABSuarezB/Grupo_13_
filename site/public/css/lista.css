@@ -2,7 +2,7 @@
     width: 60vw;
     height:  200px;
     margin-top: 15%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     border: 1px solid rgb(119, 196, 218);
 }
 .lista .megalista{
@@ -73,7 +73,7 @@ margin-top: 30px;
     .lista .contenedorlista{
         display: flex;
         height: 500px;
-        width: 50vw;
+        width: 45vw;
         
     margin: 2%; 
 }

@@ -1,143 +1,138 @@
-.vistaperfil .infoperfil{
+.vistaperfil .infoperfil {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 35px;
 }
-.vistaperfil .infoperfil .contenidoperfil{
 
+.vistaperfil .infoperfil .contenidoperfil {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid var(--azul);
     border-radius: 10%;
     height: 500px;
-    
 }
-.vistaperfil .infoperfil .contenidoperfil{
 
+.vistaperfil .infoperfil .contenidoperfil {
     margin-top: 7vh;
     width: 80%;
     height: 450px;
     background-color: rgb(194, 197, 197);
     margin-bottom: 40px;
 }
-.vistaperfil .infoperfil button{
+
+.vistaperfil .infoperfil button {
     width: 45%;
     background-color: var(--azul);
     color: white;
     border: 0;
     height: 30%;
-    margin-top: 5%;
-
-    
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
-.vistaperfil .infoperfil .contenidoperfil .nombre{
+
+.vistaperfil .infoperfil .contenidoperfil .nombre {
     margin-bottom: 20%;
     font-size: 110%;
 }
-.vistaperfil .infoperfil .contenidoperfil .fotoperfil{
-    margin:30px 0;
+
+.vistaperfil .infoperfil .contenidoperfil .fotoperfil {
+    margin: 30px 0;
 }
-.vistaperfil .infoperfil .contenidoperfil .fotoperfil img{
-    
+
+.vistaperfil .infoperfil .contenidoperfil .fotoperfil img {
     width: 100%;
     height: 90px;
     border: 1px solid var(--azul);
     border-radius: 100%;
-    
-    
 }
-.vistaperfil .infoperfil .minihistorial{
+
+.vistaperfil .infoperfil .minihistorial {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.vistaperfil .infoperfil .minihistorial .menucarucel{
-   
-    height: 400px;
+
+.vistaperfil .infoperfil .minihistorial .menucarucel {
+    height: auto;
     text-align: center;
     padding-top: 10%;
     border: 1px solid var(--azul);
+    box-shadow: 1px 1px 17px -2px rgb(0, 0, 0);
+    border-radius: 10%;
     margin-bottom: 30px;
-   
-    
-
 }
-.vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto{
+
+.vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto {
     margin-top: 20px;
     width: 50%;
     height: 40%;
     margin: 0 auto;
-
 }
-.vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto img{
+
+.vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto img {
     width: 100%;
     height: 100%;
     margin: auto;
-
 }
-.vistaperfil .infoperfil .minihistorial .menucarucel .descripcion{
-    
+
+.vistaperfil .infoperfil .minihistorial .menucarucel .descripcion {
     margin: 0 auto;
 }
-.vistaperfil .infoperfil .minihistorial .menucarucel .descripcion button{
-    
-    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-    margin-left: 50%;
-    transform: translateX(-50%);
+
+.vistaperfil .infoperfil .minihistorial .menucarucel .descripcion button {
+    width: 110px;
+    /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+    margin-left: auto/* 50% */;
+    /* transform: translateX(-50%); */
 }
-.datosuser{
+
+.datosuser {
     margin-top: 5px;
 }
-@media(min-width:361px) {
 
-}
+@media(min-width:361px) {}
+
 @media(min-width:769px) {
-    .vistaperfil .infoperfil{
+    .vistaperfil .infoperfil {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
         height: 100%;
     }
-    .vistaperfil .infoperfil .contenidoperfil{
+
+    .vistaperfil .infoperfil .contenidoperfil {
         margin-top: 0;
         width: 30%;
-       /* height: 50vh;*/
-        
+        /* height: 50vh;*/
     }
-    .vistaperfil .infoperfil .minihistorial{
-        
+
+    .vistaperfil .infoperfil .minihistorial {
         width: 60%;
-      }
-   .vistaperfil .infoperfil .historial{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-   
-    .vistaperfil .infoperfil .minihistorial .menucarucel{
+    }
+
+    .vistaperfil .infoperfil .historial {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .vistaperfil .infoperfil .minihistorial .menucarucel {
         width: 40%;
         margin: 5%;
-       
-    
     }
-    .vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto{
+
+    .vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto {
         margin-top: 20px;
         width: 50%;
         height: 40%;
         margin: 0 auto;
-    
     }
-    .vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto img{
-      
+
+    .vistaperfil .infoperfil .minihistorial .menucarucel .imgproducto img {
         width: 100%;
         height: 100%;
-      
-    
     }
-    
-    
 }
-

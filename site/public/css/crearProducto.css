@@ -1,3 +1,27 @@
-.crear-editar small{
+.crear-editar small {
     color: var(--rojo)
+}
+
+.crear-editar main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+.crear-editar input {
+    border: none;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+
+.crear-editar select {
+    border: none;
+    box-shadow: 5px 5px 19px 0px #187498ba;
+}
+
+.crear-editar textarea {
+    border: none;
+    box-shadow: 5px 5px 19px 0px #187498ba;
 }
